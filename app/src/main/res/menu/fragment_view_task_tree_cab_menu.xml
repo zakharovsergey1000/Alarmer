@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/cab_menu_delete"
+        android:alphabeticShortcut="d"
+        android:enabled="true"
+        android:numericShortcut="4"
+        android:title="@string/cab_menu_delete"
+        android:visible="true">
+    </item>
+    
+</menu>

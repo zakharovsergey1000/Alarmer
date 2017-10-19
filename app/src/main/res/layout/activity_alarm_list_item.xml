@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" >
+	<View
+		android:id="@+id/activity_alarm_list_item_color_box"
+		android:layout_width="30dip"
+		android:layout_height="30dip"
+		android:layout_gravity="center"
+		android:background="@color/Gray" />
+	<LinearLayout
+		android:layout_width="0dip"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:orientation="vertical" >
+		<TableLayout
+			android:id="@+id/activity_alarm_tablelayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" />
+		<LinearLayout
+			style="?android:attr/buttonBarStyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal" >
+			<Button
+				android:id="@+id/activity_alarm_button_snooze"
+				style="?android:attr/buttonBarButtonStyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right"
+				android:text="@string/activity_alarm_button_snooze" />
+			<Button
+				android:id="@+id/activity_alarm_button_dismiss"
+				style="?android:attr/buttonBarButtonStyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right"
+				android:text="@string/activity_alarm_button_dismiss" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

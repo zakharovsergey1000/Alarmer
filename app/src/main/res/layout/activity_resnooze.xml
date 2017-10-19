@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+
+	<TextView
+		android:id="@+id/activity_resnooze_textview_alarm_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/hello_world" />
+
+	<LinearLayout
+		android:id="@+id/activity_resnooze_linearlayout_select_custom_snooze_time"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical" >
+
+		<TextView
+			android:id="@+id/activity_resnooze_textview_select_custom_snooze_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/activity_resnooze_textview_select_custom_snooze_time" />
+
+		<Spinner
+			android:id="@+id/activity_resnooze_spinner_select_custom_snooze_time"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:entries="@array/snooze_time_array" />
+
+		<LinearLayout
+			android:id="@+id/activity_resnooze_linearlayout_select_custom_snooze_time_minutes"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<EditText
+				android:id="@+id/activity_resnooze_edittext_snooze_time_custom"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:inputType="number"
+				android:text="10" />
+
+			<TextView
+				android:id="@+id/activity_resnooze_textview_select_custom_snooze_time_minutes"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/activity_resnooze_textview_select_custom_snooze_time_minutes" />
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>

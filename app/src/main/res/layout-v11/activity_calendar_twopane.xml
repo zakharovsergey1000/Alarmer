@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context="biz.advancedcalendar.activities.ActivityCalendarList" >
+	<!--
+    This layout is a two-pane layout for the Calendars
+    master/detail flow. See res/values-large/refs.xml and
+    res/values-sw600dp/refs.xml for an example of layout aliases
+    that replace the single-pane version of the layout with
+    this two-pane version.
+
+    For more on layout aliases, see:
+    http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
+	-->
+	<android.support.v7.widget.Toolbar
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:background="?attr/colorPrimary"
+		android:elevation="4dp"
+		android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+		app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="16dp"
+		android:layout_marginRight="16dp"
+		android:baselineAligned="false"
+		android:divider="?android:attr/dividerHorizontal"
+		android:orientation="horizontal"
+		android:showDividers="middle"
+		tools:context="biz.advancedcalendar.activities.ActivityCalendarList" >
+		<fragment
+			android:id="@+id/item_list"
+			android:name="biz.advancedcalendar.fragments.FragmentCalendarList"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			tools:layout="@android:layout/list_content" />
+		<FrameLayout
+			android:id="@+id/calendar_detail_container"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="3" />
+	</LinearLayout>
+</LinearLayout>

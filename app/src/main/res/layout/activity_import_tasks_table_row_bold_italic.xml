@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" >
+	<TextView
+		android:id="@+id/activity_import_tasks_table_row_left_textview"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textStyle="bold|italic" />
+	<TextView
+		android:id="@+id/activity_import_tasks_table_row_middle_textview"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:paddingLeft="5dp" />
+	<TextView
+		android:id="@+id/activity_import_tasks_table_row_right_textview"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:paddingLeft="5dp" />
+</TableRow>

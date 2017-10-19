@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="biz.advancedcalendar.alarmer"
+	android:installLocation="internalOnly"
+	android:versionCode="21"
+	android:versionName="1.6.5" >
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:name="biz.advancedcalendar.Global"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivitySplash"
+			android:noHistory="true" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityLogin"
+			android:label="@string/activity_login"
+			android:windowSoftInputMode="adjustResize|stateVisible" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityMain"
+			android:label="@string/app_name"
+			android:launchMode="singleTask" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityViewTask"
+			android:label="@string/activity_view_task_title" >
+			<!-- Parent activity meta-data to support 4.0 and lower -->
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityMain" />
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityViewLabel"
+			android:label="@string/activity_view_label_title" >
+			<!-- Parent activity meta-data to support 4.0 and lower -->
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityMain" />
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityViewContact"
+			android:label="@string/activity_view_contact_title" >
+			<!-- Parent activity meta-data to support 4.0 and lower -->
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityMain" />
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityViewFile"
+			android:label="@string/activity_view_file_title" >
+			<!-- Parent activity meta-data to support 4.0 and lower -->
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityMain" />
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityViewDiaryRecord"
+			android:label="@string/activity_view_diary_record_title" >
+			<!-- Parent activity meta-data to support 4.0 and lower -->
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityMain" />
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityEditTask"
+			android:label="@string/activity_edit_task_title" >
+			<!-- Parent activity meta-data to support 4.0 and lower -->
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityMain" />
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityEditTask2"
+			android:label="@string/activity_edit_task_title" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityEditLabel"
+			android:label="@string/activity_edit_label_title" >
+			<!-- Parent activity meta-data to support 4.0 and lower -->
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityMain" />
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityEditContact"
+			android:label="@string/activity_view_contact_title" >
+			<!-- Parent activity meta-data to support 4.0 and lower -->
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityMain" />
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityEditFile"
+			android:label="@string/activity_edit_file_title"
+			android:uiOptions="splitActionBarWhenNarrow" >
+			<!-- Parent activity meta-data to support 4.0 and lower -->
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityMain" />
+			<meta-data
+				android:name="android.support.UI_OPTIONS"
+				android:value="splitActionBarWhenNarrow" />
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityEditDiaryRecord"
+			android:label="@string/activity_edit_diary_record_title"
+			android:uiOptions="splitActionBarWhenNarrow" >
+			<!-- Parent activity meta-data to support 4.0 and lower -->
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityMain" />
+			<meta-data
+				android:name="android.support.UI_OPTIONS"
+				android:value="splitActionBarWhenNarrow" />
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivitySelectContactData"
+			android:label="@string/activity_select_contact_data_title" >
+			<!-- Parent activity meta-data to support 4.0 and lower -->
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityEditContact" />
+		</activity>
+		<activity android:name="biz.advancedcalendar.activities.ActivitySelectTreeItems" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivitySelectTaskSortOrder"
+			android:label="@string/activity_select_task_sort_order_title" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityEditReminder"
+			android:label="@string/activity_edit_reminder_title" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityEditReminder2"
+			android:label="@string/activity_edit_reminder_title" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.FragmentSettings"
+			android:label="@string/title_activity_activity_settings" >
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityMain" />
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivitySettings2"
+			android:label="@string/title_activity_activity_settings" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityAlarm"
+			android:label="@string/title_activity_activity_alarm"
+			android:launchMode="singleTop"
+			android:windowSoftInputMode="stateHidden|adjustPan" >
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityMain" />
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityResnooze"
+			android:label="@string/activity_resnooze_title" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityResnooze2"
+			android:label="@string/activity_resnooze_title" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityColorPicker"
+			android:label="@string/activity_pick_color_title" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityPredefinedColorPicker"
+			android:label="@string/activity_pick_color_title" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityQuickReminder"
+			android:label="@string/title_activity_quick_reminder" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivitySelectDaysOfYear"
+			android:label="@string/title_activity_activity_pick_days_of_year" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivitySelectDaysOfYear2"
+			android:label="@string/title_activity_activity_pick_days_of_year" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityInformationComposer"
+			android:label="@string/title_activity_information_composer" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityCalendarList"
+			android:label="@string/title_calendar_list" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityCalendarDetail"
+			android:label="@string/title_calendar_detail"
+			android:parentActivityName="biz.advancedcalendar.activities.ActivityCalendarList" >
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="biz.advancedcalendar.activities.ActivityCalendarList" />
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityRecyclebinList"
+			android:label="@string/title_recyclebin_list" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityRecyclebinDetail"
+			android:label="@string/title_recyclebin_detail" >
+		</activity>
+		<activity
+			android:name="biz.advancedcalendar.activities.ActivityExit"
+			android:label="@string/title_activity_activity_exit" >
+		</activity>
+		<activity android:name="biz.advancedcalendar.activities.ActivityImportTasks" >
+		</activity>
+		<activity android:name="com.ipaulpro.afilechooser.FileChooserActivity" >
+		</activity>
+		<activity
+			android:name="org.acra.CrashReportDialog"
+			android:excludeFromRecents="true"
+			android:finishOnTaskLaunch="true"
+			android:launchMode="singleInstance"
+			android:theme="@android:style/Theme.Dialog" />
+		<receiver android:name="biz.advancedcalendar.receivers.AlarmReceiver" >
+		</receiver>
+		<receiver
+			android:name="biz.advancedcalendar.receivers.BootCompletedReceiver"
+			android:enabled="true"
+			android:exported="true" >
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
+		<receiver
+			android:name="biz.advancedcalendar.receivers.TimeChangedReceiver"
+			android:enabled="true"
+			android:exported="true" >
+			<intent-filter>
+				<action android:name="android.intent.action.TIME_SET" />
+			</intent-filter>
+		</receiver>
+		<service android:name="biz.advancedcalendar.services.AlarmService" />
+		<service android:name="biz.advancedcalendar.services.BootCompletedService" />
+		<service android:name="biz.advancedcalendar.services.ResetupRemindersService" />
+		<service android:name="biz.advancedcalendar.services.NotificationService" />
+		<service android:name="biz.advancedcalendar.sync.SyncService" />
+        <activity
+            android:name=".ItemListActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".ItemListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="biz.advancedcalendar.alarmer.ItemListActivity" />
+        </activity>
+    </application>
+
+</manifest>

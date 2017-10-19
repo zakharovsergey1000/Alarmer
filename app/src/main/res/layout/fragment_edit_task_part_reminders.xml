@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+	<CheckBox
+		android:id="@+id/fragment_edit_task_part_reminders_checkbox_advanced_settings"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:button="@drawable/expand_collapse_checkbox"
+		android:checked="false"
+		android:text="@string/action_more" />
+	<ScrollView
+		android:id="@+id/fragment_edit_task_part_reminders_scrollview_advanced_settings"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:visibility="gone" >
+		<LinearLayout
+			android:id="@+id/fragment_edit_task_part_reminders_linearlayout_advanced_settings"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" >
+			<TextView
+				android:id="@+id/fragment_edit_task_part_reminders_textview_alarm_ringtone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_reminders_textview_alarm_ringtone" />
+			<RadioGroup
+				android:id="@+id/fragment_edit_task_part_reminders_radiogroup_alarm_ringtone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_alarm_ringtone_from_settings"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_from_settings" />
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_alarm_ringtone_custom"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_custom" />
+			</RadioGroup>
+			<TextView
+				android:id="@+id/fragment_edit_task_part_reminders_textview_notification_ringtone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_reminders_textview_notification_ringtone" />
+			<RadioGroup
+				android:id="@+id/fragment_edit_task_part_reminders_radiogroup_notification_ringtone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_notification_ringtone_from_settings"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_from_settings" />
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_notification_ringtone_custom"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_custom" />
+			</RadioGroup>
+			<TextView
+				android:id="@+id/fragment_edit_task_part_reminders_textview_ringtone_fade_in_time"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_reminders_textview_ringtone_fade_in_time" />
+			<RadioGroup
+				android:id="@+id/fragment_edit_task_part_reminders_radiogroup_ringtone_fade_in_time"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_ringtone_fade_in_time_from_settings"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_from_settings" />
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_ringtone_fade_in_time_custom"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_custom" />
+			</RadioGroup>
+			<LinearLayout
+				android:id="@+id/fragment_edit_task_part_reminders_linearlayout_ringtone_fade_in_time_custom_segment"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal" >
+				<EditText
+					android:id="@+id/fragment_edit_task_part_reminders_edittext_ringtone_fade_in_time"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:inputType="numberDecimal"
+					android:minEms="3" >
+				</EditText>
+				<TextView
+					android:id="@+id/fragment_edit_task_part_reminders_textview_ringtone_fade_in_time_measurement_unit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceButton" />
+			</LinearLayout>
+			<TextView
+				android:id="@+id/fragment_edit_task_part_reminders_textview_reminders_popup_window_displaying_duration"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_reminders_textview_reminders_popup_window_displaying_duration" />
+			<RadioGroup
+				android:id="@+id/fragment_edit_task_part_reminders_radiogroup_reminders_popup_window_displaying_duration"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_reminders_popup_window_displaying_duration_from_settings"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_from_settings" />
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_reminders_popup_window_displaying_duration_custom"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_custom" />
+			</RadioGroup>
+			<LinearLayout
+				android:id="@+id/fragment_edit_task_part_reminders_linearlayout_reminders_popup_window_displaying_duration_custom_segment"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal" >
+				<EditText
+					android:id="@+id/fragment_edit_task_part_reminders_edittext_reminders_popup_window_displaying_duration"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:inputType="numberDecimal"
+					android:minEms="3" >
+				</EditText>
+				<TextView
+					android:id="@+id/fragment_edit_task_part_reminders_textview_reminders_popup_window_displaying_duration_measurement_unit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceButton" />
+			</LinearLayout>
+			<TextView
+				android:id="@+id/fragment_edit_task_part_reminders_textview_automatic_snooze_duration"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_reminders_textview_automatic_snooze_duration" />
+			<RadioGroup
+				android:id="@+id/fragment_edit_task_part_reminders_radiogroup_automatic_snooze_duration"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_automatic_snooze_duration_from_settings"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_from_settings" />
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_automatic_snooze_duration_custom"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_custom" />
+			</RadioGroup>
+			<LinearLayout
+				android:id="@+id/fragment_edit_task_part_reminders_linearlayout_automatic_snooze_duration_custom_segment"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal" >
+				<EditText
+					android:id="@+id/fragment_edit_task_part_reminders_edittext_automatic_snooze_duration"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:inputType="numberDecimal"
+					android:minEms="3" >
+				</EditText>
+				<TextView
+					android:id="@+id/fragment_edit_task_part_reminders_textview_automatic_snooze_duration_measurement_unit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceButton" />
+			</LinearLayout>
+			<TextView
+				android:id="@+id/fragment_edit_task_part_reminders_textview_automatic_snoozes_max_count"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_reminders_textview_automatic_snoozes_max_count" />
+			<RadioGroup
+				android:id="@+id/fragment_edit_task_part_reminders_radiogroup_automatic_snoozes_max_count"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_automatic_snoozes_max_count_from_settings"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_from_settings" />
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_automatic_snoozes_max_count_custom"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_custom" />
+			</RadioGroup>
+			<LinearLayout
+				android:id="@+id/fragment_edit_task_part_reminders_linearlayout_automatic_snoozes_max_count_custom_segment"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal" >
+				<EditText
+					android:id="@+id/fragment_edit_task_part_reminders_edittext_automatic_snoozes_max_count"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:inputType="numberDecimal"
+					android:minEms="3" >
+				</EditText>
+				<TextView
+					android:id="@+id/fragment_edit_task_part_reminders_textview_automatic_snoozes_max_count_measurement_unit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceButton" />
+			</LinearLayout>
+			<TextView
+				android:id="@+id/fragment_edit_task_part_reminders_textview_vibrate_with_alarm_ringtone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_reminders_textview_vibrate_with_alarm_ringtone" />
+			<RadioGroup
+				android:id="@+id/fragment_edit_task_part_reminders_radiogroup_vibrate_with_alarm_ringtone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_vibrate_with_alarm_ringtone_from_settings"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_from_settings" />
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_reminders_radiobutton_vibrate_with_alarm_ringtone_custom"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_radiobutton_text_custom" />
+			</RadioGroup>
+			<LinearLayout
+				android:id="@+id/fragment_edit_task_part_reminders_linearlayout_vibrate_with_alarm_ringtone_custom_segment"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal" >
+				<CheckBox
+					android:id="@+id/fragment_edit_task_part_reminders_checkbox_vibrate_with_alarm_ringtone"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_reminders_checkbox_text_vibrate" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+	<ListView
+		android:id="@+id/fragment_edit_task_part_reminders_listview_reminders"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:descendantFocusability="beforeDescendants" />
+</LinearLayout>

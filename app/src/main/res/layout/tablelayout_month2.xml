@@ -1,0 +1,330 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" >
+	<TextView
+		android:id="@+id/textview_february"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="February" />
+	<TableRow
+		android:layout_width="match_parent"
+		android:layout_height="48dp" >
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox32"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="1"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox33"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="2"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox34"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="3"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox35"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="4"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox36"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="5"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox37"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="6"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox38"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="7"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</TableRow>
+	<TableRow
+		android:layout_width="match_parent"
+		android:layout_height="48dp" >
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox39"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="8"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox40"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="9"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox41"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="10"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox42"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="11"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox43"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="12"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox44"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="13"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox45"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="14"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</TableRow>
+	<TableRow
+		android:layout_width="match_parent"
+		android:layout_height="48dp" >
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox46"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="15"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox47"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="16"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox48"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="17"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox49"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="18"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox50"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="19"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox51"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="20"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox52"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="21"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</TableRow>
+	<TableRow
+		android:layout_width="match_parent"
+		android:layout_height="48dp" >
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox53"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="22"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox54"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="23"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox55"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="24"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox56"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="25"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox57"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="26"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox58"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="27"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox59"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="28"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</TableRow>
+	<TableRow
+		android:layout_width="match_parent"
+		android:layout_height="48dp" >
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox60"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="29"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkBox61"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="6"
+			android:clickable="true"
+			android:gravity="center"
+			android:onClick="onDayOfYearClicked"
+			android:text="@string/last"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</TableRow>
+</TableLayout>

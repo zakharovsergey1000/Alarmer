@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content" >
+	<LinearLayout
+		android:id="@+id/linearlayout_occurrences_picker"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal" >
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_1"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="1" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_2"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="2" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_3"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="3" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_4"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="4" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_5"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="5" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_6"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="6" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_7"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="7" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_8"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="8" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_9"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="9" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_10"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="10" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_11"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="11" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_12"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="12" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_13"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="13" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_14"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="14" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_15"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="15" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_16"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="16" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_17"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="17" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_18"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="18" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_19"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="19" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_20"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="20" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_21"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="21" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_22"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="22" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_23"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="23" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_24"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="24" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_25"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="25" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_26"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="26" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_27"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center" 
+			android:text="27" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_28"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="28" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_29"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="29" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_30"
+			android:layout_width="48dp"
+			android:layout_height="48dp" android:gravity="center"
+			android:text="30" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_31"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:gravity="center"
+			android:text="31" />
+		<com.android.supportdatetimepicker.date.TextViewWithCircularIndicator
+			android:id="@+id/checkbox_day_last"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:gravity="center"
+			android:text="@string/last" />
+	</LinearLayout>
+</HorizontalScrollView>

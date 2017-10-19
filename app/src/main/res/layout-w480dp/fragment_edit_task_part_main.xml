@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/fragment_edit_task_part_main_scrollview"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" >
+	<LinearLayout
+		android:id="@+id/fragment_edit_task_part_main_linearlayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical" >
+		<TextView
+			android:id="@+id/fragment_edit_task_part_main_header_textview_task_name"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_edit_task_part_main_header_textview_task_name"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<EditText
+			android:id="@+id/fragment_edit_task_part_main_edittext_task_name"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/fragment_edit_task_part_main_edittext_task_name_hint" >
+		</EditText>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:baselineAligned="true"
+			android:orientation="vertical" >
+			<TextView
+				android:id="@+id/fragment_edit_task_part_main_textview_task_start_label1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_main_textview_task_start_label1"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:baselineAligned="true"
+				android:orientation="horizontal" >
+				<CheckBox
+					android:id="@+id/fragment_edit_task_part_main_checkbox_task_start_date"
+					android:layout_width="fill_parent"
+					android:layout_height="50dip"
+					android:layout_gravity="bottom"
+					android:layout_weight="1"
+					android:button="@drawable/date_checkbox"
+					android:checked="true"
+					android:text="@string/date_pattern" />
+				<CheckBox
+					android:id="@+id/fragment_edit_task_part_main_checkbox_task_start_time"
+					android:layout_width="fill_parent"
+					android:layout_height="50dip"
+					android:layout_weight="1"
+					android:button="@drawable/time_checkbox"
+					android:checked="true"
+					android:text="@string/time_pattern" />
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:baselineAligned="true"
+			android:orientation="vertical" >
+			<TextView
+				android:id="@+id/fragment_edit_task_part_main_header_textview_task_end_label1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_main_header_textview_task_end_label1"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:baselineAligned="true"
+				android:orientation="horizontal" >
+				<CheckBox
+					android:id="@+id/fragment_edit_task_part_main_checkbox_task_end_date"
+					android:layout_width="fill_parent"
+					android:layout_height="50dip"
+					android:layout_gravity="bottom"
+					android:layout_weight="1"
+					android:button="@drawable/date_checkbox"
+					android:checked="true"
+					android:text="@string/date_pattern" />
+				<CheckBox
+					android:id="@+id/fragment_edit_task_part_main_checkbox_task_end_time"
+					android:layout_width="fill_parent"
+					android:layout_height="50dip"
+					android:layout_weight="1"
+					android:button="@drawable/time_checkbox"
+					android:checked="true"
+					android:text="@string/time_pattern" />
+			</LinearLayout>
+		</LinearLayout>
+		<TextView
+			android:id="@+id/fragment_edit_task_part_main_header_textview_task_timezone"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_edit_task_part_main_header_textview_task_timezone"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:visibility="gone" />
+		<Spinner
+			android:id="@+id/fragment_edit_task_part_main_spinner_timezone"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:visibility="gone" />
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+			<TextView
+				android:id="@+id/fragment_edit_task_part_main_header_textview_recur"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_main_header_textview_recur"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+			<Spinner
+				android:id="@+id/fragment_edit_task_part_main_spinner_time_unit"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:entries="@array/time_unit_spinner_titles_array" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/fragment_edit_task_part_main_linearlayout_one_time"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:visibility="gone" >
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:visibility="gone" >
+				<TextView
+					android:id="@+id/fragment_edit_task_part_main_header_textview_task_hours_required"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_main_header_textview_task_hours_required"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
+				<EditText
+					android:id="@+id/fragment_edit_task_part_main_edittext_task_hours_required"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:inputType="numberDecimal"
+					android:minEms="10"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:visibility="gone" >
+				<TextView
+					android:id="@+id/fragment_edit_task_part_main_header_textview_task_hours_spent"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_main_header_textview_task_hours_spent"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
+				<EditText
+					android:id="@+id/fragment_edit_task_part_main_edittext_task_hours_spent"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:inputType="numberDecimal"
+					android:minEms="10"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/linearlayout_recurrent"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" >
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" >
+				<TextView
+					android:id="@+id/fragment_edit_task_part_main_textview_text_every"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_main_textview_text_every"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
+				<EditText
+					android:id="@+id/fragment_edit_task_part_main_edittext_time_units_count"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:inputType="numberDecimal"
+					android:minEms="3"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
+				<TextView
+					android:id="@+id/fragment_edit_task_part_main_textview_time_unit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
+			</LinearLayout>
+			<include
+				android:id="@+id/scrollview_occurrences_picker_minutely_recurrent"
+				layout="@layout/occurrences_picker" />
+			<include
+				android:id="@+id/scrollview_occurrences_picker_hourly_recurrent"
+				layout="@layout/occurrences_picker" />
+			<include
+				android:id="@+id/scrollview_occurrences_picker_daily_recurrent"
+				layout="@layout/occurrences_picker" />
+			<include
+				android:id="@+id/scrollview_week_days_picker"
+				layout="@layout/week_days_picker" />
+			<LinearLayout
+				android:id="@+id/linearlayout_occurrences_picker_monthly_recurrent"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical" >
+				<RadioGroup
+					android:id="@+id/fragment_edit_task_part_main_radiogroup_month_based_recurrence_mode"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:baselineAligned="true"
+					android:checkedButton="@+id/fragment_edit_task_part_main_radio_monthly_recurrent_on_date"
+					android:orientation="horizontal" >
+					<RadioButton
+						android:id="@+id/fragment_edit_task_part_main_radio_monthly_recurrent_on_date"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="@string/fragment_edit_task_part_main_radio_text_monthly_recurrent_on_date" />
+					<RadioButton
+						android:id="@+id/fragment_edit_task_part_main_radio_monthly_recurrent_on_nth_week_day"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:text="@string/fragment_edit_task_part_main_radio_text_monthly_recurrent_on_nth_week_day" />
+				</RadioGroup>
+				<include
+					android:id="@+id/scrollview_occurrences_picker_monthly_recurrent_on_date"
+					layout="@layout/occurrences_picker_monthly_recurrent_on_date" />
+				<include
+					android:id="@+id/linearlayout_occurrences_picker_monthly_recurrent_on_nth_week_day"
+					layout="@layout/occurrences_picker_monthly_recurrent_on_nth_week_day" />
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/linearlayout_occurrences_picker_yearly_recurrent"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical" >
+				<Button
+					android:id="@+id/button_days_picker_of_yearly_recurrent_task"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_main_button_days_picker_of_yearly_recurrent_task" />
+				<LinearLayout
+					android:id="@+id/linearlayout_occurrences_picker"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" >
+				<TextView
+					android:id="@+id/fragment_edit_task_part_main_header_textview_occurrences_max_count"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_main_header_textview_occurrences_max_count"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
+				<EditText
+					android:id="@+id/fragment_edit_task_part_main_edittext_occurrences_max_count"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:inputType="numberDecimal"
+					android:minEms="3"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:baselineAligned="true" >
+				<TextView
+					android:id="@+id/fragment_edit_task_part_main_header_textview_repeat_up_till_date"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_main_header_textview_repeat_up_till_date"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
+				<CheckBox
+					android:id="@+id/fragment_edit_task_part_main_checkbox_task_repetition_end_date"
+					android:layout_width="fill_parent"
+					android:layout_height="50dip"
+					android:layout_gravity="bottom"
+					android:layout_weight="1"
+					android:button="@drawable/date_checkbox"
+					android:checked="true"
+					android:text="@string/date_pattern" />
+				<CheckBox
+					android:id="@+id/fragment_edit_task_part_main_checkbox_task_repetition_end_time"
+					android:layout_width="fill_parent"
+					android:layout_height="50dip"
+					android:layout_weight="1"
+					android:button="@drawable/time_checkbox"
+					android:checked="true"
+					android:text="@string/time_pattern" />
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal" >
+			<TextView
+				android:id="@+id/fragment_edit_task_part_main_header_textview_task_color"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_main_header_textview_task_color"
+				android:textAppearance="?android:attr/textAppearanceMedium" >
+			</TextView>
+			<EditText
+				android:id="@+id/fragment_edit_task_part_main_edittext_task_color"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:ems="8"
+				android:inputType="text"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+			<ImageButton
+				android:id="@+id/fragment_edit_task_part_main_button_task_color"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:contentDescription="@string/fragment_edit_task_part_main_button_pick_task_color_description"
+				android:src="@drawable/ic_palette_black_24dp" />
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+			<TextView
+				android:id="@+id/fragment_edit_task_part_main_header_textview_task_parent"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_main_header_textview_task_parent"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:visibility="gone" />
+			<CheckBox
+				android:id="@+id/fragment_edit_task_part_main_checkbox_task_parent"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_main_checkbox_task_parent_not_set"
+				android:visibility="gone" />
+			<CheckedTextView
+				android:id="@+id/fragment_edit_task_part_main_checkedtextview_task_parent"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+				android:gravity="center_vertical"
+				android:text="@string/fragment_edit_task_part_main_header_textview_task_parent"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+			<TextView
+				android:id="@+id/fragment_edit_task_part_main_textview_task_parent"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_main_checkbox_task_parent_not_set"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:textColor="?android:attr/textColorPrimaryNoDisable" />
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" >
+			<TextView
+				android:id="@+id/fragment_edit_task_part_main_header_textview_sort_order"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_main_header_textview_sort_order"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+			<RadioGroup
+				android:id="@+id/fragment_edit_task_part_main_radiogroup_task_sortorder"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:baselineAligned="true"
+				android:checkedButton="@+id/fragment_edit_task_part_main_radiobutton_task_sortorder_first"
+				android:orientation="horizontal" >
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_main_radiobutton_task_sortorder_first"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_main_radiobutton_task_sortorder_first" />
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_main_radiobutton_task_sortorder_last"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_main_radiobutton_task_sortorder_last" />
+				<RadioButton
+					android:id="@+id/fragment_edit_task_part_main_radiobutton_task_sortorder_aftertask"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/fragment_edit_task_part_main_radiobutton_task_sortorder_aftertask_text_none" />
+				<TextView
+					android:id="@+id/fragment_edit_task_part_main_textview_task_sortorder_aftertask"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:textColor="?android:attr/textColorPrimaryNoDisable" />
+			</RadioGroup>
+		</LinearLayout>
+		<TextView
+			android:id="@+id/fragment_edit_task_part_main_header_textview_task_percent_of_completion"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_edit_task_part_main_header_textview_task_percent_of_completion"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:visibility="gone" >
+		</TextView>
+		<SeekBar
+			android:id="@+id/fragment_edit_task_part_main_seekbar_task_percent_of_completion"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:max="100"
+			android:visibility="gone" />
+		<CheckBox
+			android:id="@+id/checkbox_completed"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_edit_task_part_main_checkbox_completed"
+			android:visibility="gone" />
+		<TextView
+			android:id="@+id/fragment_edit_task_part_main_header_textview_task_priority"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_edit_task_part_main_header_textview_task_priority"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:visibility="gone" />
+		<RadioGroup
+			android:id="@+id/fragment_edit_task_part_main_radiogroup_task_priority"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:baselineAligned="true"
+			android:checkedButton="@+id/fragment_edit_task_part_main_radiobutton_task_priority_medium"
+			android:orientation="horizontal"
+			android:visibility="gone" >
+			<RadioButton
+				android:id="@+id/fragment_edit_task_part_main_radiobutton_task_priority_low"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/fragment_edit_task_part_main_radiobutton_task_priority_low" />
+			<RadioButton
+				android:id="@+id/fragment_edit_task_part_main_radiobutton_task_priority_medium"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/fragment_edit_task_part_main_radiobutton_task_priority_medium" />
+			<RadioButton
+				android:id="@+id/fragment_edit_task_part_main_radiobutton_task_priority_high"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/fragment_edit_task_part_main_radiobutton_task_priority_high" />
+		</RadioGroup>
+		<LinearLayout
+			android:id="@+id/fragment_edit_task_part_main_linearlayout_calendar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+			<TextView
+				android:id="@+id/fragment_edit_task_part_main_header_textview_calendar"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/fragment_edit_task_part_main_header_textview_calendar"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+			<Spinner
+				android:id="@+id/fragment_edit_task_part_main_spinner_calendar"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>

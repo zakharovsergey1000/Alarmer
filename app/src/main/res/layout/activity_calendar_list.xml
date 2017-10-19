@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context="biz.advancedcalendar.activities.ActivityCalendarList" >
+	<android.support.v7.widget.Toolbar
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/my_toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:background="?attr/colorPrimary"
+		android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+		app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+	<fragment
+		android:id="@+id/item_list"
+		android:name="biz.advancedcalendar.fragments.FragmentCalendarList"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="16dp"
+		android:layout_marginRight="16dp"
+		tools:context="biz.advancedcalendar.ActivityCalendarList"
+		tools:layout="@android:layout/list_content" />
+</LinearLayout>

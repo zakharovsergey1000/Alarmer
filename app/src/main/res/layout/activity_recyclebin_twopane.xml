@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/activity_recyclebin_twopane_linearlayout1"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context="biz.advancedcalendar.activities.ActivityRecyclebinList" >
+	<!--
+    This layout is a two-pane layout for the Calendars
+    master/detail flow. See res/values-large/refs.xml and
+    res/values-sw600dp/refs.xml for an example of layout aliases
+    that replace the single-pane version of the layout with
+    this two-pane version.
+
+    For more on layout aliases, see:
+    http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
+	-->
+	<android.support.v7.widget.Toolbar
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:background="?attr/colorPrimary"
+		android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+		app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+	<LinearLayout
+		android:id="@+id/activity_recyclebin_twopane_linearlayout2"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="16dp"
+		android:layout_marginRight="16dp"
+		android:baselineAligned="false"
+		android:divider="?android:attr/dividerHorizontal"
+		android:orientation="horizontal"
+		tools:context="biz.advancedcalendar.activities.ActivityRecyclebinList" >
+		<FrameLayout
+			android:id="@+id/fragment_recyclebinlist_container"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			tools:context="biz.advancedcalendar.activities.ActivityRecyclebinList"
+			tools:ignore="MergeRootFrame" />
+		<FrameLayout
+			android:id="@+id/fragment_recyclebindetails_container"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="3" />
+	</LinearLayout>
+</LinearLayout>

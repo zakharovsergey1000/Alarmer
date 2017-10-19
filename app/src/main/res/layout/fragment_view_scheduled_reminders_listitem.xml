@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/fragment_view_scheduled_reminders_listitem_linearlayout"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal" >
+
+	<CheckBox
+		android:id="@+id/fragment_view_scheduled_reminders_listitem_checkbox"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:button="@drawable/alarm_clock_with_checkbox"
+		android:checked="true"
+		android:paddingLeft="5dp"
+		android:paddingRight="5dp" />
+
+	<LinearLayout
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:orientation="vertical" >
+
+		<TableLayout
+			android:id="@+id/fragment_view_scheduled_reminders_listitem_tablelayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" />
+
+		<LinearLayout
+			android:id="@+id/fragment_view_scheduled_reminders_listitem_linearlayout_buttons_resnooze_dismiss"
+			style="?android:attr/buttonBarStyle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal" >
+
+			<Button
+				android:id="@+id/fragment_view_scheduled_reminders_listitem_button_resnooze"
+				style="?android:attr/buttonBarButtonStyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/fragment_view_scheduled_reminders_listitem_button_resnooze" />
+
+			<Button
+				android:id="@+id/fragment_view_scheduled_reminders_listitem_button_dismiss"
+				style="?android:attr/buttonBarButtonStyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="@string/fragment_view_scheduled_reminders_listitem_button_dismiss" />
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>

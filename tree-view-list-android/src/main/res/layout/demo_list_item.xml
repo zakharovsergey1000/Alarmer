@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="false"
+    android:gravity="center_vertical"
+    android:padding="2dip" >
+
+ <!--    <TextView
+        android:id="@+id/demo_list_item_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:padding="4dip"
+        android:text="0"
+        android:textSize="24dp" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/demo_list_item_description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:focusable="false"
+        android:padding="4dip"
+        android:text="Text"
+        android:textSize="24dp" >
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/demo_list_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:checked="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:padding="0dip"
+        android:soundEffectsEnabled="true"
+        android:text="" >
+    </CheckBox>
+ -->
+    <TextView
+        android:id="@+id/demo_list_item_level"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:focusable="false"
+        android:textColor="#fccc"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/demo_list_item_description"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/demo_list_item_level"
+        android:focusable="false"
+        android:textColor="#feee"
+        android:textSize="13sp" />
+
+    <pl.polidea.treeview.demo.InertCheckBox
+        android:id="@+id/demo_list_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:button="@drawable/checkbox"
+        android:focusable="false" />
+
+</LinearLayout>

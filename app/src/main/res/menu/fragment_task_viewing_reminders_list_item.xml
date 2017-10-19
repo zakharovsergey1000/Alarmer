@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	<item
+		android:id="@+id/set_enabled"
+		android:showAsAction="always"
+		android:title="@string/fragment_view_scheduled_reminders_menu_set_enabled"/>
+	<item
+		android:id="@+id/set_disabled"
+		android:showAsAction="always"
+		android:title="@string/fragment_view_scheduled_reminders_menu_set_disabled"/>
+	<item
+		android:id="@+id/delete"
+		android:icon="@drawable/ic_delete_black_24dp"
+		android:showAsAction="always"
+		android:title="@string/fragment_view_scheduled_reminders_menu_delete"/>
+</menu>

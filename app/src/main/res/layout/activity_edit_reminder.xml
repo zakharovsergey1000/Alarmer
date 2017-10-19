@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+	<!-- The ActionBar displayed at the top -->
+	<include
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		layout="@layout/appbarlayout_toolbar" />
+	<ScrollView
+		android:id="@+id/scrollView1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" >
+			<CheckBox
+				android:id="@+id/activity_edit_reminder_checkbox_reminder_enabled"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+			<TextView
+				android:id="@+id/activity_edit_reminder_header_textview_reminder_description"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/activity_edit_reminder_header_textview_reminder_description"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+			<EditText
+				android:id="@+id/activity_edit_reminder_edittext_reminder_description"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:inputType="text"
+				android:minEms="10"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+			<RadioGroup
+				android:id="@+id/activity_edit_reminder_radiogroup_notification_alarm"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:baselineAligned="true"
+				android:checkedButton="@+id/activity_edit_reminder_radio_alarm"
+				android:orientation="horizontal" >
+				<RadioButton
+					android:id="@+id/activity_edit_reminder_radio_alarm"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="@string/activity_edit_reminder_radio_alarm" />
+				<RadioButton
+					android:id="@+id/activity_edit_reminder_radio_notification"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="@string/activity_edit_reminder_radio_notification" />
+			</RadioGroup>
+			<TextView
+				android:id="@+id/activity_edit_reminder_header_textview_reminder_time"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/activity_edit_reminder_header_textview_reminder_time"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+			<RadioGroup
+				android:id="@+id/activity_edit_reminder_radiogroup_reminder_time"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:checkedButton="@+id/activity_edit_reminder_radio_reminder_time_absolute"
+				android:orientation="horizontal" >
+				<RadioButton
+					android:id="@+id/activity_edit_reminder_radio_reminder_time_absolute"
+					android:layout_width="fill_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:text="@string/activity_edit_reminder_radio_reminder_time_absolute" />
+				<RadioButton
+					android:id="@+id/activity_edit_reminder_radio_reminder_time_after_now"
+					android:layout_width="fill_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:text="@string/activity_quick_reminder_radio_reminder_time_after_now" />
+				<RadioButton
+					android:id="@+id/activity_edit_reminder_radio_reminder_time_before_event"
+					android:layout_width="fill_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:text="@string/activity_edit_reminder_radio_reminder_time_before_event" />
+				<RadioButton
+					android:id="@+id/activity_edit_reminder_radio_reminder_time_after_event"
+					android:layout_width="fill_parent"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:text="@string/activity_edit_reminder_radio_reminder_time_after_event" />
+			</RadioGroup>
+			<LinearLayout
+				android:id="@+id/activity_edit_reminder_linearlayout_reminder_time_absolute"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical" >
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal" >
+					<Button
+						android:id="@+id/button_reminder_date"
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:button="@drawable/date_checkbox"
+						android:freezesText="true"
+						android:text="@string/activity_edit_reminder_button_reminder_date" />
+					<Button
+						android:id="@+id/button_reminder_time"
+						android:layout_width="0dp"
+						android:layout_height="match_parent"
+						android:layout_weight="1"
+						android:button="@drawable/time_checkbox"
+						android:freezesText="true"
+						android:text="@string/activity_edit_reminder_button_reminder_time" />
+				</LinearLayout>
+			</LinearLayout>
+			<RelativeLayout
+				android:id="@+id/activity_edit_reminder_relativelayout_reminder_time_before_event"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal" >
+				<Button
+					android:id="@+id/button_reminder_time_before_event"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:id="@+id/activity_edit_reminder_relativelayout_reminder_time_after_now_hours_minutes"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center_horizontal" >
+				<Button
+					android:id="@+id/button_reminder_time_after_now"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:button="@drawable/time_checkbox"
+					android:freezesText="true" />
+			</RelativeLayout>
+			<CheckBox
+				android:id="@+id/activity_edit_reminder_checkbox_advanced_settings"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:button="@drawable/expand_collapse_checkbox" />
+			<LinearLayout
+				android:id="@+id/activity_edit_reminder_linearlayout_advanced_settings"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical" >
+				<LinearLayout
+					android:id="@+id/activity_edit_reminder_linearlayout_alarm_ringtone_segment"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="vertical" >
+					<TextView
+						android:id="@+id/activity_edit_reminder_textview_alarm_ringtone"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/activity_edit_reminder_textview_alarm_ringtone" />
+					<RadioGroup
+						android:id="@+id/activity_edit_reminder_radiogroup_alarm_ringtone"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" >
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_alarm_ringtone_from_task"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_from_task" />
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_alarm_ringtone_custom"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_custom" />
+					</RadioGroup>
+					<TextView
+						android:id="@+id/activity_edit_reminder_textview_ringtone_fade_in_time"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/activity_edit_reminder_textview_ringtone_fade_in_time" />
+					<RadioGroup
+						android:id="@+id/activity_edit_reminder_radiogroup_ringtone_fade_in_time"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" >
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_ringtone_fade_in_time_from_task"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_from_task" />
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_ringtone_fade_in_time_custom"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_custom" />
+					</RadioGroup>
+					<LinearLayout
+						android:id="@+id/activity_edit_reminder_linearlayout_ringtone_fade_in_time_custom_segment"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal" >
+						<EditText
+							android:id="@+id/activity_edit_reminder_edittext_ringtone_fade_in_time"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:inputType="numberDecimal"
+							android:minEms="3" >
+						</EditText>
+						<TextView
+							android:id="@+id/activity_edit_reminder_textview_ringtone_fade_in_time_measurement_unit"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textAppearance="?android:attr/textAppearanceButton" />
+					</LinearLayout>
+					<TextView
+						android:id="@+id/activity_edit_reminder_textview_reminders_popup_window_displaying_duration"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/activity_edit_reminder_textview_reminders_popup_window_displaying_duration" />
+					<RadioGroup
+						android:id="@+id/activity_edit_reminder_radiogroup_reminders_popup_window_displaying_duration"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" >
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_reminders_popup_window_displaying_duration_from_task"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_from_task" />
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_reminders_popup_window_displaying_duration_custom"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_custom" />
+					</RadioGroup>
+					<LinearLayout
+						android:id="@+id/activity_edit_reminder_linearlayout_reminders_popup_window_displaying_duration_custom_segment"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal" >
+						<EditText
+							android:id="@+id/activity_edit_reminder_edittext_reminders_popup_window_displaying_duration"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:inputType="numberDecimal"
+							android:minEms="3" >
+						</EditText>
+						<TextView
+							android:id="@+id/activity_edit_reminder_textview_reminders_popup_window_displaying_duration_measurement_unit"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textAppearance="?android:attr/textAppearanceButton" />
+					</LinearLayout>
+					<TextView
+						android:id="@+id/activity_edit_reminder_textview_automatic_snooze_duration"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/activity_edit_reminder_textview_automatic_snooze_duration" />
+					<RadioGroup
+						android:id="@+id/activity_edit_reminder_radiogroup_automatic_snooze_duration"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" >
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_automatic_snooze_duration_from_task"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_from_task" />
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_automatic_snooze_duration_custom"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_custom" />
+					</RadioGroup>
+					<LinearLayout
+						android:id="@+id/activity_edit_reminder_linearlayout_automatic_snooze_duration_custom_segment"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal" >
+						<EditText
+							android:id="@+id/activity_edit_reminder_edittext_automatic_snooze_duration"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:inputType="numberDecimal"
+							android:minEms="3" >
+						</EditText>
+						<TextView
+							android:id="@+id/activity_edit_reminder_textview_automatic_snooze_duration_measurement_unit"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textAppearance="?android:attr/textAppearanceButton" />
+					</LinearLayout>
+					<TextView
+						android:id="@+id/activity_edit_reminder_textview_automatic_snoozes_max_count"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/activity_edit_reminder_textview_automatic_snoozes_max_count" />
+					<RadioGroup
+						android:id="@+id/activity_edit_reminder_radiogroup_automatic_snoozes_max_count"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" >
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_automatic_snoozes_max_count_from_task"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_from_task" />
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_automatic_snoozes_max_count_custom"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_custom" />
+					</RadioGroup>
+					<LinearLayout
+						android:id="@+id/activity_edit_reminder_linearlayout_automatic_snoozes_max_count_custom_segment"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal" >
+						<EditText
+							android:id="@+id/activity_edit_reminder_edittext_automatic_snoozes_max_count"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:inputType="numberDecimal"
+							android:minEms="3" >
+						</EditText>
+						<TextView
+							android:id="@+id/activity_edit_reminder_textview_automatic_snoozes_max_count_measurement_unit"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textAppearance="?android:attr/textAppearanceButton" />
+					</LinearLayout>
+					<TextView
+						android:id="@+id/activity_edit_reminder_textview_vibrate_with_alarm_ringtone"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/activity_edit_reminder_textview_vibrate_with_alarm_ringtone" />
+					<RadioGroup
+						android:id="@+id/activity_edit_reminder_radiogroup_vibrate_with_alarm_ringtone"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" >
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_vibrate_with_alarm_ringtone_from_task"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_from_task" />
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_vibrate_with_alarm_ringtone_custom"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_custom" />
+					</RadioGroup>
+					<LinearLayout
+						android:id="@+id/activity_edit_reminder_linearlayout_vibrate_with_alarm_ringtone_custom_segment"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal" >
+						<CheckBox
+							android:id="@+id/activity_edit_reminder_checkbox_vibrate_with_alarm_ringtone"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_checkbox_text_vibrate" />
+					</LinearLayout>
+				</LinearLayout>
+				<LinearLayout
+					android:id="@+id/activity_edit_reminder_linearlayout_notification_ringtone_segment"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="vertical" >
+					<TextView
+						android:id="@+id/activity_edit_reminder_textview_notification_ringtone"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/activity_edit_reminder_textview_notification_ringtone" />
+					<RadioGroup
+						android:id="@+id/activity_edit_reminder_radiogroup_notification_ringtone"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" >
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_notification_ringtone_from_task"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_from_task" />
+						<RadioButton
+							android:id="@+id/activity_edit_reminder_radiobutton_notification_ringtone_custom"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="@string/activity_edit_reminder_radiobutton_text_custom" />
+					</RadioGroup>
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

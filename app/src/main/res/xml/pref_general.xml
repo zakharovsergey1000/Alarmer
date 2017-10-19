@@ -1,0 +1,218 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+	<PreferenceCategory
+		android:orderingFromXml="true"
+		android:title="@string/pref_category_general_settings" >
+		<biz.advancedcalendar.activities.MyPreference
+			android:key="@string/preference_key_calendars"
+			android:title="@string/pref_title_calendars" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="@string/information_unit_matrix_for_task_tree_default_value"
+			android:key="@string/preference_key_information_unit_matrix_for_task_tree"
+			android:title="@string/pref_title_information_unit_matrix_for_task_tree" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="@string/information_unit_matrix_for_calendar_time_intervals_mode_default_value"
+			android:key="@string/preference_key_information_unit_matrix_for_calendar_time_intervals_mode"
+			android:title="@string/pref_title_information_unit_matrix_for_calendar_time_intervals_mode" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="@string/information_unit_matrix_for_calendar_text_mode_default_value"
+			android:key="@string/preference_key_information_unit_matrix_for_calendar_text_mode"
+			android:title="@string/pref_title_information_unit_matrix_for_calendar_text_mode" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="@string/information_unit_matrix_for_agenda_default_value"
+			android:key="@string/preference_key_information_unit_matrix_for_agenda"
+			android:title="@string/pref_title_information_unit_matrix_for_agenda" />
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/first_day_of_week_default_value"
+			android:entries="@array/first_day_of_week_titles_array"
+			android:entryValues="@array/first_day_of_week_values_array"
+			android:key="@string/preference_key_first_day_of_week"
+			android:title="@string/pref_title_first_day_of_week" />
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/time_picker_time_format_default_value"
+			android:entries="@array/time_picker_time_format_titles_array"
+			android:entryValues="@array/time_picker_time_format_values_array"
+			android:key="@string/preference_key_time_picker_time_format"
+			android:title="@string/pref_title_time_picker_time_format" />
+		<biz.advancedcalendar.activities.MyCheckBoxPreference
+			android:defaultValue="@bool/is_calendars_bar_showed"
+			android:key="@string/preference_key_is_calendars_bar_showed"
+			android:title="@string/pref_title_is_calendars_bar_showed" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="@integer/business_hours_start_time_default_value"
+			android:key="@string/preference_key_business_hours_start_time"
+			android:title="@string/pref_title_business_hours_start_time" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="@integer/business_hours_end_time_default_value"
+			android:key="@string/preference_key_business_hours_end_time"
+			android:title="@string/pref_title_business_hours_end_time" />
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/business_hours_task_displaying_policy_default_value"
+			android:entries="@array/business_hours_task_displaying_policy_titles_array"
+			android:entryValues="@array/business_hours_task_displaying_policy_values_array"
+			android:key="@string/preference_key_business_hours_task_displaying_policy"
+			android:title="@string/pref_title_business_hours_task_displaying_policy" />
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/on_task_select_action_default_value"
+			android:entries="@array/on_task_select_action_titles_array"
+			android:entryValues="@array/on_task_select_action_values_array"
+			android:key="@string/preference_key_on_task_select_action"
+			android:title="@string/pref_title_on_task_select_action" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="@color/calendar_today_date_text_color_default_value"
+			android:key="@string/preference_key_calendar_today_date_text_color"
+			android:title="@string/pref_title_calendar_today_date_text_color" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="@color/calendar_today_date_highlight_color_default_value"
+			android:key="@string/preference_key_calendar_today_date_highlight_color"
+			android:title="@string/pref_title_calendar_today_date_highlight_color" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="@integer/silence_time_duration_default_value"
+			android:key="@string/preference_key_silence_time_duration"
+			android:title="@string/pref_title_silence_time_duration" />
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/reminder_default_behavior_for_completed_task"
+			android:entries="@array/reminder_behavior_for_completed_task_titles_array"
+			android:entryValues="@array/reminder_behavior_for_completed_task_values_array"
+			android:key="@string/preference_key_reminder_behavior_for_completed_task"
+			android:title="@string/pref_title_reminder_behavior_for_completed_task" />
+		<biz.advancedcalendar.activities.MyCheckBoxPreference
+			android:defaultValue="@bool/vibrate_with_alarm_ringtone_default_value"
+			android:key="@string/preference_key_vibrate_with_alarm_ringtone"
+			android:title="@string/pref_title_vibrate_with_alarm_ringtone" />
+	</PreferenceCategory>
+	<PreferenceCategory
+		android:orderingFromXml="true"
+		android:title="@string/pref_category_default_settings_for_new_task_event" >
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/start_time_required_action_default_value"
+			android:entries="@array/start_time_required_action_titles_array"
+			android:entryValues="@array/start_time_required_action_values_array"
+			android:key="@string/preference_key_start_time_required_action"
+			android:title="@string/pref_title_start_time_required_action" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="@integer/start_time_default_value"
+			android:key="@string/preference_key_start_time"
+			android:title="@string/pref_title_start_time" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="@integer/task_duration_default_value"
+			android:key="@string/preference_key_task_duration"
+			android:title="@string/pref_title_task_duration" />
+		<biz.advancedcalendar.activities.MyEditTextPreference
+			android:defaultValue="@integer/repetitions_duration_default_value"
+			android:dialogTitle="@string/pref_dialog_title_repetitions_duration"
+			android:key="@string/preference_key_repetitions_duration"
+			android:numeric="integer"
+			android:title="@string/pref_title_repetitions_duration" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="@color/task_unset_color_default_value"
+			android:key="@string/preference_key_task_unset_color"
+			android:title="@string/pref_title_task_unset_color" />
+		<!--<biz.advancedcalendar.activities.MyListPreference
+		android:defaultValue="@integer/hours_ruler_displaying_policy_default_value"
+		android:entries="@array/hours_ruler_displaying_policy_titles_array"
+		android:entryValues="@array/hours_ruler_displaying_policy_values_array"
+		android:key="@string/preference_key_hours_ruler_displaying_policy"
+		android:title="@string/pref_title_hours_ruler_displaying_policy" />-->
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/date_picker_default_selected_date"
+			android:entries="@array/date_picker_selected_date_titles_array"
+			android:entryValues="@array/date_picker_selected_date_values_array"
+			android:key="@string/preference_key_date_picker_default_selected_date"
+			android:title="@string/pref_title_date_picker_default_selected_date" />
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/time_unit_default_value"
+			android:entries="@array/time_unit_titles_array"
+			android:entryValues="@array/time_unit_values_array"
+			android:key="@string/preference_key_time_unit"
+			android:title="@string/pref_title_time_unit" />
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/month_recurrence_mode_default_value"
+			android:entries="@array/month_recurrence_mode_titles_array"
+			android:entryValues="@array/month_recurrence_mode_values_array"
+			android:key="@string/preference_key_month_recurrence_mode"
+			android:title="@string/pref_title_month_recurrence_mode" />
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/month_based_recurrences_date_default_value"
+			android:entries="@array/month_based_recurrences_date_titles_array"
+			android:entryValues="@array/month_based_recurrences_date_values_array"
+			android:key="@string/preference_key_month_based_recurrences_date"
+			android:title="@string/pref_title_month_based_recurrences_date" />
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/week_day_number_default_value"
+			android:entries="@array/week_day_number_titles_array"
+			android:entryValues="@array/week_day_number_values_array"
+			android:key="@string/preference_key_week_day_number"
+			android:title="@string/pref_title_week_day_number" />
+		<biz.advancedcalendar.activities.MyEditTextPreference
+			android:defaultValue="@integer/time_units_count_minutely_recurrent_default_value"
+			android:dialogTitle="@string/pref_dialog_title_time_units_count_minutely_recurrent"
+			android:key="@string/preference_key_time_units_count_minutely_recurrent"
+			android:numeric="integer"
+			android:title="@string/pref_title_time_units_count_minutely_recurrent" />
+		<biz.advancedcalendar.activities.MyEditTextPreference
+			android:defaultValue="@integer/time_units_count_hourly_recurrent_default_value"
+			android:dialogTitle="@string/pref_dialog_title_time_units_count_hourly_recurrent"
+			android:key="@string/preference_key_time_units_count_hourly_recurrent"
+			android:numeric="integer"
+			android:title="@string/pref_title_time_units_count_hourly_recurrent" />
+		<biz.advancedcalendar.activities.MyEditTextPreference
+			android:defaultValue="@integer/time_units_count_daily_recurrent_default_value"
+			android:dialogTitle="@string/pref_dialog_title_time_units_count_daily_recurrent"
+			android:key="@string/preference_key_time_units_count_daily_recurrent"
+			android:numeric="integer"
+			android:title="@string/pref_title_time_units_count_daily_recurrent" />
+		<biz.advancedcalendar.activities.MyEditTextPreference
+			android:defaultValue="@integer/time_units_count_weekly_recurrent_default_value"
+			android:dialogTitle="@string/pref_dialog_title_time_units_count_weekly_recurrent"
+			android:key="@string/preference_key_time_units_count_weekly_recurrent"
+			android:numeric="integer"
+			android:title="@string/pref_title_time_units_count_weekly_recurrent" />
+		<biz.advancedcalendar.activities.MyEditTextPreference
+			android:defaultValue="@integer/time_units_count_monthly_recurrent_on_date_default_value"
+			android:dialogTitle="@string/pref_dialog_title_time_units_count_monthly_recurrent_on_date"
+			android:key="@string/preference_key_time_units_count_monthly_recurrent_on_date"
+			android:numeric="integer"
+			android:title="@string/pref_title_time_units_count_monthly_recurrent_on_date" />
+		<biz.advancedcalendar.activities.MyEditTextPreference
+			android:defaultValue="@integer/time_units_count_monthly_recurrent_on_nth_week_day_default_value"
+			android:dialogTitle="@string/pref_dialog_title_time_units_count_monthly_recurrent_on_nth_week_day"
+			android:key="@string/preference_key_time_units_count_monthly_recurrent_on_nth_week_day"
+			android:numeric="integer"
+			android:title="@string/pref_title_time_units_count_monthly_recurrent_on_nth_week_day" />
+		<biz.advancedcalendar.activities.MyEditTextPreference
+			android:defaultValue="@integer/time_units_count_yearly_recurrent_default_value"
+			android:dialogTitle="@string/pref_dialog_title_time_units_count_yearly_recurrent"
+			android:key="@string/preference_key_time_units_count_yearly_recurrent"
+			android:numeric="integer"
+			android:title="@string/pref_title_time_units_count_yearly_recurrent" />
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/time_units_starting_index_default_value"
+			android:entries="@array/time_units_starting_index_titles_array"
+			android:entryValues="@array/time_units_starting_index_values_array"
+			android:key="@string/preference_key_time_units_starting_index"
+			android:title="@string/pref_title_time_units_starting_index" />
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/task_copying_approach_default_value"
+			android:entries="@array/task_copying_approach_titles_array"
+			android:entryValues="@array/task_copying_approach_values_array"
+			android:key="@string/preference_key_task_copying_approach"
+			android:title="@string/pref_title_task_copying_approach" />
+	</PreferenceCategory>
+	<PreferenceCategory
+		android:orderingFromXml="true"
+		android:title="@string/pref_category_backup" >
+		<biz.advancedcalendar.activities.MyPreference
+			android:key="@string/preference_key_backup_now"
+			android:title="@string/pref_title_backup_now" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:key="@string/preference_key_restore"
+			android:title="@string/pref_title_restore" />
+		<!--
+         	<biz.advancedcalendar.activities.MyCheckBoxPreference
+			android:defaultValue="@bool/automatic_backup_default_value"
+			android:key="@string/preference_key_automatic_backup"
+			android:title="@string/pref_title_automatic_backup"
+			android:visible="false" />
+		-->
+	</PreferenceCategory>
+</PreferenceScreen>

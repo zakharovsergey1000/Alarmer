@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/fragment_view_task_part_notes_header_textview_task_notes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_view_task_part_notes_header_textview_task_notes"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/fragment_view_task_part_notes_value_textview_task_notes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </TextView>
+
+</LinearLayout>

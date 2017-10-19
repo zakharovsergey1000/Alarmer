@@ -1,0 +1,1647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="selected_configuration">layout</string>
+	<!-- Choices for timezones, must be kept in sync with timezone_values. This list was taken from packages/apps/Settings/res/xml/timezones.xml sed -e 's/^.*">/ <item>"/;s,</.*$,"</item>,' packages/apps/Settings/res/xml/timezones.xml [CHAR LIMIT=25] -->
+	<string-array name="timezone_labels">
+		<item>"Marshall Islands"</item>
+		<item>"Midway Island"</item>
+		<item>"Hawaii"</item>
+		<item>"Alaska"</item>
+		<item>"Pacific Time"</item>
+		<item>"Tijuana"</item>
+		<item>"Arizona"</item>
+		<item>"Chihuahua"</item>
+		<item>"Mountain Time"</item>
+		<item>"Central America"</item>
+		<item>"Central Time"</item>
+		<item>"Mexico City"</item>
+		<item>"Saskatchewan"</item>
+		<item>"Bogota"</item>
+		<item>"Eastern Time"</item>
+		<item>"Venezuela"</item>
+		<item>"Atlantic Time (Barbados)"</item>
+		<item>"Atlantic Time (Canada)"</item>
+		<item>"Manaus"</item>
+		<item>"Santiago"</item>
+		<item>"Newfoundland"</item>
+		<item>"Brasilia"</item>
+		<item>"Buenos Aires"</item>
+		<item>"Greenland"</item>
+		<item>"Montevideo"</item>
+		<item>"Mid-Atlantic"</item>
+		<item>"Azores"</item>
+		<item>"Cape Verde Islands"</item>
+		<item>"Casablanca"</item>
+		<item>"London, Dublin"</item>
+		<item>"Amsterdam, Berlin"</item>
+		<item>"Belgrade"</item>
+		<item>"Brussels"</item>
+		<item>"Sarajevo"</item>
+		<item>"Windhoek"</item>
+		<item>"W. Africa Time"</item>
+		<item>"Amman, Jordan"</item>
+		<item>"Athens, Istanbul"</item>
+		<item>"Beirut, Lebanon"</item>
+		<item>"Cairo"</item>
+		<item>"Helsinki"</item>
+		<item>"Jerusalem"</item>
+		<item>"Minsk"</item>
+		<item>"Harare"</item>
+		<item>"Baghdad"</item>
+		<item>"Moscow"</item>
+		<item>"Kuwait"</item>
+		<item>"Nairobi"</item>
+		<item>"Tehran"</item>
+		<item>"Baku"</item>
+		<item>"Tbilisi"</item>
+		<item>"Yerevan"</item>
+		<item>"Dubai"</item>
+		<item>"Kabul"</item>
+		<item>"Islamabad, Karachi"</item>
+		<item>"Ural'sk"</item>
+		<item>"Yekaterinburg"</item>
+		<item>"Kolkata"</item>
+		<item>"Sri Lanka"</item>
+		<item>"Kathmandu"</item>
+		<item>"Astana"</item>
+		<item>"Yangon"</item>
+		<item>"Krasnoyarsk"</item>
+		<item>"Bangkok"</item>
+		<item>"Beijing"</item>
+		<item>"Hong Kong"</item>
+		<item>"Irkutsk"</item>
+		<item>"Kuala Lumpur"</item>
+		<item>"Perth"</item>
+		<item>"Taipei"</item>
+		<item>"Seoul"</item>
+		<item>"Tokyo, Osaka"</item>
+		<item>"Yakutsk"</item>
+		<item>"Adelaide"</item>
+		<item>"Darwin"</item>
+		<item>"Brisbane"</item>
+		<item>"Hobart"</item>
+		<item>"Sydney, Canberra"</item>
+		<item>"Vladivostok"</item>
+		<item>"Guam"</item>
+		<item>"Magadan"</item>
+		<item>"Auckland"</item>
+		<item>"Fiji"</item>
+		<item>"Tonga"</item>
+	</string-array>
+	<!-- Choices for timezones, must be kept in sync with timezone_values. This list was taken from packages/apps/Settings/res/xml/timezones.xml sed -e 's/^.*=/ <item>/;s,">.*$,"</item>,' packages/apps/Settings/res/xml/timezones.xml -->
+	<string-array name="timezone_values" translatable="false">
+		<item>"Pacific/Majuro"</item>
+		<item>"Pacific/Midway"</item>
+		<item>"Pacific/Honolulu"</item>
+		<item>"America/Anchorage"</item>
+		<item>"America/Los_Angeles"</item>
+		<item>"America/Tijuana"</item>
+		<item>"America/Phoenix"</item>
+		<item>"America/Chihuahua"</item>
+		<item>"America/Denver"</item>
+		<item>"America/Costa_Rica"</item>
+		<item>"America/Chicago"</item>
+		<item>"America/Mexico_City"</item>
+		<item>"America/Regina"</item>
+		<item>"America/Bogota"</item>
+		<item>"America/New_York"</item>
+		<item>"America/Caracas"</item>
+		<item>"America/Barbados"</item>
+		<item>"America/Halifax"</item>
+		<item>"America/Manaus"</item>
+		<item>"America/Santiago"</item>
+		<item>"America/St_Johns"</item>
+		<item>"America/Sao_Paulo"</item>
+		<item>"America/Argentina/Buenos_Aires"</item>
+		<item>"America/Godthab"</item>
+		<item>"America/Montevideo"</item>
+		<item>"Atlantic/South_Georgia"</item>
+		<item>"Atlantic/Azores"</item>
+		<item>"Atlantic/Cape_Verde"</item>
+		<item>"Africa/Casablanca"</item>
+		<item>"Europe/London"</item>
+		<item>"Europe/Amsterdam"</item>
+		<item>"Europe/Belgrade"</item>
+		<item>"Europe/Brussels"</item>
+		<item>"Europe/Sarajevo"</item>
+		<item>"Africa/Windhoek"</item>
+		<item>"Africa/Brazzaville"</item>
+		<item>"Asia/Amman"</item>
+		<item>"Europe/Athens"</item>
+		<item>"Asia/Beirut"</item>
+		<item>"Africa/Cairo"</item>
+		<item>"Europe/Helsinki"</item>
+		<item>"Asia/Jerusalem"</item>
+		<item>"Europe/Minsk"</item>
+		<item>"Africa/Harare"</item>
+		<item>"Asia/Baghdad"</item>
+		<item>"Europe/Moscow"</item>
+		<item>"Asia/Kuwait"</item>
+		<item>"Africa/Nairobi"</item>
+		<item>"Asia/Tehran"</item>
+		<item>"Asia/Baku"</item>
+		<item>"Asia/Tbilisi"</item>
+		<item>"Asia/Yerevan"</item>
+		<item>"Asia/Dubai"</item>
+		<item>"Asia/Kabul"</item>
+		<item>"Asia/Karachi"</item>
+		<item>"Asia/Oral"</item>
+		<item>"Asia/Yekaterinburg"</item>
+		<item>"Asia/Calcutta"</item>
+		<item>"Asia/Colombo"</item>
+		<item>"Asia/Katmandu"</item>
+		<item>"Asia/Almaty"</item>
+		<item>"Asia/Rangoon"</item>
+		<item>"Asia/Krasnoyarsk"</item>
+		<item>"Asia/Bangkok"</item>
+		<item>"Asia/Shanghai"</item>
+		<item>"Asia/Hong_Kong"</item>
+		<item>"Asia/Irkutsk"</item>
+		<item>"Asia/Kuala_Lumpur"</item>
+		<item>"Australia/Perth"</item>
+		<item>"Asia/Taipei"</item>
+		<item>"Asia/Seoul"</item>
+		<item>"Asia/Tokyo"</item>
+		<item>"Asia/Yakutsk"</item>
+		<item>"Australia/Adelaide"</item>
+		<item>"Australia/Darwin"</item>
+		<item>"Australia/Brisbane"</item>
+		<item>"Australia/Hobart"</item>
+		<item>"Australia/Sydney"</item>
+		<item>"Asia/Vladivostok"</item>
+		<item>"Pacific/Guam"</item>
+		<item>"Asia/Magadan"</item>
+		<item>"Pacific/Auckland"</item>
+		<item>"Pacific/Fiji"</item>
+		<item>"Pacific/Tongatapu"</item>
+	</string-array>
+	<string name="first">First</string>
+	<string name="last">Last</string>
+	<!-- Strings related to whole application -->
+	<string name="app_name">Alarmer</string>
+	<string name="app_name_advancedcalendar">Advanced Calendar</string>
+	<string name="app_name_alarmer">Alarmer</string>
+	<string name="action_show_calendars_selector">Show calendars selector</string>
+	<string name="action_hide_calendars_selector">Hide calendars selector</string>
+	<string name="action_show_days_count_selector">Show days count selector</string>
+	<string name="action_hide_days_count_selector">Hide days count selector</string>
+	<string name="preference_key_selected_calendars">preference_key_selected_calendars</string>
+	<string name="action_expand">Expand</string>
+	<string name="action_collapse">Collapse</string>
+	<string name="action_more">More</string>
+	<string name="action_less">Less</string>
+	<string name="action_help">Help</string>
+	<string name="action_settings">Settings</string>
+	<string name="action_logout">Logout</string>
+	<string name="action_calendar_new">New calendar</string>
+	<string name="action_task_new">New task</string>
+	<string name="action_goto_today">Go to today</string>
+	<string name="action_goto_date">Go to date</string>
+	<string name="action_show_latest_first">Show latest first</string>
+	<string name="action_show_oldest_first">Show oldest first</string>
+	<string name="action_dismiss_all">Dismiss all</string>
+	<string name="action_dismiss">Dismiss</string>
+	<string name="action_discard_all">Discard all</string>
+	<string name="action_discard">Discard</string>
+	<string name="action_check_all">Check all</string>
+	<string name="action_uncheck_all">Uncheck all</string>
+	<string name="action_new_reminder">New reminder</string>
+	<string name="action_mute_alarm">Mute alarm</string>
+	<string name="action_batch_restore">Batch restore</string>
+	<string name="action_weekview_toggle_display_mode_time_intervals">Toggle graphic mode</string>
+	<string name="action_weekview_toggle_display_mode_list">Toggle text mode</string>
+	<string name="action_unmute_alarm">Unmute alarm</string>
+	<string name="time_picker_title_for_silence_time">Silence time</string>
+	<string name="preference_key_silence_alarms_until_datetime">preference_key_silence_alarms_until_datetime</string>
+	<string name="action_silence_alarms">Silence alarms</string>
+	<string name="action_unsilence_alarms">Unsilence alarms</string>
+	<string name="alarms_are_silenced_for_time_interval">Alarms are silenced for: %1$s</string>
+	<string name="alarms_are_silenced_until_the_time">Alarms are silenced until: %1$s</string>
+	<string name="alarms_have_been_unsilenced">Alarms have been unsilenced</string>
+	<string name="toast_message_the_backup_file_was_successfully_created">The backup file was successfully created</string>
+	<string name="toast_message_the_backup_file_was_not_created">The backup file was not created</string>
+	<string name="action_label_new">New label</string>
+	<string name="action_contact_new">New contact</string>
+	<string name="action_file_new">New file</string>
+	<string name="action_diary_record_new">New diary record</string>
+	<string name="action_diary_records_expand_all">Expand all</string>
+	<string name="action_diary_records_collapse_all">Collapse all</string>
+	<string name="action_message_new">New message</string>
+	<string name="action_task_synchronize_all">Synchronize tasks</string>
+	<string name="action_label_synchronize_all">Synchronize labels</string>
+	<string name="action_contact_synchronize_all">Synchronize contacts</string>
+	<string name="action_file_synchronize_all">Synchronize files</string>
+	<string name="action_diary_record_synchronize_all">Synchronize diary records</string>
+	<string name="action_messages_synchronize_all">Synchronize messages</string>
+	<string name="action_reminder_new">New reminder</string>
+	<string name="action_edit">Edit</string>
+	<string name="action_edit_task_new_task_name">New task</string>
+	<string name="action_copy">Copy</string>
+	<string name="action_delete">Delete</string>
+	<string name="action_delete_permanently">Delete permanently</string>
+	<string name="action_undelete">Undelete</string>
+	<string name="action_view">View</string>
+	<string name="action_set_completed">Set completed</string>
+	<string name="action_set_active">Set active</string>
+	<string name="action_delete_task_confirmation">Delete task?</string>
+	<string name="action_dismiss_scheduled_reminder_confirmation">Dismiss the scheduled reminder?</string>
+	<string name="action_delete_checked_reminders_confirmation">Delete checked reminders?</string>
+	<string name="action_delete_reminder_confirmation">Delete the reminder?</string>
+	<string name="action_delete_checked_calendar_confirmation">Delete the calendar? All tasks in the calendar will be moved into the default calendar</string>
+	<string name="action_delete_checked_calendars_confirmation">Delete checked calendars? All tasks in the calendars will be moved into the default calendar</string>
+	<string name="action_undelete_checked_tasks_confirmation">Undelete checked tasks?</string>
+	<string name="action_undelete_the_task_confirmation">Undelete the task?</string>
+	<string name="action_undelete_task_confirmation">Undelete the task?</string>
+	<string name="action_delete_checked_tasks_permanently_confirmation">Delete checked tasks permanently?</string>
+	<string name="action_delete_the_task_permanently_confirmation">Delete the task permanently?</string>
+	<string name="action_discard_checked_elapsed_reminders_confirmation">Discard the checked elapsed reminders?</string>
+	<string name="action_discard_elapsed_reminder_confirmation">Discard the elapsed reminder?</string>
+	<string name="action_discard_all_elapsed_reminders_confirmation">Discard all elapsed reminders?</string>
+	<string name="action_delete_task_subtree_confirmation">Also delete task subtree</string>
+	<string name="action_dont_bother_anymore">Don’t show this again</string>
+	<string name="action_cancel">Cancel</string>
+	<string name="action_done">Done</string>
+	<string name="action_pick_predefined_color">Pick predefined color</string>
+	<string name="action_restore_tasks_from_backup_file_no_tasks_selected_to_replace_or_add_from_backup_file">No tasks selected to replace or add from backup file</string>
+	<string name="action_restore_tasks_from_backup_file_tasks_restored_successfully">Tasks restored successfully</string>
+	<string name="action_restore_tasks_from_backup_file__you_are_about_to">You are about to</string>
+	<string name="action_restore_tasks_from_backup_file__replace_tasks">replace %s task(s)</string>
+	<string name="action_restore_tasks_from_backup_file__and">and</string>
+	<string name="action_restore_tasks_from_backup_file__add_tasks">add %s task(s)</string>
+	<string name="action_restore_tasks_from_backup_file__from_backup_file">from the backup file</string>
+	<string name="action_restore_tasks_from_backup_file__do_you_want_to_continue">Continue?</string>
+	<string name="activity_view_task_action_edit_task">Edit task</string>
+	<string name="activity_import_tasks_recyclerview_item_radio_skip">Skip</string>
+	<string name="activity_import_tasks_recyclerview_item_radio_replace">Replace</string>
+	<string name="activity_import_tasks_recyclerview_item_radio_add">Add</string>
+	<string name="activity_import_tasks_recyclerview_imagebutton_choose_another_correlated_app_task">Choose another correlated application task</string>
+	<string name="activity_import_tasks_recyclerview_imagebutton_replace_task_in_app_by_the_task_from_backup_file">Replace the task in app by the task from the backup file</string>
+	<string name="activity_alarm_title">Alarm</string>
+	<string name="time_picker_title_for_snooze_mode">Snooze</string>
+	<string name="activity_alarm_header_textview_task_name">Task</string>
+	<string name="activity_alarm_radio_alarm_snooze_mode_timespan">Time interval</string>
+	<string name="activity_alarm_radio_alarm_snooze_mode_absolute_time">Absolute time</string>
+	<string name="activity_alarm_toast_next_alarm_time_for_snooze_mode_absolute_time_today">The reminder will go off today at: %1$s</string>
+	<string name="activity_alarm_toast_next_alarm_time_for_snooze_mode_absolute_time_tomorrow">The reminder will go off tomorrow at: %1$s</string>
+	<string name="activity_alarm_toast_next_alarm_time_for_snooze_mode_timespan">The reminder will go off after: %1$s</string>
+	<string name="activity_alarm_toast_next_alarm_time_for_snooze_mode_timespan_hours">hours</string>
+	<string name="activity_alarm_toast_next_alarm_time_for_snooze_mode_timespan_minutes">minutes</string>
+	<string name="hello_world">Hello world!</string>
+	<string name="title_activity_splash"></string>
+	<string name="alert_dialog_ok">OK</string>
+	<string name="alert_dialog_cancel">Cancel</string>
+	<string name="button_ok">OK</string>
+	<string name="button_dismiss">Dismiss</string>
+	<string name="button_cancel">Cancel</string>
+	<string name="date_pattern">yyyy-MM-dd</string>
+	<string name="time_pattern">HH:mm</string>
+	<string name="not_online">No network connection available</string>
+	<string name="pick_account">You must pick an account</string>
+	<string name="the_device_is_not_online">The device is not online</string>
+	<!-- Strings related to cab -->
+	<string name="cab_menu_delete">Delete</string>
+	<!-- Strings related to drawers_titles -->
+	<string name="drawer_title_calendar">Calendar</string>
+	<string name="drawer_title_taskstree">Tasks Tree</string>
+	<string name="drawer_title_reminders">Reminders</string>
+	<string name="drawer_title_settings">Settings</string>
+	<string name="drawer_title_recyclebin">Recycle Bin</string>
+	<string name="drawer_open">Open navigation drawer</string>
+	<string name="drawer_close">Close navigation drawer</string>
+	<string name="action_websearch">Web search</string>
+	<string name="app_not_available">Sorry, there’s no web browser available</string>
+	<!-- Strings related to editing in general -->
+	<string name="error_field_required">The field is required</string>
+	<string name="error_field_format_incorrect">Incorrect format</string>
+	<!-- Strings related to splash screenl -->
+	<string name="activity_splash_picture_description">Splash screen picture</string>
+	<string name="activity_splash_textview_info">Preparing database, please wait…</string>
+	<!-- Strings related to login -->
+	<string name="activity_login">Sign in</string>
+	<string name="radio_signin_type_application">Signin with Application account</string>
+	<string name="radio_signin_type_google">Signin with Google account</string>
+	<string name="radiobutton_signin">Sign in</string>
+	<string name="radiobutton_signup">Sign up</string>
+	<string name="prompt_email">Email</string>
+	<string name="prompt_password">Password</string>
+	<string name="prompt_confirm_password">Password confirmation</string>
+	<string name="action_signin">Sign in</string>
+	<string name="action_google_signin">Sign in with Google account</string>
+	<string name="action_signup">Sign up</string>
+	<string name="signup_success">Sign up success</string>
+	<string name="signup_success_email_confirmation_required">You have successfully signed up. Now you have to confirm your email before you can sign in. Please check your email box and follow the link to confirm your email.</string>
+	<string name="action_forgot_password">Recover lost password</string>
+	<string name="login_progress_signing_in">Signing in</string>
+	<string name="error_invalid_email">This email address is invalid</string>
+	<string name="error_invalid_password">Password must be at least %1$d characters</string>
+	<string name="error_invalid_confirm_password">Passwords do not match</string>
+	<string name="error_incorrect_password">This password is incorrect</string>
+	<string name="error_the_password_do_not_match_to_the_login">The password do not match to the login</string>
+	<string name="error_no_user_with_such_login">No user with such login</string>
+	<string name="error_an_error_occurred_while_signing_in">An error occurred while signing in:</string>
+	<string name="error_an_error_occurred_while_signing_up">An error occurred while signing up:</string>
+	<string name="error_an_unknown_error_occurred_while_signing_in">An unknown error occurred while signing in:</string>
+	<string name="error_an_unknown_error_occurred_while_signing_up">An unknown error occurred while signing up:</string>
+	<string name="error_the_login_is_already_taken_up">The login is already taken up</string>
+	<string name="error_the_server_returned_an_error_INTERNAL_SERVER_ERROR">The server returned an error: INTERNAL_SERVER_ERROR</string>
+	<string name="error_the_network_connection_failed">The network connection failed</string>
+	<string name="error_an_error_occurred">An error occurred:</string>
+	<string name="error_an_unknown_error_occurred">An unknown error occurred</string>
+	<string name="error_the_server_didnt_return_response_successfully">The server did not return response successfully.</string>
+	<string name="error_the_server_didnt_return_authorization_token">The server didn’t return authorization token.</string>
+	<string name="error_the_server_didnt_return_user_profile_data_successfully">The server didn’t return user profile data successfully</string>
+	<string name="error_the_server_has_returned_userprofile_equals_null_for_unknown_reason">The server has returned UserProfile == null for unknown reason</string>
+	<string name="error_please_check_internet_connection_settings">Please check Internet connection settings.</string>
+	<!-- Strings related to cab -->
+	<!-- Strings related to ActivityMain -->
+	<string name="no_suitable_file_manager_was_found.">No suitable File Manager was found.</string>
+	<string name="the_file_was_successfully_uploaded">The file was successfully uploaded.</string>
+	<string name="tab_agenda">Agenda</string>
+	<string name="tab_todo_list">To do</string>
+	<!-- Strings related to ActivityAlarm -->
+	<string name="activity_alarm_button_snooze">Snooze</string>
+	<string name="activity_alarm_button_snooze_minutes">minutes</string>
+	<string name="activity_alarm_button_dismiss">Dismiss</string>
+	<string name="activity_alarm_checkbox_advanced">Advanced</string>
+	<string name="activity_alarm_textview_select_custom_snooze_time">Select snooze time</string>
+	<string name="activity_alarm_textview_select_custom_snooze_time_minutes">Minutes</string>
+	<!-- Strings related to ActivityResnooze -->
+	<string name="activity_resnooze_textview_select_custom_snooze_time">Select snooze time</string>
+	<string name="activity_resnooze_textview_select_custom_snooze_time_minutes">Minutes</string>
+	<string name="activity_resnooze_title">Resnooze</string>
+	<string name="activity_pick_color_title">Pick color</string>
+	<string-array name="snooze_time_array">
+		<item>custom</item>
+		<item>5 minutes</item>
+		<item>10 minutes</item>
+		<item>15 minutes</item>
+		<item>30 minutes</item>
+		<item>45 minutes</item>
+		<item>1 hour</item>
+		<item>2 hours</item>
+		<item>3 hours</item>
+		<item>4 hours</item>
+	</string-array>
+	<!-- Strings related to ActivitySettings -->
+	<string name="never_sync">Never sync</string>
+	<string name="sync_every">Sync every</string>
+	<string name="minutes">minutes</string>
+	<!-- Strings related to ActivitySplash -->
+	<string name="database_creation_failed">Database creation failed!</string>
+	<string name="reason">Reason:</string>
+	<string name="close_application">Close Application</string>
+	<!-- Strings related to todo -->
+	<string name="radiobutton_todo_sort_order_default">Sort order default</string>
+	<string name="radiobutton_todo_sort_order_priority">Sort order by priority</string>
+	<string name="radiobutton_todo_sort_order_date">Sort order by date</string>
+	<!-- Strings related to agenda -->
+	<string name="actionbar_agenda">Agenda</string>
+	<!-- Strings related to calendar -->
+	<string name="actionbar_calendar">Calendar</string>
+	<string name="default_calendar_name">Default</string>
+	<string name="input_new_calendar_name">Input new calendar name</string>
+	<string name="input_calendar_name">Input calendar name</string>
+	<string name="choose_calendar">Choose calendar</string>
+	<string name="new_calendar_name">New calendar name</string>
+	<string name="tab_calendar_day">Day</string>
+	<string name="tab_calendar_week">Week</string>
+	<string name="tab_calendar_month">Month</string>
+	<string name="tab_calendar_agenda">Agenda</string>
+	<string name="collapse_expand_button_text_collapse">Collapse</string>
+	<string name="collapse_expand_button_text_expand">Expand</string>
+	<!-- Strings related to tasks -->
+	<string name="pref_fragment_view_week_previous_imagebutton">Previous</string>
+	<string name="pref_fragment_view_week_next_imagebutton">Next</string>
+	<string name="preference_key_fragment_view_week_collapse_expand_state">pref_fragment_view_week_collapse_expand_state</string>
+	<string name="preference_key_activity_edit_reminder_advanced_settings_expand_state">preference_key_activity_edit_reminder_advanced_settings_expand_state</string>
+	<string name="task_treeview_list_item_imageview_completed_contentdescription">Task completed</string>
+	<string name="fragment_view_week_days_count_selector_header_textview"><xliff:g id="days_count">%1$s</xliff:g> days</string>
+	<string name="fragment_view_task_header_textview_task_name">Task name:</string>
+	<string name="fragment_view_task_header_textview_parent_task">Parent task:</string>
+	<string name="fragment_view_task_value_textview_parent_task_not_set">Not set</string>
+	<string name="fragment_view_task_header_textview_sort_order">Sort order:</string>
+	<string name="fragment_view_task_value_textview_sort_order_first">First</string>
+	<string name="fragment_view_task_value_textview_sort_order_aftertask">After task</string>
+	<string name="fragment_view_task_value_textview_sort_order_last">Last</string>
+	<string name="fragment_view_task_header_textview_is_completed">Is completed:</string>
+	<string name="fragment_view_task_header_textview_is_deleted">Is deleted:</string>
+	<string name="fragment_view_task_value_textview_is_completed_yes">Yes</string>
+	<string name="fragment_view_task_value_textview_is_completed_no">No</string>
+	<string name="fragment_view_task_value_textview_is_deleted_yes">Yes</string>
+	<string name="fragment_view_task_value_textview_is_deleted_no">No</string>
+	<string name="fragment_view_task_header_textview_percent_of_completion">Percent of completion:</string>
+	<string name="fragment_view_task_value_textview_percent_of_completion">%1$d%%</string>
+	<string name="fragment_view_task_header_textview_priority">Priority:</string>
+	<string name="fragment_view_task_header_textview_color">Color:</string>
+	<string name="fragment_view_task_header_textview_color_not_set">Not set</string>
+	<string name="fragment_view_task_header_textview_color_default">Default</string>
+	<string name="fragment_view_task_header_textview_task_start">Starts at:</string>
+	<string name="fragment_view_task_header_textview_task_end">Finishes at:</string>
+	<string name="fragment_view_task_header_textview_is_recurrent">Is recurrent:</string>
+	<string name="fragment_view_task_value_textview_is_recurrent_yes">Yes</string>
+	<string name="fragment_view_task_value_textview_is_recurrent_no">No</string>
+	<string name="fragment_view_task_header_textview_task_hours_required">Task hours required:</string>
+	<string name="fragment_view_task_header_textview_task_hours_spent">Task hours spent:</string>
+	<string name="fragment_view_task_header_textview_task_recurrence_interval">Recurrence interval:</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_not_set">Not set</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_minute">Minute</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_minutes">%1$d minutes, repeats on minutes with ordinal numbers: %2$s (starts from %3$d)</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_hour">Hour</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_hours">%1$d hours, repeats on hours with ordinal numbers: %2$s (starts from %3$d)</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_day">Day</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_days">%1$d days, repeats on days with ordinal numbers: %2$s (starts from %3$d)</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_week">Week, repeats on %1$s</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_weeks">%1$d weeks, repeats on %2$s</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_month">Month</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_months">%1$d months</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_month_on_date">Month, repeats on dates: %1$s</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_months_on_date">%1$d months, repeats on dates: %2$s</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_month_on_nth_week_day">Month, repeats on %1$s %2$s</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_months_on_nth_week_day">%1$d months, repeats on %2$s %3$s</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_year">Year, repeats on: %1$s</string>
+	<string name="fragment_view_task_value_textview_task_recurrence_interval_years">%1$d years, repeats on: %2$s</string>
+	<string name="fragment_view_task_header_textview_task_repetition_no_more_than">Occurs no more than:</string>
+	<string name="fragment_view_task_header_textview_task_repetition_no_more_than_not_set">Not set</string>
+	<string name="fragment_view_task_header_textview_task_repetition_until_date">Repeat until:</string>
+	<string name="fragment_view_task_value_textview_task_repetition_until_date_not_set">Not set</string>
+	<string name="fragment_view_task_header_textview_task_notes">Notes:</string>
+	<string name="fragment_view_task_header_textview_task_labels">Labels:</string>
+	<string name="fragment_view_task_header_textview_task_contacts">Contacts:</string>
+	<string name="fragment_view_task_header_textview_task_reminders">Reminders:</string>
+	<string name="activity_select_task_sort_order_title">Task sort order selection</string>
+	<string name="activity_view_tasks_title">Tasks</string>
+	<string name="activity_view_task_tree_tab_active">Active</string>
+	<string name="activity_view_task_tree_tab_closed">Completed</string>
+	<string name="activity_view_task_title">View task</string>
+	<string name="activity_edit_task_title">Edit task</string>
+	<string name="activity_view_task_tab_main">Main</string>
+	<string name="activity_view_task_tab_notes">Notes</string>
+	<string name="activity_view_task_tab_labels">Labels</string>
+	<string name="activity_view_task_tab_contacts">Contacts</string>
+	<string name="activity_view_task_tab_reminders">Reminders</string>
+	<string name="activity_view_task_tab_access">Access</string>
+	<string name="activity_view_task_tab_messages">Messages</string>
+	<string name="activity_view_task_tab_reminders_elapsed">Elapsed</string>
+	<string name="activity_view_task_tab_reminders_scheduled">Scheduled</string>
+	<string name="activity_view_task_tab_files">Files</string>
+	<string name="activity_select_task_title_select_parent_task">Select parent task</string>
+	<string name="activity_select_task_title_select_correlated_task">Select correlated task</string>
+	<string name="fragment_view_task_part_main_header_textview_task_priority">Priority:</string>
+	<string name="fragment_view_task_part_main_value_textview_task_priority_low">Low</string>
+	<string name="fragment_view_task_part_main_value_textview_task_priority_medium">Medium</string>
+	<string name="fragment_view_task_part_main_value_textview_task_priority_high">High</string>
+	<string name="fragment_view_task_part_main_header_textview_task_type">Task recurrence:</string>
+	<string name="fragment_view_task_part_main_value_textview_task_type_task">One time</string>
+	<string name="fragment_view_task_part_main_value_textview_task_type_event">Recurrent</string>
+	<string name="fragment_view_task_part_main_header_textview_task_start_date">Start date:</string>
+	<string name="fragment_view_task_part_main_value_textview_task_start_date_not_set">not set</string>
+	<string name="fragment_view_task_part_main_header_textview_task_end">Task end:</string>
+	<string name="fragment_view_task_part_main_value_textview_task_end_date_not_set">not set</string>
+	<string name="fragment_view_task_part_main_header_textview_task_required_time">Task required time:</string>
+	<string name="fragment_view_task_part_main_header_textview_task_actual_time">Task actual time:</string>
+	<string name="fragment_view_task_part_main_button_task_bring_to_an_end_text">Close</string>
+	<string name="fragment_view_task_part_reminders_header_textview_reminder_reminder_name">Reminder name</string>
+	<string name="fragment_view_task_part_reminders_header_textview_reminder_state">State:</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_state_enabled">Enabled</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_state_disabled">Disabled</string>
+	<string name="fragment_view_task_part_reminders_header_textview_reminder_text">Text:</string>
+	<string name="fragment_view_task_part_reminders_header_textview_alarm_mode">Alarm mode:</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_type_alarm">Popup window</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_type_notification">Notification at the status bar</string>
+	<string name="fragment_view_task_part_reminders_header_textview_reminder_time_mode">Start mode:</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_time_mode_absolute_time">Absolute time</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_time_mode_after_now">After now</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_time_mode_time_before_event">At time before event</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_time_mode_time_after_event">At time after event</string>
+	<string name="fragment_view_task_part_reminders_text_next_alarm_time">Next alarm time: %1$s</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_time_next_reminder_time_none">None</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_time_type_absolute">Absolute</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_time_type_at_task_start">At time of event</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_time_type_before_task_start">before task start</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_time_type_after_task_start">after task start</string>
+	<string name="text_for_reminder_time_interval_and_time_mode">%1$s %2$s</string>
+	<string name="text_for_reminder_time_interval_and_time_mode_and_next_alarm_time">%1$s. %2$s</string>
+	<string name="fragment_view_task_part_reminders_header_textview_reminder_time">Time:</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_time_remind_before_after_days">Days</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_time_remind_before_after_hours">Hours</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_time_remind_before_after_minutes">Minutes</string>
+	<string name="fragment_view_task_part_reminders_header_textview_is_recurrent_reminder">Is recurrent:</string>
+	<string name="fragment_view_task_part_reminders_value_textview_is_recurrent_reminder_yes">Yes</string>
+	<string name="fragment_view_task_part_reminders_value_textview_is_recurrent_reminder_no">No</string>
+	<string name="fragment_view_task_part_reminders_header_textview_warning_the_reminder_is_in_silence_time_interval">The reminder’s time to go off is in silence time interval</string>
+	<string name="fragment_view_task_part_reminders_header_textview_warning_alarms_are_silenced_until_datetime">The reminders’ alarms are silenced until: %1$s</string>
+	<string name="fragment_view_task_part_reminders_header_textview_reminder_ringtone">Ringtone:</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_ringtone">%1$s (%2$s)</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_ringtone_from_task">From task</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_ringtone_custom">Custom</string>
+	<string name="fragment_view_task_part_reminders_value_textview_reminder_ringtone_default">Default</string>
+	<string name="fragment_view_task_part_reminders_header_textview_reminders_popup_window_displaying_duration">Playing duration:</string>
+	<string name="fragment_view_task_part_reminders_header_textview_automatic_snooze_duration">Snooze duration:</string>
+	<string name="fragment_view_task_part_reminders_header_textview_automatic_snoozes_max_count">Max snoozes:</string>
+	<string name="fragment_view_task_part_reminders_header_textview_vibrate_with_alarm_ringtone">Vibration:</string>
+	<string name="fragment_view_task_part_messages_textview_new_message">New message</string>
+	<string name="fragment_view_task_part_messages_button_send">Send</string>
+	<string name="activity_edit_reminder_radio_alarm">Popup window</string>
+	<string name="activity_edit_reminder_radio_notification">Status bar</string>
+	<string name="fragment_view_task_part_reminders_list_item_checkbox_reminder_enabled">Reminder enabled</string>
+	<string name="fragment_view_task_part_reminders_list_item_checkbox_reminder_disabled">Reminder disabled</string>
+	<string name="fragment_view_task_part_reminders_list_item_button_edit">Edit</string>
+	<string name="fragment_view_task_part_reminders_list_item_button_delete">Delete</string>
+	<string name="fragment_view_task_part_reminders_list_item_entry_reminder_type">Reminder type:</string>
+	<string name="fragment_view_task_part_reminders_list_item_entry_reminder_time_setting_mode">Reminder time setting mode:</string>
+	<string name="fragment_view_task_part_notes_header_textview_task_notes">Notes:</string>
+	<string name="fragment_edit_task_part_main_header_textview_task_name">Task name</string>
+	<string name="fragment_edit_task_part_main_edittext_task_name_hint">Task name</string>
+	<string name="fragment_edit_task_part_main_header_textview_task_parent">Parent task:</string>
+	<string name="fragment_edit_task_part_main_header_textview_sort_order">Sort order:</string>
+	<string name="fragment_edit_task_part_main_checkbox_task_parent_not_set">Not set</string>
+	<string name="fragment_edit_task_part_main_checkbox_sort_order_first">First</string>
+	<string name="fragment_edit_task_part_main_radiobutton_task_sortorder_first">First</string>
+	<string name="fragment_edit_task_part_main_radiobutton_task_sortorder_last">Last</string>
+	<string name="fragment_edit_task_part_main_radiobutton_task_sortorder_aftertask_text_task">After: %1$s</string>
+	<string name="fragment_edit_task_part_main_radiobutton_task_sortorder_aftertask_text_none">After …</string>
+	<string name="fragment_edit_task_part_main_radiobutton_task_sortorder_aftertask_text_after">"After: "</string>
+	<string name="fragment_edit_task_part_main_textview_task_sortorder_aftertask_text_none"></string>
+	<string name="fragment_edit_task_part_main_header_textview_task_percent_of_completion">Percent of completion:</string>
+	<string name="fragment_edit_task_part_main_checkbox_completed">Completed</string>
+	<string name="fragment_edit_task_part_main_header_textview_task_color">Task color (AARRGGBB):</string>
+	<string name="fragment_edit_task_part_main_button_pick_task_color_description">Pick task color</string>
+	<string name="fragment_edit_task_part_main_header_textview_task_priority">Priority:</string>
+	<string name="fragment_edit_task_part_main_radiobutton_task_priority_low">Low</string>
+	<string name="fragment_edit_task_part_main_radiobutton_task_priority_medium">Medium</string>
+	<string name="fragment_edit_task_part_main_radiobutton_task_priority_high">High</string>
+	<string name="fragment_edit_task_part_main_header_textview_recur">Recur</string>
+	<string name="fragment_edit_task_part_main_header_textview_calendar">Calendar</string>
+	<string name="fragment_edit_task_part_main_radio_text_monthly_recurrent_on_date">Recur on specified date</string>
+	<string name="fragment_edit_task_part_main_radio_text_monthly_recurrent_on_nth_week_day">Recur on Nth week day</string>
+	<string name="fragment_edit_task_part_main_button_days_picker_of_yearly_recurrent_task">Select days</string>
+	<string name="fragment_edit_task_part_main_textview_task_start_label1">Starts at:</string>
+	<string name="fragment_edit_task_part_main_value_textview_task_start"></string>
+	<string name="fragment_edit_task_part_main_imagebutton_task_start_date_contentdescription">Select Date Button</string>
+	<string name="fragment_edit_task_part_main_imagebutton_task_start_time_contentdescription">Select Time Button</string>
+	<string name="fragment_edit_task_part_main_header_textview_task_end_label1">Finishes at:</string>
+	<string name="fragment_edit_task_part_main_header_textview_task_timezone">Timezone</string>
+	<string name="fragment_edit_task_part_main_imagebutton_task_end_date_contentdescription">Select Date Button</string>
+	<string name="fragment_edit_task_part_main_imagebutton_task_end_time_contentdescription">Select Time Button</string>
+	<string name="fragment_edit_task_part_main_header_textview_task_hours_required">Task hours required:</string>
+	<string name="fragment_edit_task_part_main_header_textview_task_hours_spent">Task hours spent:</string>
+	<string name="fragment_edit_task_part_main_last_day">last day</string>
+	<string name="tag_key_fragment_edit_task_part_main_checkbox_task_start_date_previous_value">tag_key_fragment_edit_task_part_main_checkbox_task_start_date_previous_value</string>
+	<string name="tag_key_fragment_edit_task_part_main_checkbox_task_start_time_previous_value">tag_key_fragment_edit_task_part_main_checkbox_task_start_time_previous_value</string>
+	<string name="tag_key_start_time_default_value">tag_key_start_time_default_value</string>
+	<string name="tag_key_fragment_edit_task_part_main_checkbox_task_end_date_previous_value">tag_key_fragment_edit_task_part_main_checkbox_task_end_date_previous_value</string>
+	<string name="tag_key_fragment_edit_task_part_main_checkbox_task_end_time_previous_value">tag_key_fragment_edit_task_part_main_checkbox_task_end_time_previous_value</string>
+	<string name="tag_key_fragment_edit_task_part_main_checkbox_task_repetition_end_date_previous_value">tag_key_fragment_edit_task_part_main_checkbox_task_repetition_end_date_previous_value</string>
+	<string name="tag_key_fragment_edit_task_part_main_checkbox_task_repetition_end_time_previous_value">tag_key_fragment_edit_task_part_main_checkbox_task_repetition_end_time_previous_value</string>
+	<string name="tag_key_checkbox_title">tag_key_checkbox_title</string>
+	<string name="fragment_task_viewing_reminders_textview_timezone">Timezone:</string>
+	<string name="fragment_task_viewing_reminders_list_item_delete_warning">Are you sure to delete the reminder? The changes will be saved only after task is saved</string>
+	<string name="spinner_timezone_prompt">Select timezone</string>
+	<string name="ordinal_number_of_occurrence_of_weekday_in_month_prompt">Ordinal number of occurrence of the weekday in a month</string>
+	<string name="date_of_month_prompt">Select date</string>
+	<string name="fragment_view_task_tree_cab_menu_delete">Delete</string>
+	<string name="fragment_view_task_tree_cab_menu_delete_condensed">Delete</string>
+	<string name="fragment_view_task_tree_cab_menu_set_complete">Set completed</string>
+	<string name="fragment_view_task_tree_cab_menu_set_active">Set active</string>
+	<!-- Strings related to task messages -->
+	<string name="fragment_edit_task_part_messages_button_send">Send</string>
+	<string name="fragment_edit_task_part_messages_header_textview">Comments</string>
+	<string name="fragment_edit_task_part_messages_header_textview2">Your comment</string>
+	<!-- Strings related to error messages -->
+	<string name="fragment_edit_task_part_main_checkbox_task_start_date_not_set">Date is not set</string>
+	<string name="fragment_edit_task_part_main_checkbox_task_start_time_not_set">Time is not set</string>
+	<string name="fragment_edit_task_part_main_checkbox_task_end_date_not_set">Date is not set</string>
+	<string name="fragment_edit_task_part_main_checkbox_task_end_time_not_set">Time is not set</string>
+	<string name="fragment_edit_task_part_main_checkbox_task_repetition_end_date_not_set">Date is not set</string>
+	<string name="fragment_edit_task_part_main_checkbox_task_repetition_end_time_not_set">Time is not set</string>
+	<string name="fragment_edit_task_part_main_checkbox_task_start_time_please_select_date_first">Please, select task start date first.</string>
+	<string name="fragment_edit_task_part_main_checkbox_task_end_time_please_select_date_first">Please, select task end date first.</string>
+	<string name="fragment_edit_task_part_main_checkbox_task_repetition_end_time_please_select_date_first">Please, select task repetition end date first.</string>
+	<string name="toast_text_task_length_is_longer_than_task_recurrence_interval">Time interval between start time and end time is greater than recurrence interval.</string>
+	<string name="wrong_occurrences_max_count_value_is_set_for_the_task">Wrong value of maximum number of times a task is allowed to repeat is set for the task.</string>
+	<string name="tag_key_checkbox_error_text">tag_key_checkbox_error_text</string>
+	<!-- we are forced to use string array instead of integer array because preferences only work with strings -->
+	<string name="fragment_edit_task_part_main_textview_text_every">Every:</string>
+	<string name="text_one_time">one time</string>
+	<string name="text_second">second</string>
+	<string name="text_seconds">seconds</string>
+	<string name="text_seconds_count_singular">%1$d second</string>
+	<string name="text_seconds_count_plural">%1$d seconds</string>
+	<string name="text_minute">minute</string>
+	<string name="text_minutes">minutes</string>
+	<string name="text_minutes_count_singular">%1$d minute</string>
+	<string name="text_minutes_count_plural">%1$d minutes</string>
+	<string name="text_hour">hour</string>
+	<string name="text_hours">hours</string>
+	<string name="text_hours_count_singular">%1$d hour</string>
+	<string name="text_hours_count_plural">%1$d hours</string>
+	<string name="text_day">day</string>
+	<string name="text_days">days</string>
+	<string name="text_days_count_singular">%1$d day</string>
+	<string name="text_days_count_plural">%1$d days</string>
+	<string name="text_week">week</string>
+	<string name="text_weeks">weeks</string>
+	<string name="text_weeks_count_singular">%1$d week</string>
+	<string name="text_weeks_count_plural">%1$d weeks</string>
+	<string name="text_month">month</string>
+	<string name="text_months">months</string>
+	<string name="text_months_count_singular">%1$d month</string>
+	<string name="text_months_count_plural">%1$d months</string>
+	<string name="text_year">year</string>
+	<string name="text_years">years</string>
+	<string name="text_years_count_singular">%1$d year</string>
+	<string name="text_years_count_plural">%1$d years</string>
+	<string name="textview_reminders_popup_window_displaying_duration_text_measurement_unit_singular">second</string>
+	<string name="textview_reminders_popup_window_displaying_duration_text_measurement_unit_plural">seconds</string>
+	<string name="textview_automatic_snooze_duration_text_measurement_unit_singular">minute</string>
+	<string name="textview_automatic_snooze_duration_text_measurement_unit_plural">minutes</string>
+	<string name="textview_automatic_snoozes_max_count_text_measurement_unit_singular">snooze</string>
+	<string name="textview_automatic_snoozes_max_count_text_measurement_unit_plural">snoozes</string>
+	<string name="fragment_edit_task_part_main_textview_on_nth_week_day">On</string>
+	<string name="fragment_edit_task_part_main_header_textview_occurrences_max_count">No more than:</string>
+	<string name="fragment_edit_task_part_main_header_textview_repeat_up_till_date">Until:</string>
+	<string name="fragment_edit_task_part_main_button_task_cancel">Cancel</string>
+	<string name="fragment_edit_task_part_main_button_task_save">Save</string>
+	<string name="fragment_edit_task_part_notes_header_textview">Notes</string>
+	<string name="error_date_field_is_required_if_time_field_is_set">The date field must be filled if time field is filled</string>
+	<string name="error_start_time_must_be_before_end_time">Start time must be before of the end time</string>
+	<string name="error_start_time_must_not_be_after_end_time">Start time may not be after end time</string>
+	<string name="error_time_field_must_be_filled_in_time_interval_0000_2359">The time must be from 00:00 to 23:59</string>
+	<string name="error_end_time_must_be_after_start_time">End time must be after start time</string>
+	<string name="error_start_date_is_required_for_recurrent_task">Start date is required for recurrent task</string>
+	<string name="an_error_occurred_while_saving_a_task">An error occurred while task was being saved:</string>
+	<string name="fragment_edit_task_part_reminders_reminder_of_task">Task reminder:</string>
+	<string name="fragment_edit_task_part_reminders_local">Local</string>
+	<string name="fragment_edit_task_part_reminders_textview_alarm_ringtone">Default ringtone for reminder going off with popup window:</string>
+	<string name="fragment_edit_task_part_reminders_textview_reminders_popup_window_displaying_duration">Reminder’s popup window displaying duration:</string>
+	<string name="fragment_edit_task_part_reminders_textview_automatic_snooze_duration">Automatic snooze duration:</string>
+	<string name="fragment_edit_task_part_reminders_textview_automatic_snoozes_max_count">Max automatic snoozes:</string>
+	<string name="fragment_edit_task_part_reminders_textview_vibrate_with_alarm_ringtone">Vibrate with ringtone played for reminder:</string>
+	<string name="fragment_edit_task_part_reminders_checkbox_text_vibrate">Vibrate</string>
+	<string name="fragment_edit_task_part_reminders_select_reminders">Select Reminders</string>
+	<string name="fragment_edit_task_part_reminders_cannot_launch_reminder_editor_because_the_task_is_in_inconsistent_state">Cannot add reminder. The task is in inconsistent state:</string>
+	<string name="vibrate">Do vibrate</string>
+	<string name="do_not_vibrate">Do not vibrate</string>
+	<string name="activity_edit_reminder_textview_reminders_popup_window_displaying_duration">Reminder’s popup window displaying duration:</string>
+	<string name="activity_edit_reminder_textview_automatic_snooze_duration">Automatic snooze duration:</string>
+	<string name="activity_edit_reminder_textview_automatic_snoozes_max_count">Max automatic snoozes:</string>
+	<string name="activity_edit_reminder_textview_vibrate_with_alarm_ringtone">Vibrate with ringtone played for reminder:</string>
+	<string name="fragment_edit_task_part_reminders_textview_notification_ringtone">Default ringtone for reminder going off with notification at the status bar:</string>
+	<string name="fragment_edit_task_part_reminders_radiobutton_text_from_settings">From settings (%1$s)</string>
+	<string name="fragment_edit_task_part_reminders_radiobutton_text_custom">Custom (%1$s)</string>
+	<string name="custom">Custom</string>
+	<string name="fragment_edit_task_part_reminders_to_email">to email</string>
+	<string name="fragment_edit_task_part_reminders_to_phone">to phone</string>
+	<string name="fragment_edit_task_part_reminders_at_task_beginning">Alarm time is set to the start time of the task</string>
+	<string name="fragment_edit_task_part_reminders_before">before</string>
+	<string name="fragment_edit_task_part_reminders_before_task_beginning">Alarm time is set to %s before start time of the task</string>
+	<string name="fragment_view_todo_medium">Medium</string>
+	<string name="fragment_view_todo_low">Low</string>
+	<string name="fragment_view_todo_high">High</string>
+	<!-- Strings related to labels -->
+	<string name="actionbar_labels">Labels</string>
+	<string name="activity_view_label_title">View label</string>
+	<string name="activity_edit_label_title">Edit label</string>
+	<string name="activity_main_state_labels_action_content_new">New label</string>
+	<string name="activity_label_creation_tab_main">Main</string>
+	<string name="activity_label_creation_tab_tasks">Tasks</string>
+	<string name="activity_label_creation_tab_contacts">Contacts</string>
+	<string name="activity_label_creation_tab_files">Files</string>
+	<string name="fragment_edit_label_part_main_textview_label_name">Name:</string>
+	<string name="fragment_edit_label_part_main_edittext_label_name_hint">Label name</string>
+	<string name="fragment_edit_label_part_main_textview_label_description">Description</string>
+	<string name="fragment_edit_label_part_main_header_textview_label_parent">Parent label:</string>
+	<string name="fragment_edit_label_part_main_checkbox_label_parent_not_set">Not set</string>
+	<string name="fragment_edit_label_part_main_header_textview_sort_order">Sort order:</string>
+	<string name="fragment_edit_label_part_main_checkbox_sort_order_not_set">not set</string>
+	<string name="fragment_edit_label_part_main_edittext_label_description_hint">Label description</string>
+	<string name="fragment_create_view_edit_label_part_main_button_label_cancel">Cancel</string>
+	<string name="fragment_create_view_edit_label_part_main_button_label_save">Save</string>
+	<string name="fragment_label_creation_part_tasks_textview_tasks_list_header">Linked tasks:</string>
+	<string name="fragment_view_label_part_tasks_textview_clarification">Linked to label tasks are checked</string>
+	<string name="an_error_occurred_while_saving_a_label">An error occurred while label was being saved</string>
+	<!-- Strings related to contacts -->
+	<string name="actionbar_contacts">Contacts</string>
+	<string name="activity_view_contact_title">View contact</string>
+	<string name="activity_edit_contact_title">Edit contact</string>
+	<string name="activity_select_contact_data_title">Contact data selection</string>
+	<string name="activity_main_state_contacts_action_content_new">New contact</string>
+	<string name="radiobutton_contacts_sort_order_default">Sort order default</string>
+	<string name="radiobutton_contacts_sort_order_ascending_descending">Sort order alphabetically</string>
+	<string name="activity_view_contact_tab_main">Main</string>
+	<string name="activity_view_contact_tab_data">Data</string>
+	<string name="activity_view_contact_tab_labels">Labels</string>
+	<string name="activity_view_contact_tab_tasks">Tasks</string>
+	<string name="activity_view_contact_action_edit">Edit contact</string>
+	<string name="fragment_view_contact_part_main_header_textview_contact_name">Name:</string>
+	<string name="fragment_view_contact_part_main_header_textview_contact_description">Description:</string>
+	<string name="fragment_view_contact_part_data_group_header_textview_phone_numbers">Phone numbers</string>
+	<string name="fragment_view_contact_part_data_header_textview_phone_cellular">Cellular phone</string>
+	<string name="fragment_view_contact_part_data_header_textview_phone_cellular_2">Cellular phone 2</string>
+	<string name="fragment_view_contact_part_data_header_textview_fax">Fax</string>
+	<string name="fragment_view_contact_part_data_header_textview_fax_work">Working fax</string>
+	<string name="fragment_view_contact_part_data_header_textview_phone_work">Working phone</string>
+	<string name="fragment_view_contact_part_data_header_textview_phone_work_2">Working phone 2</string>
+	<string name="fragment_view_contact_part_data_header_textview_phone_home">Home phone</string>
+	<string name="fragment_view_contact_part_data_header_textview_phone_home_2">Home phone 2</string>
+	<string name="fragment_view_contact_part_data_group_header_textview_email">Email"</string>
+	<string name="fragment_view_contact_part_data_header_textview_email">Email</string>
+	<string name="fragment_view_contact_part_data_header_textview_email_personal">Personal email</string>
+	<string name="fragment_view_contact_part_data_header_textview_email_personal_2">Personal email 2</string>
+	<string name="fragment_view_contact_part_data_header_textview_email_work">Working email</string>
+	<string name="fragment_view_contact_part_data_header_textview_email_work_2">Working email 2</string>
+	<string name="fragment_view_contact_part_data_group_header_textview_internet_communication">Internet communication</string>
+	<string name="fragment_view_contact_part_data_header_textview_icq">ICQ</string>
+	<string name="fragment_view_contact_part_data_header_textview_facebook">Facebook</string>
+	<string name="fragment_view_contact_part_data_header_textview_mail_agent">Mail agent</string>
+	<string name="fragment_view_contact_part_data_header_textview_qip">QIP</string>
+	<string name="fragment_view_contact_part_data_header_textview_msn">MSN</string>
+	<string name="fragment_view_contact_part_data_header_textview_google_talk">Google Talk</string>
+	<string name="fragment_view_contact_part_data_header_textview_live_journal">Live Journal</string>
+	<string name="fragment_view_contact_part_data_header_textview_personal_site">Personal site</string>
+	<string name="fragment_view_contact_part_data_header_textview_personal_site_2">Personal site 2</string>
+	<string name="fragment_view_contact_part_data_header_textview_skype">Skype</string>
+	<string name="fragment_view_contact_part_data_header_textview_twitter">Twitter</string>
+	<string name="fragment_view_contact_part_data_header_textview_jabber">Jabber</string>
+	<string name="fragment_view_contact_part_data_group_header_textview_addresses_and_requisites">Addresses and requisites</string>
+	<string name="fragment_view_contact_part_data_header_textview_address">Address</string>
+	<string name="fragment_view_contact_part_data_header_textview_address_2">Address 2</string>
+	<string name="fragment_view_contact_part_data_header_textview_legal_address">Legal address</string>
+	<string name="fragment_view_contact_part_data_header_textview_company">Company</string>
+	<string name="fragment_view_contact_part_data_header_textview_occupation">Job title</string>
+	<string name="fragment_view_contact_part_data_group_header_textview_own_fields">Own fields</string>
+	<string name="fragment_view_contact_part_data_header_textview_field_1">Field 1</string>
+	<string name="fragment_view_contact_part_data_header_textview_field_2">Field 2</string>
+	<string name="fragment_view_contact_part_data_header_textview_field_3">Field 3</string>
+	<string name="fragment_view_contact_part_data_header_textview_field_4">Field 4</string>
+	<string name="fragment_view_contact_part_data_header_textview_field_5">Field 5</string>
+	<string name="fragment_view_contact_part_data_header_textview_field_6">Field 6</string>
+	<string name="fragment_view_contact_part_labels_textview_clarification">Linked to contact labels are checked</string>
+	<string name="fragment_edit_contact_part_labels_textview_clarification">Check labels to link them to contact</string>
+	<string name="an_error_occurred_while_saving_a_contact">An error occurred while contact was being saved</string>
+	<string name="fragment_edit_contact_part_data_button_add">+ add</string>
+	<string name="fragment_view_contact_list_listitem_imageview_content_description">Contact icon</string>
+	<string name="fragment_view_contact_list_cab_menu_delete">Delete</string>
+	<!-- Strings related to files -->
+	<string name="actionbar_files">Files</string>
+	<string name="activity_view_file_tab_main">Main</string>
+	<string name="activity_view_file_tab_history">History</string>
+	<string name="activity_view_file_tab_labels">Labels</string>
+	<string name="activity_view_file_tab_contacts">Contacts</string>
+	<string name="activity_edit_file_tab_main">Main</string>
+	<string name="activity_edit_file_tab_history">History</string>
+	<string name="activity_edit_file_tab_tasks">Tasks</string>
+	<string name="activity_edit_file_tab_labels">Labels</string>
+	<string name="activity_edit_file_tab_contacts">Contacts</string>
+	<string name="activity_edit_file_tab_reminders">Reminders</string>
+	<string name="activity_edit_file_tab_files">Files</string>
+	<string name="activity_main_state_files_action_content_new">New file</string>
+	<string name="activity_view_file_action_edit">Edit file</string>
+	<string name="activity_view_file_title">View file</string>
+	<string name="activity_edit_file_title">Edit file</string>
+	<string name="tab_files_mine">Mine</string>
+	<string name="tab_files_shared">Shared</string>
+	<string name="fragment_view_file_part_main_header_textview_file_name">Name</string>
+	<string name="fragment_view_file_part_main_header_textview_file_description">Description</string>
+	<string name="fragment_view_file_part_history_header_textview">History</string>
+	<string name="fragment_view_file_part_contacts_header_textview">Linked contacts:</string>
+	<string name="fragment_view_file_part_history_header_textview_no_history">No previous versions</string>
+	<string name="fragment_view_file_part_labels_textview_clarification">Linked to file labels are checked</string>
+	<string name="fragment_edit_file_part_main_header_textview_file_name">Name:</string>
+	<string name="fragment_edit_file_part_main_header_textview_file_description">Description:</string>
+	<string name="fragment_edit_file_part_history_checkbox">Keep history</string>
+	<string name="fragment_edit_file_part_contacts_header_textview">Linked contacts:</string>
+	<string name="fragment_edit_file_part_tasks_header_textview">Linked tasks:</string>
+	<string name="fragment_edit_file_part_labels_textview_clarification">Check labels to link them to file</string>
+	<string name="an_error_occurred_while_saving_a_file">An error occurred while file was being saved</string>
+	<string name="an_error_occurred_while_uploading_the_file">An error occurred while file was being uploaded</string>
+	<string name="file_out_of_sync_warning">The file is not synchronized. Synchronize it now?</string>
+	<string name="there_are_no_applications_installed_can_handle_this_file">There are no applications installed can handle this file.</string>
+	<!-- Strings related to diary -->
+	<string name="actionbar_diary">Diary</string>
+	<string name="activity_view_diary_record_tab_main">Main</string>
+	<string name="activity_view_diary_record_tab_notes">Notes</string>
+	<string name="activity_view_diary_record_title">View diary record</string>
+	<string name="activity_edit_diary_record_title">Edit diary record</string>
+	<string name="activity_main_state_diary_action_content_new">New diary record</string>
+	<string name="activity_view_diary_record_action_edit">Edit diary record</string>
+	<string name="activity_edit_diary_record_tab_main">Main</string>
+	<string name="activity_edit_diary_record_tab_notes">Notes</string>
+	<string name="fragment_view_diary_record_part_main_header_textview_diary_record_text">Diary record text</string>
+	<string name="fragment_view_diary_record_part_notes_header_textview_diary_record_notes">Notes:</string>
+	<string name="fragment_edit_diary_record_part_main_header_textview_diary_record_text">Diary record text</string>
+	<string name="fragment_edit_diary_record_part_main_header_textview_diary_record_linked_task">Linked task</string>
+	<string name="fragment_edit_diary_record_part_main_checkbox_diary_record_linked_task_not_set">not set</string>
+	<string name="fragment_edit_diary_record_part_main_checkbox_diary_record_task_was_completed">The task is completed</string>
+	<string name="fragment_edit_diary_record_part_main_checkbox_diary_record_waste_time">Consider it was waste of time</string>
+	<string name="fragment_edit_diary_record_part_notes_header_textview_diary_record_notes">Notes:</string>
+	<string name="fragment_view_diary_record_part_main_header_textview_diary_record_date">Diary record date:</string>
+	<string name="fragment_view_diary_record_part_main_header_textview_diary_record_starttime">Start time:</string>
+	<string name="fragment_view_diary_record_part_main_header_textview_diary_record_endtime">End time:</string>
+	<string name="fragment_edit_diary_record_part_main_header_textview_diary_record_date">Diary record date:</string>
+	<string name="an_error_occurred_while_saving_a_diary_record">An error occurred while diary record was being saved</string>
+	<string name="fragment_view_diary_record_part_main_header_textview_diary_record_date_error_date_field_is_required">The field date have to be filled</string>
+	<string name="fragment_edit_diary_record_part_main_checkbox_start_date_not_set">Start date not set</string>
+	<string name="fragment_edit_diary_record_part_main_checkbox_end_date_not_set">End date not set</string>
+	<string name="fragment_edit_diary_record_part_main_checkbox_start_time_not_set">Start time not set</string>
+	<string name="fragment_edit_diary_record_part_main_checkbox_end_time_not_set">End time not set</string>
+	<string name="fragment_edit_diary_record_part_main_checkbox_please_select_date_first">Please, select date first.</string>
+	<string name="fragment_edit_diary_record_part_main_checkbox_start_time_please_select_date_first">Please, select start date first.</string>
+	<string name="fragment_edit_diary_record_part_main_checkbox_end_time_please_select_date_first">Please, select end date first.</string>
+	<string name="fragment_edit_diary_record_part_main_checkbox_hh_mm">hh:mm</string>
+	<!-- Strings related to messages -->
+	<string name="actionbar_messages">Messages</string>
+	<string name="activity_main_state_messages_action_content_new">New message</string>
+	<string name="tab_messages_messages">Messages</string>
+	<string name="tab_messages_reminders">Reminders</string>
+	<string name="tab_messages_updates">Updates</string>
+	<string name="textview_messages_new_messages">New messages:</string>
+	<string name="fragment_view_new_messages_list_item_button_reply">Reply</string>
+	<string name="fragment_view_new_messages_list_item_button_ignore">Ignore</string>
+	<!-- Strings related to reminders -->
+	<string name="actionbar_reminders">Reminders</string>
+	<string name="activity_edit_reminder_title">Edit reminder</string>
+	<string name="activity_edit_reminder_title_add_reminder">Add reminder</string>
+	<string name="activity_edit_reminder_checkbox_text_enabled">Enabled</string>
+	<string name="activity_edit_reminder_checkbox_text_disabled">Disabled</string>
+	<string name="activity_edit_reminder_edittext_template_text">Reminder:</string>
+	<string name="activity_edit_reminder_header_textview_reminder_will_be_send_to">The reminder will be send to:</string>
+	<string name="activity_edit_reminder_radio_reminder_type_email">Email</string>
+	<string name="activity_edit_reminder_radio_reminder_type_phone">Phone (SMS)</string>
+	<string name="activity_edit_reminder_radio_reminder_type_local">Local (Alarm)</string>
+	<string name="activity_edit_reminder_header_textview_reminder_destination_email">Address:</string>
+	<string name="activity_edit_reminder_header_textview_reminder_destination_phone">Phone:</string>
+	<string name="activity_edit_reminder_header_textview_reminder_time">Reminder time:</string>
+	<string name="activity_edit_reminder_radio_reminder_time_absolute">Absolute</string>
+	<string name="activity_edit_reminder_radio_reminder_time_before_event">Time before event</string>
+	<string name="activity_edit_reminder_radio_reminder_time_after_event">Time after event</string>
+	<string name="activity_edit_reminder_header_textview_after">After</string>
+	<string name="activity_edit_reminder_header_textview_before">Before</string>
+	<string name="activity_edit_reminder_button_reminder_time_after_now_text_now">Now</string>
+	<string name="activity_edit_reminder_button_reminder_time_before_event_text_at_task_start">At time of event</string>
+	<string name="activity_edit_reminder_header_textview_reminder_time_after_now_days">days</string>
+	<string name="activity_edit_reminder_header_textview_reminder_time_before_event_days">days</string>
+	<string name="activity_edit_reminder_header_textview_reminder_time_before_event_hours">hours</string>
+	<string name="activity_edit_reminder_header_textview_reminder_time_before_event_minutes">minutes</string>
+	<string name="activity_edit_reminder_checkbox_repeat_each_iteration">Repeat at each iteration</string>
+	<string name="activity_edit_reminder_header_textview_reminder_start">Reminder date and time:</string>
+	<string name="activity_edit_reminder_header_textview_reminder_description">Text:</string>
+	<string name="activity_edit_reminder_button_reminder_date">yyyy-MM-dd</string>
+	<string name="activity_edit_reminder_button_reminder_time">HH:mm</string>
+	<string name="activity_edit_reminder_textview_alarm_ringtone">Default ringtone for reminder going off with popup window:</string>
+	<string name="activity_edit_reminder_textview_notification_ringtone">Default ringtone for reminder going off with notification at the status bar:</string>
+	<string name="activity_edit_reminder_radiobutton_text_from_task">From task (%1$s)</string>
+	<string name="activity_edit_reminder_radiobutton_text_custom">Custom (%1$s)</string>
+	<string name="activity_edit_reminder_checkbox_text_vibrate">Vibrate</string>
+	<string name="fragment_view_scheduled_reminders_menu_share">Share</string>
+	<string name="fragment_view_scheduled_reminders_menu_set_enabled">Set enabled</string>
+	<string name="rename">Rename</string>
+	<string name="move">Move</string>
+	<string name="fragment_view_scheduled_reminders_menu_set_disabled">Set disabled</string>
+	<string name="fragment_view_scheduled_reminders_menu_delete">Delete</string>
+	<string name="delete">Delete</string>
+	<string name="undelete">Undelete</string>
+	<string name="delete_permanently">Delete permanently</string>
+	<string name="fragment_view_elapsed_reminders_listitem_icon_reminder_type_icon_description">Reminder type icon</string>
+	<string name="fragment_view_scheduled_reminders_listitem_button_dismiss">Dismiss</string>
+	<string name="fragment_view_scheduled_reminders_listitem_button_resnooze">Resnooze</string>
+	<string name="fragment_view_scheduled_reminders_toast_the_reminder_does_not_exist_anymore">The reminder does not exist anymore</string>
+	<string name="activity_quick_reminder_tab_main">Main</string>
+	<string name="activity_quick_reminder_tab_tasks">Attached task</string>
+	<string name="title_activity_quick_reminder">Quick Reminder</string>
+	<string name="activity_quick_reminder_header_textview_reminder_time_after_now_days">days</string>
+	<string name="activity_quick_reminder_header_textview_reminder_time_after_now_hours">hours</string>
+	<string name="activity_quick_reminder_header_textview_reminder_time_after_now_minutes">minutes</string>
+	<string name="activity_quick_reminder_radio_reminder_time_absolute">Absolute</string>
+	<string name="activity_quick_reminder_radio_reminder_time_after_now">After now</string>
+	<string name="activity_quick_reminder_header_textview_after">After</string>
+	<string name="activity_quick_reminder_radio_alarm">Alarm</string>
+	<string name="activity_quick_reminder_radio_notification">Notification</string>
+	<string name="activity_quick_reminder_header_textview_reminder_time">Reminder time:</string>
+	<string name="activity_quick_reminder_radio_reminder_time_before_event">Time before event</string>
+	<string name="activity_quick_reminder_radio_reminder_time_after_event">Time after event</string>
+	<string name="activity_quick_reminder_header_textview_before">Before</string>
+	<string name="activity_quick_reminder_button_timespan_text_at_task_start">At task start</string>
+	<string name="activity_quick_reminder_header_textview_reminder_time_before_event_days">days</string>
+	<string name="activity_quick_reminder_header_textview_reminder_time_before_event_hours">hours</string>
+	<string name="activity_quick_reminder_header_textview_reminder_time_before_event_minutes">minutes</string>
+	<string name="activity_quick_reminder_checkbox_repeat_each_iteration">Repeat at each iteration</string>
+	<string name="activity_quick_reminder_header_textview_reminder_start">Reminder date and time:</string>
+	<string name="activity_quick_reminder_header_textview_reminder_description">Text:</string>
+	<string name="activity_quick_reminder_button_reminder_date">yyyy-MM-dd</string>
+	<string name="activity_quick_reminder_button_reminder_time">HH:mm</string>
+	<string name="activity_quick_reminder_textview_alarm_ringtone">Ringtone:</string>
+	<string name="activity_quick_reminder_radiobutton_text_from_settings">From settings</string>
+	<string name="activity_quick_reminder_title_text">Reminder: </string>
+	<string name="activity_quick_reminder_radiobutton_text_custom">Custom</string>
+	<string name="activity_quick_reminder_checkbox_text_vibrate">Do vibrate</string>
+	<string name="activity_quick_reminder_textview_reminders_popup_window_displaying_duration">Reminder’s popup window displaying duration, seconds:</string>
+	<string name="activity_quick_reminder_textview_automatic_snooze_duration">Automatic snooze duration, minutes:</string>
+	<string name="activity_quick_reminder_textview_automatic_snoozes_max_count">Max automatic snoozes:</string>
+	<string name="activity_quick_reminder_textview_vibrate_with_alarm_ringtone">Vibration:</string>
+	<string name="an_error_occurred_while_saving_the_reminder">An error occurred while reminder was being scheduled</string>
+	<!-- Strings related to notifications -->
+	<string name="advanced_calendar_task_notification_content_title_2">Advanced Calendar task notification</string>
+	<string name="advanced_calendar_task_notification_content_title">New notification</string>
+	<string name="advanced_calendar_task_notification_content_title_plural">new notifications</string>
+	<string name="advanced_calendar_task_notification_subtext_total">Total</string>
+	<string name="advanced_calendar_task_notification_content_text">You’ve received task notiffications:</string>
+	<string name="advanced_calendar_task_notification_content_text_2">New notiffications:</string>
+	<string name="fragment_view_reminders_last_alarmed">Last alarmed at:</string>
+	<string name="fragment_view_reminders_last_notified">Notified at:</string>
+	<string name="fragment_view_reminders_will_notificate_at">Will notificate at:</string>
+	<string name="fragment_view_reminders_will_notificate_snooze_at">Will notificate (snooze %d) at:</string>
+	<string name="fragment_view_reminders_will_not_notificate_at">Will not notificate at:</string>
+	<string name="fragment_view_reminders_will_not_notificate_snooze_at">Will not notificate (snooze %d) at:</string>
+	<string name="fragment_view_reminders_text">Text:</string>
+	<string name="fragment_view_reminders_attached_to_task">Task:</string>
+	<string name="fragment_view_reminders_will_alarm_at">Will alarm at:</string>
+	<string name="fragment_view_reminders_would_alarm_at">Would alarm at:</string>
+	<string name="fragment_view_reminders_will_alarm_snooze_at">Will alarm (snooze %d) at:</string>
+	<string name="fragment_view_reminders_would_alarm_snooze_at">Would alarm (snooze %d) at:</string>
+	<string name="fragment_view_reminders_will_not_alarm_at">Will not alarm at:</string>
+	<string name="fragment_view_reminders_will_not_alarm_snooze_at">Will not alarm (snooze %d) at:</string>
+	<string name="fragment_view_reminders_reminder_scheduled_time">Reminder scheduled time:</string>
+	<string name="fragment_view_reminders_notificate_at">Notificate at:</string>
+	<string name="fragment_view_reminders_last_snooze_at">Last snooze</string>
+	<string name="fragment_view_reminders_alarmed_at">Alarmed at</string>
+	<string name="fragment_view_reminders_will_alarm_again_at">Will alarm again (snooze %d) at</string>
+	<string name="fragment_view_reminders_will_not_alarm_again_at">Will not alarm again (snooze %d) at</string>
+	<string name="fragment_view_reminders_will_notificate_again_at">Will notificate again (snooze %d) at</string>
+	<string name="fragment_view_reminders_will_not_notificate_again_at">Will not notificate again (snooze %d) at</string>
+	<string name="snooze">Snooze</string>
+	<string name="fragment_view_reminders_next_snooze_at">Next snooze</string>
+	<string name="fragment_view_reminders_snooze_count">Snooze:</string>
+	<!-- Strings related to ACRA -->
+	<string name="crash_toast_text">Sorry, an unexpected error has occurred.</string>
+	<!-- <string name="crash_toast_text">Ooooops ! I crashed, but a report has been sent to my developer to help fix the issue !</string> -->
+	<string name="crash_dialog_title">Alarmer has crashed</string>
+	<string name="crash_dialog_text">An unexpected error occurred forcing the application to stop. Please help us fix this by sending us error data, all you have to do is click OK.</string>
+	<string name="crash_dialog_comment_prompt">You might add your comments about the problem below:</string>
+	<string name="crash_dialog_ok_toast">Thank you !</string>
+	<!-- Strings related to file upload -->
+	<string name="advanced_calendar_file_download_dialog_message_downloading_source">Downloading source…</string>
+	<string name="advanced_calendar_file_download_dialog_message_downloaded">Downloaded</string>
+	<string name="advanced_calendar_file_download_dialog_message_kb">KB</string>
+	<!-- Strings related to Synchronizing -->
+	<string name="synchronizing">Synchronizing…</string>
+	<!-- Strings related to Settings -->
+	<string name="title_activity_activity_settings">Settings</string>
+	<string-array name="first_day_of_week_titles_array">
+		<item>Default (%1$s)</item>
+		<item>Sunday</item>
+		<item>Monday</item>
+		<item>Tuesday</item>
+		<item>Wednesday</item>
+		<item>Thursday</item>
+		<item>Friday</item>
+		<item>Saturday</item>
+	</string-array>
+	<string-array name="day_of_week_three_letter">
+		<item>Sun</item>
+		<item>Mon</item>
+		<item>Tue</item>
+		<item>Wed</item>
+		<item>Thu</item>
+		<item>Fri</item>
+		<item>Sat</item>
+	</string-array>
+	<string-array name="first_day_of_week_values_array">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+	</string-array>
+	<!-- Example General settings -->
+	<string name="pref_category_default_settings_for_new_reminder">Default settings for new reminder</string>
+	<string name="pref_category_default_settings_for_new_task_event">Default settings for new task (event)</string>
+	<string name="pref_category_general_settings">General settings</string>
+	<string name="pref_category_backup">Backup</string>
+	<string name="pref_header_general">General</string>
+	<string name="pref_title_social_recommendations">Enable social recommendations</string>
+	<string name="pref_description_social_recommendations">Recommendations for people to contact based on your message history</string>
+	<string name="pref_title_display_name">Display name</string>
+	<string name="pref_default_display_name">John Smith</string>
+	<string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+	<string name="pref_title_first_day_of_week">First day of the week:</string>
+	<string name="preference_key_time_units_count">preference_key_time_units_count</string>
+	<string name="preference_key_time_units_count_minutely_recurrent">preference_key_time_units_count_minutely_recurrent</string>
+	<string name="preference_key_time_units_count_hourly_recurrent">preference_key_time_units_count_hourly_recurrent</string>
+	<string name="preference_key_time_units_count_daily_recurrent">preference_key_time_units_count_daily_recurrent</string>
+	<string name="preference_key_time_units_count_weekly_recurrent">preference_key_time_units_count_weekly_recurrent</string>
+	<string name="preference_key_time_units_count_monthly_recurrent_on_date">preference_key_time_units_count_monthly_recurrent_on_date</string>
+	<string name="preference_key_time_units_count_monthly_recurrent_on_nth_week_day">preference_key_time_units_count_monthly_recurrent_on_nth_week_day</string>
+	<string name="preference_key_time_units_count_yearly_recurrent">preference_key_time_units_count_yearly_recurrent</string>
+	<string name="preference_key_time_units_starting_index">preference_key_time_units_starting_index</string>
+	<string name="preference_key_task_copying_approach">preference_key_task_copying_approach</string>
+	<string name="pref_summary_time_units_count_minutely_recurrent">The number of time units (minutes, hours, days, weeks, months, years), making up a recurrence interval, to preselect for new tasks:</string>
+	<string name="pref_title_time_units_count">The number of time units (minutes, hours, days, weeks, months, years), making up a recurrence interval, to preselect for new tasks:</string>
+	<string name="pref_title_time_units_count_minutely_recurrent">Recurrence interval to preselect for new minutely recurrent tasks:</string>
+	<string name="pref_title_time_units_count_hourly_recurrent">Recurrence interval to preselect for new hourly recurrent tasks:</string>
+	<string name="pref_title_time_units_count_daily_recurrent">Recurrence interval to preselect for new daily recurrent tasks:</string>
+	<string name="pref_title_time_units_count_weekly_recurrent">Recurrence interval to preselect for new weekly recurrent tasks:</string>
+	<string name="pref_title_time_units_count_monthly_recurrent">Recurrence interval to preselect for new monthly recurrent tasks:</string>
+	<string name="pref_title_time_units_count_monthly_recurrent_on_date">Recurrence interval to preselect for new tasks that are monthly recurrent on date:</string>
+	<string name="pref_title_time_units_count_monthly_recurrent_on_nth_week_day">Recurrence interval to preselect for new tasks that are monthly recurrent on nth week day:</string>
+	<string name="pref_title_time_units_count_yearly_recurrent">Recurrence interval to preselect for new yearly recurrent tasks:</string>
+	<string name="pref_dialog_title_time_units_count_minutely_recurrent">Recurrence interval to preselect for new minutely recurrent tasks, %1$s:</string>
+	<string name="pref_dialog_title_time_units_count_hourly_recurrent">Recurrence interval to preselect for new hourly recurrent tasks, %1$s:</string>
+	<string name="pref_dialog_title_time_units_count_daily_recurrent">Recurrence interval to preselect for new daily recurrent tasks, %1$s:</string>
+	<string name="pref_dialog_title_time_units_count_weekly_recurrent">Recurrence interval to preselect for new weekly recurrent tasks, %1$s:</string>
+	<string name="pref_dialog_title_time_units_count_monthly_recurrent_on_date">Recurrence interval to preselect for new tasks that are monthly recurrent on date, %1$s:</string>
+	<string name="pref_dialog_title_time_units_count_monthly_recurrent_on_nth_week_day">Recurrence interval to preselect for new tasks that are monthly recurrent on nth week day, %1$s:</string>
+	<string name="pref_dialog_title_time_units_count_yearly_recurrent">Recurrence interval to preselect for new yearly recurrent tasks, %1$s:</string>
+	<string name="pref_title_time_units_starting_index">Start index for time units (minutes, hours, days), making up recurrence interval:</string>
+	<string name="pref_title_task_copying_approach">Copied task acquires parameters from:</string>
+	<string name="pref_summary_time_units_count_singular">%1$d (minute, hour, day, week, month, year)</string>
+	<string name="pref_summary_time_units_count_minutely_recurrent_singular">%1$d minute</string>
+	<string name="pref_summary_time_units_count_hourly_recurrent_singular">%1$d hour</string>
+	<string name="pref_summary_time_units_count_daily_recurrent_singular">%1$d day</string>
+	<string name="pref_summary_time_units_count_weekly_recurrent_singular">%1$d week</string>
+	<string name="pref_summary_time_units_count_monthly_recurrent_singular">%1$d month</string>
+	<string name="pref_summary_time_units_count_monthly_recurrent_on_date_singular">%1$d month</string>
+	<string name="pref_summary_time_units_count_monthly_recurrent_on_nth_week_day_singular">%1$d month</string>
+	<string name="pref_summary_time_units_count_yearly_recurrent_singular">%1$d year</string>
+	<string name="pref_summary_time_units_count_plural">%1$d (minutes, hours, days, weeks, months, years)</string>
+	<string name="pref_summary_time_units_count_minutely_recurrent_plural">%1$d minutes</string>
+	<string name="pref_summary_time_units_count_hourly_recurrent_plural">%1$d hours</string>
+	<string name="pref_summary_time_units_count_daily_recurrent_plural">%1$d days</string>
+	<string name="pref_summary_time_units_count_weekly_recurrent_plural">%1$d weeks</string>
+	<string name="pref_summary_time_units_count_monthly_recurrent_plural">%1$d months</string>
+	<string name="pref_summary_time_units_count_monthly_recurrent_on_date_plural">%1$d months</string>
+	<string name="pref_summary_time_units_count_monthly_recurrent_on_nth_week_day_plural">%1$d months</string>
+	<string name="pref_summary_time_units_count_yearly_recurrent_plural">%1$d years</string>
+	<string name="pref_title_start_time">Default start time for edited task:</string>
+	<string name="time_picker_title_for_task_time_default_value">Default time for edited task</string>
+	<string name="time_picker_title_for_task_time">Time for task</string>
+	<string name="time_picker_title_for_start_time_default_value">Default start time for edited task</string>
+	<string name="time_picker_title_for_start_time">Start time</string>
+	<string name="time_picker_radiobutton_text_start_time">start time</string>
+	<string name="time_picker_title_for_end_time_default_value">Default finish time for edited task</string>
+	<string name="time_picker_title_for_end_time">Finish time</string>
+	<string name="time_picker_radiobutton_text_end_time">end time</string>
+	<string name="time_picker_title_for_task_duration_default_value">Default time for edited task</string>
+	<string name="time_picker_title_for_task_duration">Task duration</string>
+	<string name="time_picker_radiobutton_text_task_duration">duration</string>
+	<string name="time_picker_title_for_repetition_end_time_default_value">Default time for cancelling task repetitions</string>
+	<string name="time_picker_title_for_repetition_end_time">Repetitions will be cancelled at</string>
+	<string name="time_picker_radiobutton_text_repetition_end_time">cancelling time</string>
+	<string name="color_picker_title_for_task_unset_color">Task unset color</string>
+	<string name="time_picker_title_for_alarm_ringtone">Alarm Ringtone</string>
+	<string name="color_picker_radiobutton_text_task_unset_color">Task unset color</string>
+	<string name="color_picker_title_for_calendar_today_date_text_color">Text color for today date of the calendar</string>
+	<string name="color_picker_radiobutton_text_calendar_today_date_text_color">text color</string>
+	<string name="color_picker_title_for_calendar_today_date_highlight_color">Highlight color for today date of the calendar</string>
+	<string name="color_picker_radiobutton_text_calendar_today_date_highlight_color">highlight color</string>
+	<string name="pref_title_calendars">Calendars</string>
+	<string name="preference_key_calendars">preference_key_calendars</string>
+	<string name="pref_title_business_hours_start_time">Business hours start at:</string>
+	<string name="pref_title_business_hours_end_time">Business hours finish at:</string>
+	<string name="time_picker_title_for_business_hours">Business hours</string>
+	<string name="time_picker_radiobutton_text_business_hours_start_time">start</string>
+	<string name="time_picker_radiobutton_text_business_hours_end_time">finish</string>
+	<string name="toast_text_business_hours_start_time_must_be_less_than_business_hours_end_time">Please select new values for start time or finish time to ensure finish time is greater than start time. Please ensure time interval between start time and finish time is greater than %1$s.</string>
+	<string name="toast_text_time_interval_between_business_hours_start_time_and_business_hours_end_time_must_be_greater">Please select new values for start time or finish time to ensure time interval between start time and finish time is greater than %1$s. Currently, time interval is %2$s.</string>
+	<string name="time_picker_title_for_silence_time_duration_default_value">Silence time default duration</string>
+	<string name="time_picker_title_for_silence_time_duration">Silence time</string>
+	<string name="time_picker_radiobutton_text_silence_time_duration">time interval</string>
+	<string name="pref_title_business_hours_task_displaying_policy">How to display tasks laying completely out of range of business hours?</string>
+	<string name="pref_title_hours_ruler_displaying_policy">How to display hours ruler for two or more days displayed on a calendar?</string>
+	<string name="preference_key_start_time">preference_key_start_time</string>
+	<string name="preference_key_task_duration">preference_key_task_duration</string>
+	<string name="pref_title_task_duration">Default duration used to calculate finish time for new task:</string>
+	<string name="preference_key_repetitions_duration">preference_key_repetitions_duration</string>
+	<string name="pref_title_repetitions_duration">Default duration of the time interval where several occurrences of recurrent task will have happened:</string>
+	<string name="pref_dialog_title_repetitions_duration">Default duration of the time interval where several occurrences of recurrent task will have happened, %1$s:</string>
+	<string name="pref_summary_repetitions_duration_singular">%1$d day</string>
+	<string name="pref_summary_repetitions_duration_plural">%1$d days</string>
+	<string name="preference_key_task_unset_color">preference_key_task_unset_color</string>
+	<string name="pref_title_task_unset_color">This color will be applied to tasks with no color has been assigned to:</string>
+	<string name="preference_key_calendar_today_date_text_color">preference_key_calendar_today_date_text_color</string>
+	<string name="pref_title_calendar_today_date_text_color">Text color for today date of the calendar</string>
+	<string name="preference_key_calendar_today_date_highlight_color">preference_key_calendar_today_date_highlight_color</string>
+	<string name="pref_title_calendar_today_date_highlight_color">Highlight color for today date of the calendar</string>
+	<string name="text_information_unit_matrix_unset">unset</string>
+	<string name="information_composer_title_for_task_tree">Information to display on the task representation bar on graphic mode of the calendar</string>
+	<string name="information_composer_radiobutton_text_task_tree">task tree</string>
+	<string name="information_unit_sort_orders_holder_for_task_tree_default_value">{}</string>
+	<string name="preference_key_information_unit_sort_orders_holder_for_task_tree">preference_key_information_unit_sort_orders_holder_for_task_tree</string>
+	<string name="information_unit_matrix_for_task_tree_default_value">{\"informationUnitRows\":[{\"informationUnits\":[{\"informationUnitSelector\":\"TASK_NAME\",\"whateverDelimiterString\":\"\"},{\"informationUnitSelector\":\"CURRENT_SCHEDULED_START_MONTH\",\"whateverDelimiterString\":\"\"},{\"informationUnitSelector\":\"CURRENT_SCHEDULED_START_DATE_OF_MONTH\",\"whateverDelimiterString\":\"\"},{\"informationUnitSelector\":\"ANY_STRING\",\"whateverDelimiterString\":\", \"},{\"informationUnitSelector\":\"CURRENT_SCHEDULED_START_YEAR\",\"whateverDelimiterString\":\"\"},{\"informationUnitSelector\":\"CURRENT_SCHEDULED_START_WEEK_DAY\",\"whateverDelimiterString\":\"\"},{\"informationUnitSelector\":\"CURRENT_SCHEDULED_START_TIME\",\"whateverDelimiterString\":\"\"}]}]}</string>
+	<string name="preference_key_information_unit_matrix_for_task_tree">preference_key_information_unit_matrix_for_task_tree</string>
+	<string name="pref_title_information_unit_matrix_for_task_tree">Information to display on the task representation bar on the task tree</string>
+	<string name="information_composer_title_for_calendar">Information to display on the task representation bar on the calendar</string>
+	<string name="information_composer_title_for_calendar_time_intervals_and_text_mode">Information to display on the task representation bar on graphic or text mode of the calendar</string>
+	<string name="information_composer_title_for_calendar_time_intervals_mode">Information to display on the task representation bar on graphic mode of the calendar</string>
+	<string name="information_composer_radiobutton_text_calendar_time_intervals_mode">graphic mode</string>
+	<string name="information_unit_sort_orders_holder_for_calendar_time_intervals_mode_default_value">{}</string>
+	<string name="preference_key_information_unit_sort_orders_holder_for_calendar_time_intervals_mode">preference_key_information_unit_sort_orders_holder_for_calendar_time_intervals_mode</string>
+	<string name="information_unit_matrix_for_calendar_time_intervals_mode_default_value">{\"informationUnitRows\":[{\"informationUnits\":[{\"informationUnitSelector\":\"TASK_NAME\",\"whateverDelimiterString\":\"\"}]},{\"informationUnits\":[{\"informationUnitSelector\":\"CURRENT_SCHEDULED_START_TIME\",\"whateverDelimiterString\":\"\"},{\"informationUnitSelector\":\"ANY_STRING\",\"whateverDelimiterString\":\" - \"},{\"informationUnitSelector\":\"CURRENT_SCHEDULED_END_TIME\",\"whateverDelimiterString\":\"\"}]}]}</string>
+	<string name="preference_key_information_unit_matrix_for_calendar_time_intervals_mode">preference_key_information_unit_matrix_for_calendar_time_intervals_mode</string>
+	<string name="pref_title_information_unit_matrix_for_calendar_time_intervals_mode">Information to display on the task representation bar on graphic mode of the calendar</string>
+	<string name="information_composer_title_for_calendar_text_mode">Information to display on the task representation bar on text mode of the calendar</string>
+	<string name="information_composer_radiobutton_text_calendar_text_mode">text mode</string>
+	<string name="information_unit_sort_orders_holder_for_calendar_text_mode_default_value">{}</string>
+	<string name="preference_key_information_unit_sort_orders_holder_for_calendar_text_mode">preference_key_information_unit_sort_orders_holder_for_calendar_text_mode</string>
+	<string name="information_unit_matrix_for_calendar_text_mode_default_value">{\"informationUnitRows\":[{\"informationUnits\":[{\"informationUnitSelector\":\"CURRENT_SCHEDULED_START_TIME\",\"whateverDelimiterString\":\"\"},{\"informationUnitSelector\":\"ANY_STRING\",\"whateverDelimiterString\":\" - \"},{\"informationUnitSelector\":\"CURRENT_SCHEDULED_END_TIME\",\"whateverDelimiterString\":\"\"},{\"informationUnitSelector\":\"TASK_NAME\",\"whateverDelimiterString\":\"\"}]}]}</string>
+	<string name="preference_key_information_unit_matrix_for_calendar_text_mode">preference_key_information_unit_matrix_for_calendar_text_mode</string>
+	<string name="pref_title_information_unit_matrix_for_calendar_text_mode">Information to display on the task representation bar on text mode of the calendar</string>
+	<string name="information_composer_title_for_agenda">Information to display on the task representation bar on agenda</string>
+	<string name="information_composer_radiobutton_text_agenda">agenda</string>
+	<string name="information_unit_sort_orders_holder_for_agenda_default_value">{}</string>
+	<string name="preference_key_information_unit_sort_orders_holder_for_agenda">preference_key_information_unit_sort_orders_holder_for_agenda</string>
+	<string name="information_unit_matrix_for_agenda_default_value">{\"informationUnitRows\":[{\"informationUnits\":[{\"informationUnitSelector\":\"CURRENT_SCHEDULED_START_TIME\",\"whateverDelimiterString\":\"\"},{\"informationUnitSelector\":\"ANY_STRING\",\"whateverDelimiterString\":\" - \"},{\"informationUnitSelector\":\"CURRENT_SCHEDULED_END_TIME\",\"whateverDelimiterString\":\"\"},{\"informationUnitSelector\":\"TASK_NAME\",\"whateverDelimiterString\":\"\"}]}]}</string>
+	<string name="preference_key_information_unit_matrix_for_agenda">preference_key_information_unit_matrix_for_agenda</string>
+	<string name="pref_title_information_unit_matrix_for_agenda">Information to display on the task representation bar on the agenda</string>
+	<string name="information_unit_description_text_space_character">Space character</string>
+	<string name="information_unit_description_text_current_scheduled_start_date_time">The date and time of the start of the current scheduled task</string>
+	<string name="information_unit_description_text_current_scheduled_start_time">The time of the day of the start of the current scheduled task</string>
+	<string name="information_unit_description_text_current_scheduled_start_year">The year of the start of the current scheduled task</string>
+	<string name="information_unit_description_text_current_scheduled_start_month">The month of the start of the current scheduled task</string>
+	<string name="information_unit_description_text_current_scheduled_start_date_of_month">The date of the month of the start of the current scheduled task</string>
+	<string name="information_unit_description_text_current_scheduled_start_week_day">The day of the week of the start of the current scheduled task</string>
+	<string name="information_unit_description_text_current_scheduled_end_date_time">The date and time of the finish of the current scheduled task</string>
+	<string name="information_unit_description_text_current_scheduled_end_time">The time of the day of the finish of the current scheduled task</string>
+	<string name="information_unit_description_text_current_scheduled_end_year">The year of the finish of the current scheduled task</string>
+	<string name="information_unit_description_text_current_scheduled_end_month">The month of the finish of the current scheduled task</string>
+	<string name="information_unit_description_text_current_scheduled_end_date_of_month">The date of the month of the finish of the current scheduled task</string>
+	<string name="information_unit_description_text_current_scheduled_end_week_day">The day of the week of the finish of the current scheduled task</string>
+	<string name="information_unit_description_text_next_scheduled_start_date_time">The date and time of the start of the next scheduled task</string>
+	<string name="information_unit_description_text_next_scheduled_start_time">The time of the day of the start of the next scheduled task</string>
+	<string name="information_unit_description_text_next_scheduled_start_year">The year of the start of the next scheduled task</string>
+	<string name="information_unit_description_text_next_scheduled_start_month">The month of the start of the next scheduled task</string>
+	<string name="information_unit_description_text_next_scheduled_start_date_of_month">The date of the month of the start of the next scheduled task</string>
+	<string name="information_unit_description_text_next_scheduled_start_week_day">The day of the week of the start of the next scheduled task</string>
+	<string name="information_unit_description_text_next_scheduled_end_date_time">The date and time of the finish of the next scheduled task</string>
+	<string name="information_unit_description_text_next_scheduled_end_time">The time of the day of the finish of the next scheduled task</string>
+	<string name="information_unit_description_text_next_scheduled_end_year">The year of the finish of the next scheduled task</string>
+	<string name="information_unit_description_text_next_scheduled_end_month">The month of the finish of the next scheduled task</string>
+	<string name="information_unit_description_text_next_scheduled_end_date_of_month">The date of the month of the finish of the next scheduled task</string>
+	<string name="information_unit_description_text_next_scheduled_end_week_day">The day of the week of the finish of the next scheduled task</string>
+	<string name="information_unit_description_text_first_scheduled_start_date_time">The date and time of the start of the first scheduled task</string>
+	<string name="information_unit_description_text_first_scheduled_start_time">The time of the day of the start of the first scheduled task</string>
+	<string name="information_unit_description_text_first_scheduled_start_year">The year of the start of the first scheduled task</string>
+	<string name="information_unit_description_text_first_scheduled_start_month">The month of the start of the first scheduled task</string>
+	<string name="information_unit_description_text_first_scheduled_start_date_of_month">The date of the month of the start of the first scheduled task</string>
+	<string name="information_unit_description_text_first_scheduled_start_week_day">The day of the week of the start of the first scheduled task</string>
+	<string name="information_unit_description_text_first_scheduled_end_date_time">The date and time of the finish of the first scheduled task</string>
+	<string name="information_unit_description_text_first_scheduled_end_time">The time of the day of the finish of the first scheduled task</string>
+	<string name="information_unit_description_text_first_scheduled_end_year">The year of the finish of the first scheduled task</string>
+	<string name="information_unit_description_text_first_scheduled_end_month">The month of the finish of the first scheduled task</string>
+	<string name="information_unit_description_text_first_scheduled_end_date_of_month">The date of the month of the finish of the first scheduled task</string>
+	<string name="information_unit_description_text_first_scheduled_end_week_day">The day of the week of the finish of the first scheduled task</string>
+	<string name="information_unit_text_next_scheduled_time_none">None</string>
+	<string name="information_unit_text_whole_day">whole day</string>
+	<string name="information_unit_description_text_any_string">Any string</string>
+	<string name="information_unit_description_text_duration_of_the_task">Duration of the task</string>
+	<string name="information_unit_description_text_information_about_repetition">Information about repetition</string>
+	<string name="information_unit_description_text_location">Location</string>
+	<string name="information_unit_description_text_information_about_reminders">Information about reminders</string>
+	<string name="information_unit_description_text_task_name">Task name</string>
+	<string name="activity_information_composer_textview_text_after_inserting_of_an_item">Item to select after another item has been inserted:</string>
+	<string name="activity_information_composer_radiobutton_text_select_inserted_item">Select inserted item</string>
+	<string name="activity_information_composer_radiobutton_text_leave_previous_item_selected">Leave selection on previously selected item</string>
+	<string name="activity_information_composer_button_text_replace_information_unit">Replace item</string>
+	<string name="activity_information_composer_button_text_replace_text">Replace text</string>
+	<string name="activity_information_composer_button_text_insert_to_left">Insert to left</string>
+	<string name="activity_information_composer_button_text_insert_to_right">Insert to right</string>
+	<string name="activity_information_composer_button_text_insert_to_up">Insert to up</string>
+	<string name="activity_information_composer_button_text_insert_to_down">Insert to down</string>
+	<string name="activity_information_composer_button_text_delete">Remove selected item</string>
+	<string name="activity_information_composer_textview_text_after_deleting_of_an_item">Item to select after current item has been removed:</string>
+	<string name="activity_information_composer_radiobutton_text_select_left_item">Select left item</string>
+	<string name="activity_information_composer_radiobutton_text_select_right_item">Select right item</string>
+	<string name="preference_key_is_calendars_bar_showed">preference_key_is_calendars_bar_showed</string>
+	<string name="preference_key_is_days_count_selector_bar_showed">preference_key_is_days_count_selector_bar_showed</string>
+	<string name="preference_key_days_count_for_weekview">preference_key_days_count_for_weekview</string>
+	<string name="pref_title_is_calendars_bar_showed">Show calendars bar</string>
+	<string name="preference_key_business_hours_start_time">preference_key_business_hours_start_time</string>
+	<string name="preference_key_business_hours_end_time">preference_key_business_hours_end_time</string>
+	<string name="preference_key_business_hours_task_displaying_policy">preference_key_business_hours_task_displaying_policy</string>
+	<string name="preference_key_hours_ruler_displaying_policy">preference_key_hours_ruler_displaying_policy</string>
+	<string name="preference_key_first_day_of_week">preference_key_first_day_of_week</string>
+	<string name="preference_key_mode_for_day">preference_key_mode_for_day</string>
+	<string name="preference_key_mode_for_week">preference_key_mode_for_week</string>
+	<string name="preference_key_recent_timezones">preference_key_recent_timezones</string>
+	<!-- Example settings for Data & Sync -->
+	<string name="pref_header_data_sync">Data &amp; sync</string>
+	<string name="preference_key_sync_policy">preference_key_sync_policy</string>
+	<string name="preference_key_mark_sync_needed">preference_key_mark_sync_needed</string>
+	<string name="pref_title_sync_policy">Data synchronization policy:</string>
+	<string name="pref_title_mark_sync_needed">When to mark data need to be synchronized?</string>
+	<string name="pref_title_sync_frequency">Sync frequency</string>
+	<string name="pref_title_system_sync_settings">System sync settings</string>
+	<string name="pref_title_sync_settings_force_sync">Force sync</string>
+	<string name="pref_description_sync_settings_force_sync">Tap here to force sync</string>
+	<string name="pref_sync_settings_force_sync_alert_dialog_message">Force sync?</string>
+	<string name="pref_title_sync_on_cellular_internet">Sync on cellular internet</string>
+	<string name="preference_key_labels_next_sync_down_datetime">preference_key_labels_next_sync_down_datetime</string>
+	<string name="preference_key_contacts_next_sync_down_datetime">preference_key_contacts_next_sync_down_datetime</string>
+	<string name="preference_key_diary_records_next_sync_down_datetime">preference_key_diary_records_next_sync_down_datetime</string>
+	<string name="preference_key_tasks_next_sync_down_datetime">preference_key_tasks_next_sync_down_datetime</string>
+	<string name="preference_key_sync_on_cellular_internet">preference_key_sync_on_cellular_internet</string>
+	<string name="preference_key_backup_now">preference_key_backup_now</string>
+	<string name="preference_key_backup_now_last_used_path">preference_key_backup_now_last_used_path</string>
+	<string name="pref_title_backup_now">Backup now</string>
+	<string name="preference_key_restore">preference_key_restore</string>
+	<string name="pref_title_restore">Restore</string>
+	<!-- Example settings for Notifications -->
+	<string name="pref_header_notifications">Notifications</string>
+	<string name="pref_title_new_message_notifications">New message notifications</string>
+	<string name="pref_title_alarm_method">Alarm method to preselect for new reminders:</string>
+	<string name="pref_title_reminder_behavior_for_completed_task">How to schedule reminders of completed tasks?</string>
+	<string name="pref_title_reminder_time_mode">What time should be selected for new reminders?</string>
+	<string name="pref_title_reminders_popup_window_displaying_duration">Reminder’s popup window displaying duration:</string>
+	<string name="pref_dialog_title_reminders_popup_window_displaying_duration">Reminder’s popup window displaying duration, %1$s:</string>
+	<string name="pref_title_automatic_snooze_duration">Automatic snooze duration:</string>
+	<string name="pref_dialog_title_automatic_snooze_duration">Automatic snooze duration, %1$s:</string>
+	<string name="pref_title_automatic_snoozes_max_count">Max automatic snoozes:</string>
+	<string name="pref_summary_reminders_popup_window_displaying_duration_singular">%1$d second</string>
+	<string name="pref_summary_reminders_popup_window_displaying_duration_plural">%1$d seconds</string>
+	<string name="pref_summary_automatic_snooze_duration_singular">%1$d minute</string>
+	<string name="pref_summary_automatic_snooze_duration_plural">%1$d minutes</string>
+	<string name="pref_summary_automatic_snoozes_max_count_singular">%1$d snooze</string>
+	<string name="pref_summary_automatic_snoozes_max_count_plural">%1$d snoozes</string>
+	<string name="pref_title_max_number_of_elapsed_reminders">Maximum number of elapsed reminders to show:</string>
+	<string name="pref_title_date_picker_default_selected_date">Date picker default selected date:</string>
+	<string name="pref_title_start_time_required_action">Action to apply if start time hasn’t been set but is required for the currently selected values of the attributes of an edited task:</string>
+	<string name="pref_title_time_picker_time_format">Time format for time picker (12/24-hour clock):</string>
+	<string name="pref_title_on_task_select_action">Selecting a task opens it in:</string>
+	<string name="pref_title_time_unit">Recurrence interval to preselect for new tasks:</string>
+	<string name="pref_title_week_day_number">Ordinal number of occurrence of the day of the week in a month to preselect for new tasks:</string>
+	<string name="pref_title_month_based_recurrences_date">Date of month to preselect for new tasks that are monthly recurrent on date:</string>
+	<string name="pref_title_month_recurrence_mode">Recurrence mode (whether to recur on Nth weekday or on specified date) to preselect for new monthly recurrent tasks:</string>
+	<string name="preference_key_alarm_method">preference_key_alarm_method</string>
+	<string name="preference_key_reminder_time_mode">preference_key_reminder_time_mode</string>
+	<string name="preference_key_reminder_behavior_for_completed_task">preference_key_reminder_behavior_for_completed_task</string>
+	<string name="preference_key_ringtone_fade_in_time">preference_key_ringtone_fade_in_time</string>
+	<string name="pref_title_ringtone_fade_in_time">Ringtone fade in duration:</string>
+	<string name="pref_dialog_title_ringtone_fade_in_time">Ringtone fade in duration, %1$s:</string>
+	<string name="pref_summary_ringtone_fade_in_time_singular">%1$d minute</string>
+	<string name="pref_summary_ringtone_fade_in_time_plural">%1$d minutes</string>
+	<string name="text_ringtone_fade_in_duration_zero">Zero length (ringtone will start with normal volume from the beginning)</string>
+	<string name="fragment_view_task_part_reminders_header_textview_ringtone_fade_in_time">Ringtone fade in duration:</string>
+	<string name="toast_text_ringtone_fade_in_time_must_be_greater_than_or_equal_to">Ringtone fade in duration must be greater than or equal to %1$d.</string>
+	<string name="toast_text_ringtone_fade_in_time_must_be_less_than_or_equal_to">Ringtone fade in duration must be less than or equal to %1$d.</string>
+	<string name="toast_text_ringtone_fade_in_time_must_be_within_bounds">Please enter the number of %3$s for the ringtone fade in duration from %1$d to %2$d.</string>
+	<string name="fragment_edit_task_part_reminders_textview_ringtone_fade_in_time">Ringtone fade in duration:</string>
+	<string name="activity_edit_reminder_textview_ringtone_fade_in_time">Ringtone fade in duration:</string>
+	<string name="textview_ringtone_fade_in_time_text_measurement_unit_singular">minute</string>
+	<string name="textview_ringtone_fade_in_time_text_measurement_unit_plural">minutes</string>
+	<string name="preference_key_reminders_popup_window_displaying_duration">preference_key_reminders_popup_window_displaying_duration</string>
+	<string name="preference_key_automatic_snooze_duration">preference_key_automatic_snooze_duration</string>
+	<string name="preference_key_automatic_snoozes_max_count">preference_key_automatic_snoozes_max_count</string>
+	<string name="preference_key_date_picker_default_selected_date">preference_key_date_picker_default_selected_date</string>
+	<string name="preference_key_start_time_required_action">preference_key_start_time_required_action</string>
+	<string name="preference_key_time_picker_time_format">preference_key_time_picker_time_format</string>
+	<string name="preference_key_on_task_select_action">preference_key_on_task_select_action</string>
+	<string name="preference_key_time_unit">preference_key_time_unit</string>
+	<string name="preference_key_week_day_number">preference_key_week_day_number</string>
+	<string name="preference_key_month_based_recurrences_date">preference_key_month_based_recurrences_date</string>
+	<string name="preference_key_month_recurrence_mode">preference_key_month_recurrence_mode</string>
+	<string name="preference_key_vibrate_with_alarm_ringtone">preference_key_vibrate_with_alarm_ringtone</string>
+	<string name="preference_key_sort_order_ascending">preference_key_sort_order_ascending</string>
+	<string name="preference_key_alarm_ringtone">preference_key_alarm_ringtone</string>
+	<string name="preference_key_notification_ringtone">preference_key_notification_ringtone</string>
+	<string name="preference_key_default_snooze_time_minutes">"preference_key_default_snooze_time_minutes"</string>
+	<string name="preference_key_show_alert_dialog_on_dismiss_scheduled_reminder_button_press">"preference_key_show_alert_dialog_on_dismiss_scheduled_reminder_button_press"</string>
+	<string name="preference_key_show_alert_dialog_on_discard_selected_elapsed_reminders_button_press">"preference_key_show_alert_dialog_on_discard_selected_elapsed_reminders_button_press"</string>
+	<string name="preference_key_silence_time_duration">preference_key_silence_time_duration</string>
+	<string name="pref_title_silence_time_duration">Silence time default duration:</string>
+	<string name="zero_length">Zero length</string>
+	<string name="pref_title_alarm_ringtone">Default ringtone for reminder going off with popup window:</string>
+	<string name="pref_title_notification_ringtone">Default ringtone for reminder going off with notification at the status bar:</string>
+	<string name="ringtone_silent">Silent</string>
+	<string name="default_phone_ringtone_with_actual">Default phone ringtone (<xliff:g id="actual_ringtone">%1$s</xliff:g>)</string>
+	<string name="default_alarm_ringtone_with_actual">Default alarm ringtone (<xliff:g id="actual_ringtone">%1$s</xliff:g>)</string>
+	<string name="default_notification_ringtone_with_actual">Default notification ringtone (<xliff:g id="actual_ringtone">%1$s</xliff:g>)</string>
+	<string name="preference_key_custom_colors">custom_colors</string>
+	<string name="pref_title_vibrate_with_alarm_ringtone">Vibrate with ringtone played for reminder (individual reminders may override this setting)</string>
+	<string name="title_activity_activity_alarm">ActivityAlarm</string>
+	<string name="toast_text_value_must_be_greater_than_or_equal_to">%2$s\nValue must be greater than or equal to %1$d.</string>
+	<string name="toast_text_value_must_be_less_than_or_equal_to">%2$s\nValue must be less than or equal to %1$d.</string>
+	<string name="toast_text_value_must_be_within_bounds">%3$s\nValue must be greater than or equal to %1$d and less than or equal to %2$d.</string>
+	<string name="tag_key_value_must_be_greater_than_or_equal_to">tag_key_value_must_be_greater_than_or_equal_to</string>
+	<string name="tag_key_value_must_be_less_than_or_equal_to">tag_key_value_must_be_less_than_or_equal_to</string>
+	<string name="tag_key_value_must_be_within_bounds">tag_key_value_must_be_within_bounds</string>
+	<string name="tag_key_value_must_be">tag_key_value_must_be</string>
+	<string name="toast_text_time_units_count_must_be_greater_than_or_equal_to">The number of time units (minutes, hours, days, weeks, months, years) must be greater than or equal to %1$d.</string>
+	<string name="toast_text_time_units_count_must_be_less_than_or_equal_to">The number of time units (minutes, hours, days, weeks, months, years) must be less than or equal to %1$d.</string>
+	<string name="toast_text_time_units_count_must_be_within_bounds">Please enter the number of time units (minutes, hours, days, weeks, months, years) from %1$d to %2$d.</string>
+	<string name="toast_text_minutes_count_must_be_greater_than_or_equal_to">The number of minutes must be greater than or equal to %1$d.</string>
+	<string name="toast_text_minutes_count_must_be_less_than_or_equal_to">The number of minutes must be less than or equal to %1$d.</string>
+	<string name="toast_text_minutes_count_must_be_within_bounds">Please enter the number of minutes from %1$d to %2$d.</string>
+	<string name="toast_text_hours_count_must_be_greater_than_or_equal_to">The number of hours must be greater than or equal to %1$d.</string>
+	<string name="toast_text_hours_count_must_be_less_than_or_equal_to">The number of hours must be less than or equal to %1$d.</string>
+	<string name="toast_text_hours_count_must_be_within_bounds">Please enter the number of hours from %1$d to %2$d.</string>
+	<string name="toast_text_days_count_must_be_greater_than_or_equal_to">The number of days must be greater than or equal to %1$d.</string>
+	<string name="toast_text_days_count_must_be_less_than_or_equal_to">The number of days must be less than or equal to %1$d.</string>
+	<string name="toast_text_days_count_must_be_within_bounds">Please enter the number of days from %1$d to %2$d.</string>
+	<string name="toast_text_weeks_count_must_be_greater_than_or_equal_to">The number of weeks must be greater than or equal to %1$d.</string>
+	<string name="toast_text_weeks_count_must_be_less_than_or_equal_to">The number of weeks must be less than or equal to %1$d.</string>
+	<string name="toast_text_weeks_count_must_be_within_bounds">Please enter the number of weeks from %1$d to %2$d.</string>
+	<string name="toast_text_months_count_must_be_greater_than_or_equal_to">The number of months must be greater than or equal to %1$d.</string>
+	<string name="toast_text_months_count_must_be_less_than_or_equal_to">The number of months must be less than or equal to %1$d.</string>
+	<string name="toast_text_months_count_must_be_within_bounds">Please enter the number of months from %1$d to %2$d.</string>
+	<string name="toast_text_months_on_date_count_must_be_greater_than_or_equal_to">The number of months must be greater than or equal to %1$d.</string>
+	<string name="toast_text_months_on_date_count_must_be_less_than_or_equal_to">The number of months must be less than or equal to %1$d.</string>
+	<string name="toast_text_months_on_date_count_must_be_within_bounds">Please enter the number of months from %1$d to %2$d.</string>
+	<string name="toast_text_months_on_nth_week_day_count_must_be_greater_than_or_equal_to">The number of months must be greater than or equal to %1$d.</string>
+	<string name="toast_text_months_on_nth_week_day_count_must_be_less_than_or_equal_to">The number of months must be less than or equal to %1$d.</string>
+	<string name="toast_text_months_on_nth_week_day_count_must_be_within_bounds">Please enter the number of months from %1$d to %2$d.</string>
+	<string name="toast_text_years_count_must_be_greater_than_or_equal_to">The number of years must be greater than or equal to %1$d.</string>
+	<string name="toast_text_years_count_must_be_less_than_or_equal_to">The number of years must be less than or equal to %1$d.</string>
+	<string name="toast_text_years_count_must_be_within_bounds">Please enter the number of years from %1$d to %2$d.</string>
+	<string name="toast_text_occurrences_max_count_must_be_greater_than_or_equal_to">The maximum number of times a task is allowed to repeat must be greater than or equal to %1$d.</string>
+	<string name="toast_text_occurrences_max_count_must_be_less_than_or_equal_to">The maximum number of times a task is allowed to repeat must be less than or equal to %1$d.</string>
+	<string name="toast_text_occurrences_max_count_must_be_within_bounds">Please enter the maximum number of times a task is allowed to repeat, from %1$d to %2$d or leave it empty.</string>
+	<string name="toast_text_unable_to_load_tasks_from_file">Unable to load tasks from file</string>
+	<string name="toast_text_there_are_no_tasks_in_the_backup_file">There are no tasks in the backup file</string>
+	<string name="error_text_checkbox_count_is_less_than_occurrences_count">The number of check boxes (%1$d) is less than the number of occurrences (%2$d).</string>
+	<string name="error_text_id_is_null">id is null</string>
+	<string name="toast_text_start_time_must_be_before_end_time">Start time must be before of the end time</string>
+	<string name="task_title_for_quick_reminder">%1$s</string>
+	<string name="error_text_task_name_is_required">Task name is required</string>
+	<string name="toast_text_task_name_is_required">Please select task name</string>
+	<string name="toast_text_reminder_name_is_required">Please select reminder name</string>
+	<string name="toast_text_set_reminders_start_type_to_absolute_time_or_select_task_start_time">Please set “%1$s” reminder’s start time to absolute time or to time after now or select task start time.</string>
+	<string name="toast_text_start_date_is_required_for_recurrent_task">Start date is required for recurrent task.</string>
+	<string name="toast_text_time_unit_is_not_selected">Please select days.</string>
+	<string name="toast_text_start_date_time_for_one_time_is_not_selected">Please select days.</string>
+	<string name="toast_text_occurrences_is_not_selected">Please select days.</string>
+	<string name="toast_text_minutely_recurrent_tasks_occurrences_is_not_selected">Please select minutes (To select minutes, tick checkboxes representing minutes).</string>
+	<string name="toast_text_hourly_recurrent_tasks_occurrences_is_not_selected">Please select hours (To select hours, tick checkboxes representing hours).</string>
+	<string name="toast_text_daily_recurrent_tasks_occurrences_is_not_selected">Please select days (To select days, tick checkboxes representing days).</string>
+	<string name="toast_text_weekly_recurrent_tasks_occurrences_is_not_selected">Please select days of week (To select days of week, tick checkboxes representing days of week).</string>
+	<string name="toast_text_monthly_recurrent_on_date_tasks_occurrences_is_not_selected">Please select days of month (To select days of month, tick checkboxes representing days of month).</string>
+	<string name="toast_text_monthly_recurrent_on_nth_week_day_tasks_occurrences_is_not_selected">Please select days of week (To select days of week, tick checkboxes representing days of week).</string>
+	<string name="toast_text_yearly_recurrent_tasks_occurrences_is_not_selected">Please select days of year (To select days of year, tap “%1$s” button, then choose dates and click “%2$s”).</string>
+	<string name="toast_text_reminders_popup_window_displaying_duration_must_be_greater_than_or_equal_to">The number of %2$s the reminder’s popup window will be displaying up to, must be greater than or equal to %1$d.</string>
+	<string name="toast_text_reminders_popup_window_displaying_duration_must_be_less_than_or_equal_to">The number of %2$s the reminder’s popup window will be displaying up to, must be less than or equal to %1$d.</string>
+	<string name="toast_text_reminders_popup_window_displaying_duration_must_be_within_bounds">Please enter the number of %3$s the reminder’s popup window will be displaying up to, from %1$d to %2$d.</string>
+	<string name="toast_text_automatic_snooze_duration_must_be_greater_than_or_equal_to">The number of %2$s the reminder will be automatically snoozed to, must be greater than or equal to %1$d.</string>
+	<string name="toast_text_automatic_snooze_duration_must_be_less_than_or_equal_to">The number of %2$s the reminder will be automatically snoozed to, must be less than or equal to %1$d.</string>
+	<string name="toast_text_automatic_snooze_duration_must_be_within_bounds">Please enter the number of %3$s the reminder will be automatically snoozed to, from %1$d to %2$d.</string>
+	<string name="toast_text_automatic_snoozes_max_count_must_be_greater_than_or_equal_to">The number of times the reminder will be automatically snoozed, must be greater than or equal to %1$d.</string>
+	<string name="toast_text_automatic_snoozes_max_count_must_be_less_than_or_equal_to">The number of times the reminder will be automatically snoozed, must be less than or equal to %1$d.</string>
+	<string name="toast_text_automatic_snoozes_max_count_must_be_within_bounds">Please enter the number of times the reminder will be automatically snoozed, from %1$d to %2$d.</string>
+	<string-array name="alarm_method_titles_array">
+		<item>Show a popup window with an option to snoose the alarm</item>
+		<item>Show a notification at the status bar</item>
+	</string-array>
+	<string-array name="reminder_behavior_for_completed_task_titles_array">
+		<item>Do not schedule reminders for completed task</item>
+		<item>Schedule reminders for completed task</item>
+	</string-array>
+	<string-array name="date_picker_selected_date_titles_array">
+		<item>Currently selected date</item>
+		<item>Today date</item>
+	</string-array>
+	<string-array name="start_time_required_action_titles_array">
+		<item>Apply default start time from settings</item>
+		<item>Apply current time</item>
+		<item>Do not apply start time automatically</item>
+	</string-array>
+	<string-array name="time_picker_time_format_titles_array">
+		<item>Default (%1$s)</item>
+		<item>12-hour clock</item>
+		<item>24-hour clock</item>
+	</string-array>
+	<string-array name="on_task_select_action_titles_array">
+		<item>Edit mode</item>
+		<item>View mode</item>
+	</string-array>
+	<string-array name="time_unit_spinner_titles_array">
+		<item>One time</item>
+		<item>Minutely</item>
+		<item>Hourly</item>
+		<item>Daily</item>
+		<item>Weekly</item>
+		<item>Monthly</item>
+		<item>Yearly</item>
+	</string-array>
+	<string-array name="time_unit_titles_array">
+		<item>One time</item>
+		<item>Minutes</item>
+		<item>Hours</item>
+		<item>Days</item>
+		<item>Weeks</item>
+		<item>Months</item>
+		<item>Years</item>
+	</string-array>
+	<string-array name="week_day_number_spinner_titles_array">
+		<item>First</item>
+		<item>Second</item>
+		<item>Third</item>
+		<item>Fourth</item>
+		<item>Last</item>
+	</string-array>
+	<string-array name="week_day_number_titles_array">
+		<item>First</item>
+		<item>Second</item>
+		<item>Third</item>
+		<item>Fourth</item>
+		<item>Last</item>
+	</string-array>
+	<string-array name="week_day_number_lower_case_titles_array">
+		<item>first</item>
+		<item>second</item>
+		<item>third</item>
+		<item>fourth</item>
+		<item>last</item>
+	</string-array>
+	<string-array name="month_based_recurrences_date_titles_array">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+		<item>8</item>
+		<item>9</item>
+		<item>10</item>
+		<item>11</item>
+		<item>12</item>
+		<item>13</item>
+		<item>14</item>
+		<item>15</item>
+		<item>16</item>
+		<item>17</item>
+		<item>18</item>
+		<item>19</item>
+		<item>20</item>
+		<item>21</item>
+		<item>22</item>
+		<item>23</item>
+		<item>24</item>
+		<item>25</item>
+		<item>26</item>
+		<item>27</item>
+		<item>28</item>
+		<item>29</item>
+		<item>30</item>
+		<item>31</item>
+		<item>Last</item>
+	</string-array>
+	<string-array name="month_recurrence_mode_titles_array">
+		<item>Recur on specified date</item>
+		<item>Recur on Nth week day</item>
+	</string-array>
+	<string-array name="alarm_method_values_array">
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	<string-array name="reminder_behavior_for_completed_task_values_array">
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	<string-array name="date_picker_selected_date_values_array">
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	<string-array name="start_time_required_action_values_array">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+	<string-array name="time_picker_time_format_values_array">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+	<string-array name="on_task_select_action_values_array">
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	<string-array name="time_unit_values_array">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+	</string-array>
+	<string-array name="week_day_number_values_array">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>-1</item>
+	</string-array>
+	<string-array name="month_based_recurrences_date_values_array">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+		<item>8</item>
+		<item>9</item>
+		<item>10</item>
+		<item>11</item>
+		<item>12</item>
+		<item>13</item>
+		<item>14</item>
+		<item>15</item>
+		<item>16</item>
+		<item>17</item>
+		<item>18</item>
+		<item>19</item>
+		<item>20</item>
+		<item>21</item>
+		<item>22</item>
+		<item>23</item>
+		<item>24</item>
+		<item>25</item>
+		<item>26</item>
+		<item>27</item>
+		<item>28</item>
+		<item>29</item>
+		<item>30</item>
+		<item>31</item>
+		<item>-1</item>
+	</string-array>
+	<string-array name="month_recurrence_mode_values_array">
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	<string-array name="time_units_starting_index_titles_array">
+		<item>0</item>
+		<item>1</item>
+	</string-array>
+	<string-array name="time_units_starting_index_values_array">
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	<string-array name="task_copying_approach_titles_array">
+		<item>Original saved task</item>
+		<item>Currently modified task</item>
+	</string-array>
+	<string-array name="task_copying_approach_values_array">
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	<string-array name="reminder_time_mode_titles_array">
+		<item>Absolute time</item>
+		<item>Time after now</item>
+		<item>Time before event</item>
+		<item>Time after event</item>
+	</string-array>
+	<string-array name="reminder_time_mode_values_array">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+	</string-array>
+	<string-array name="sync_policy_titles_array">
+		<item>Always sync local data with server data</item>
+		<item>Don’t sync local data with server data</item>
+	</string-array>
+	<string-array name="sync_policy_values_array">
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	<string-array name="mark_sync_needed_titles_array">
+		<item>Always mark data need to be synchronized</item>
+		<item>Mark data need to be synchronized only if synchronization is switched on</item>
+		<item>Never mark data need to be synchronized</item>
+	</string-array>
+	<string-array name="mark_sync_needed_values_array">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+	<string name="title_activity_activity_pick_days_of_year">Select days of year</string>
+	<string-array name="business_hours_task_displaying_policy_titles_array">
+		<item>Display tasks on separated bar</item>
+		<item>Display tasks as usual, within business hours area</item>
+		<item>Do not display these tasks</item>
+	</string-array>
+	<string-array name="business_hours_task_displaying_policy_values_array">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+	<string-array name="hours_ruler_displaying_policy_titles_array">
+		<item>Display only one hours ruler</item>
+		<item>Display separate hours ruler for each day</item>
+	</string-array>
+	<string-array name="hours_ruler_displaying_policy_values_array">
+		<item>1</item>
+		<item>2</item>
+	</string-array>
+	<string name="title_activity_activity_exit">ActivityExit</string>
+	<string name="title_activity_information_composer">Information Composer</string>
+	<string name="title_activity_activity_settings2">Settings</string>
+	<string name="title_calendar_list">Calendars</string>
+	<string name="title_calendar_detail">Calendar Detail</string>
+	<string name="title_recyclebin_list">Deleted Tasks</string>
+	<string name="title_recyclebin_detail">Deleted Task Detail</string>
+    <string name="title_item_detail">Item Detail</string>
+</resources>

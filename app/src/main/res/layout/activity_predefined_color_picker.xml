@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+	<!-- The ActionBar displayed at the top -->
+	<include
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		layout="@layout/appbarlayout_toolbar" />
+	<TableLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+		<TableRow
+			android:id="@+id/tableRow1"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button1"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/White"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button2"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Ivory"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button3"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LightYellow"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button4"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Yellow"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button5"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Snow"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button6"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/FloralWhite"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button7"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LemonChiffon"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button8"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Cornsilk"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button9"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Seashell"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button10"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LavenderBlush"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow2"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button11"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/PapayaWhip"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button12"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/BlanchedAlmond"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button13"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/MistyRose"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button14"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Bisque"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button15"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Moccasin"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button16"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/NavajoWhite"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button17"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/PeachPuff"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button18"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Gold"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button19"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Pink"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button20"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LightPink"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow3"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button21"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Orange"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button22"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LightSalmon"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button23"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkOrange"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button24"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Coral"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button25"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/HotPink"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button26"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Tomato"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button27"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/OrangeRed"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button28"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DeepPink"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button29"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Fuchsia"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button30"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Magenta"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow4"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button31"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Red"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button32"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/OldLace"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button33"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LightGoldenrodYellow"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button34"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Linen"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button35"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/AntiqueWhite"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button36"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Salmon"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button37"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/GhostWhite"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button38"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/MintCream"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button39"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/WhiteSmoke"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button40"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Beige"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow5"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button41"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Wheat"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button42"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/SandyBrown"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button43"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Azure"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button44"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Honeydew"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button45"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/AliceBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button46"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Khaki"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button47"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LightCoral"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button48"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/PaleGoldenrod"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button49"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Violet"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button50"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkSalmon"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow6"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button51"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Lavender"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button52"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LightCyan"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button53"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/BurlyWood"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button54"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Plum"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button55"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Gainsboro"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button56"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Crimson"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button57"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/PaleVioletRed"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button58"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Goldenrod"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button59"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Orchid"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button60"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Thistle"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow7"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button61"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LightGrey"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button62"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Tan"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button63"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Chocolate"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button64"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Peru"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button65"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/IndianRed"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button66"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/MediumVioletRed"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button67"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Silver"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button68"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkKhaki"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button69"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/RosyBrown"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button70"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/MediumOrchid"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow8"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button71"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkGoldenrod"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button72"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/FireBrick"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button73"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/PowderBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button74"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LightSteelBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button75"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/PaleTurquoise"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button76"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/GreenYellow"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button77"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LightBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button78"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkGray"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button79"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Brown"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button80"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Sienna"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow9"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button81"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/YellowGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button82"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkOrchid"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button83"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/PaleGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button84"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkViolet"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button85"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/MediumPurple"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button86"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LightGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button87"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkSeaGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button88"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/SaddleBrown"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button89"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkMagenta"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button90"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkRed"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow10"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button91"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/BlueViolet"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button92"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LightSkyBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button93"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/SkyBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button94"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Gray"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button95"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Olive"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button96"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Purple"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button97"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Maroon"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button98"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Aquamarine"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button99"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Chartreuse"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button100"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LawnGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow11"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button101"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/MediumSlateBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button102"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LightSlateGray"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button103"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/SlateGray"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button104"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/OliveDrab"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button105"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/SlateBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button106"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DimGray"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button107"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/MediumAquamarine"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button108"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/CornflowerBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button109"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/CadetBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button110"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkOliveGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow12"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button111"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Indigo"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button112"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/MediumTurquoise"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button113"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkSlateBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button114"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/SteelBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button115"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/RoyalBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button116"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Turquoise"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button117"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/MediumSeaGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button118"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LimeGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button119"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkSlateGray"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button120"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/SeaGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow13"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button121"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/ForestGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button122"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/LightSeaGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button123"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DodgerBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button124"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/MidnightBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button125"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Aqua"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button126"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Cyan"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button127"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/SpringGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button128"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Lime"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button129"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/MediumSpringGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button130"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkTurquoise"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+		<TableRow
+			android:id="@+id/tableRow14"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button131"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DeepSkyBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button132"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkCyan"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button133"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Teal"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button134"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Green"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button135"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkGreen"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button136"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Blue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button137"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/MediumBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button138"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/DarkBlue"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button139"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Navy"
+				android:onClick="onPredefinedColorButtonClick" />
+			<Button
+				android:id="@+id/activity_predefined_color_picker_button140"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_margin="1dp"
+				android:layout_weight="1"
+				android:background="@color/Black"
+				android:onClick="onPredefinedColorButtonClick" />
+		</TableRow>
+	</TableLayout>
+</LinearLayout>

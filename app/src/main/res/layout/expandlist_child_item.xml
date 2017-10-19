@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dip"
+    android:background="@color/ExpandChildBackground"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tvChild1"
+        android:layout_width="55dip"
+        android:layout_height="wrap_content"
+        android:text="hh:mm"
+        android:textColor="@color/Black"
+        android:textSize="17dip" />
+
+    <TextView
+        android:id="@+id/tvChild2"
+        android:layout_width="55dip"
+        android:layout_height="wrap_content"
+        android:text="hh:mm"
+        android:textColor="@color/Black"
+        android:textSize="17dip" />
+
+    <TextView
+        android:id="@+id/tvChild3"
+        android:layout_width="55dip"
+        android:layout_height="wrap_content"
+        android:text="hh:mm"
+        android:textColor="@color/Black"
+        android:textSize="17dip" />
+
+    <TextView
+        android:id="@+id/tvChild4"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:text="work on task qwerty asdf zxcv asdf"
+        android:textColor="@color/Black"
+        android:textSize="17dip" />
+
+</LinearLayout>

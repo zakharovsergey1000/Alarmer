@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+	<PreferenceCategory android:title="@string/pref_category_default_settings_for_new_reminder" >
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/reminder_time_mode_default_value"
+			android:entries="@array/reminder_time_mode_titles_array"
+			android:entryValues="@array/reminder_time_mode_values_array"
+			android:key="@string/preference_key_reminder_time_mode"
+			android:title="@string/pref_title_reminder_time_mode" />
+		<biz.advancedcalendar.activities.MyListPreference
+			android:defaultValue="@integer/alarm_method_default_value"
+			android:entries="@array/alarm_method_titles_array"
+			android:entryValues="@array/alarm_method_values_array"
+			android:key="@string/preference_key_alarm_method"
+			android:title="@string/pref_title_alarm_method" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="content://settings/system/alarm_alert"
+			android:key="@string/preference_key_alarm_ringtone"
+			android:ringtoneType="alarm"
+			android:title="@string/pref_title_alarm_ringtone" />
+		<biz.advancedcalendar.activities.MyPreference
+			android:defaultValue="content://settings/system/notification_sound"
+			android:key="@string/preference_key_notification_ringtone"
+			android:ringtoneType="notification"
+			android:title="@string/pref_title_notification_ringtone" />
+		<biz.advancedcalendar.activities.MyEditTextPreference
+			android:defaultValue="@integer/ringtone_fade_in_time_default_value"
+			android:dialogTitle="@string/pref_dialog_title_ringtone_fade_in_time"
+			android:key="@string/preference_key_ringtone_fade_in_time"
+			android:numeric="integer"
+			android:title="@string/pref_title_ringtone_fade_in_time" />
+		<biz.advancedcalendar.activities.MyEditTextPreference
+			android:defaultValue="@integer/reminders_popup_window_displaying_duration_default_value"
+			android:dialogTitle="@string/pref_dialog_title_reminders_popup_window_displaying_duration"
+			android:key="@string/preference_key_reminders_popup_window_displaying_duration"
+			android:numeric="integer"
+			android:title="@string/pref_title_reminders_popup_window_displaying_duration" />
+		<biz.advancedcalendar.activities.MyEditTextPreference
+			android:defaultValue="@integer/automatic_snooze_duration_default_value"
+			android:dialogTitle="@string/pref_dialog_title_automatic_snooze_duration"
+			android:key="@string/preference_key_automatic_snooze_duration"
+			android:numeric="integer"
+			android:title="@string/pref_title_automatic_snooze_duration" />
+		<biz.advancedcalendar.activities.MyEditTextPreference
+			android:defaultValue="@integer/automatic_snoozes_max_count_default_value"
+			android:key="@string/preference_key_automatic_snoozes_max_count"
+			android:numeric="integer"
+			android:title="@string/pref_title_automatic_snoozes_max_count" />
+	</PreferenceCategory>
+</PreferenceScreen>

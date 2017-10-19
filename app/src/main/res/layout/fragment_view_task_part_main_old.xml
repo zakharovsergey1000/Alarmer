@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_percent_of_completion_header"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_view_task_header_textview_percent_of_completion"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_percent_of_completion_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</LinearLayout>
+	<SeekBar
+		android:id="@+id/fragment_task_viewing_main_seekbar_task_percent_of_completion"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:max="100" />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_priority_header"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_view_task_part_main_header_textview_task_priority"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_priority_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_type_header"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_view_task_part_main_header_textview_task_type"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_type_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_start_date_header"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_view_task_part_main_header_textview_task_start_date"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_start_date_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_end_header"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_view_task_part_main_header_textview_task_end"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_end_value"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_required_time_header"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_view_task_part_main_header_textview_task_required_time"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_required_time_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_actual_time_header"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_view_task_part_main_header_textview_task_actual_time"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<TextView
+			android:id="@+id/fragment_task_viewing_main_textview_task_actual_time_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+	</LinearLayout>
+	<Button
+		android:id="@+id/fragment_task_viewing_main_button_task_bring_to_an_end"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:onClick="onClick"
+		android:text="@string/fragment_view_task_part_main_button_task_bring_to_an_end_text" />
+</LinearLayout>

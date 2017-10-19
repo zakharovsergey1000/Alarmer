@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="20dip"
+        android:checkedButton="@+id/button_first"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio_contacts_sort_default"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/segmented_button_background_first"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:minWidth="70dp"
+            android:padding="5dp"
+            android:text="@string/radiobutton_contacts_sort_order_default"
+            android:textColor="@color/segmented_button_text" />
+
+        <RadioButton
+            android:id="@+id/radio_contacts_sort_acsending_descending"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/segmented_button_background_last"
+            android:button="@null"
+            android:gravity="center"
+            android:minWidth="70dp"
+            android:padding="5dp"
+            android:text="@string/radiobutton_contacts_sort_order_ascending_descending"
+            android:textColor="@color/segmented_button_text" />
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/fragment_view_contact_list_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

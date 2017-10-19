@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+	<!-- The ActionBar displayed at the top -->
+	<include
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		layout="@layout/appbarlayout_toolbar" />
+	<ScrollView
+		android:id="@+id/scrollView1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+		<LinearLayout
+			android:id="@+id/activity_information_composer_linearlayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			tools:context="biz.advancedcalendar.activities.ActivityInformationComposer" >
+			<HorizontalScrollView
+				android:id="@+id/horizontalScrollView1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<TableLayout
+					android:id="@+id/activity_information_composer_tablelayout"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" >
+				</TableLayout>
+			</HorizontalScrollView>
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right" >
+				<Button
+					android:id="@+id/button_replace_information_unit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/activity_information_composer_button_text_replace_information_unit"
+					android:textAllCaps="false" />
+				<Button
+					android:id="@+id/button_replace_text"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/activity_information_composer_button_text_replace_text"
+					android:textAllCaps="false" />
+				<Button
+					android:id="@+id/button_delete"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/activity_information_composer_button_text_delete"
+					android:textAllCaps="false" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<EditText
+					android:id="@+id/activity_information_composer_edittext_whatever_delimiter_string"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:maxEms="3"
+					android:minEms="3" >
+				</EditText>
+				<Button
+					android:id="@+id/button_insert_to_right"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/activity_information_composer_button_text_insert_to_right"
+					android:textAllCaps="false" />
+				<Button
+					android:id="@+id/button_insert_to_down"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text="@string/activity_information_composer_button_text_insert_to_down"
+					android:textAllCaps="false" />
+				<Button
+					android:id="@+id/button_insert_to_left"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/activity_information_composer_button_text_insert_to_left"
+					android:textAllCaps="false" />
+				<Button
+					android:id="@+id/button_insert_to_up"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text="@string/activity_information_composer_button_text_insert_to_up"
+					android:textAllCaps="false" />
+			</LinearLayout>
+			<RadioGroup
+				android:id="@+id/activity_information_composer_radiogroup_information_units"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+			</RadioGroup>
+			<ListView
+				android:id="@+id/activity_information_composer_listview_information_units"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:visibility="gone" >
+				<TextView
+					android:id="@+id/activity_information_composer_textview_after_inserting_of_an_item"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/activity_information_composer_textview_text_after_inserting_of_an_item" />
+				<RadioGroup
+					android:id="@+id/activity_information_composer_radiogroup_item_to_select_after_inserting"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" >
+					<RadioButton
+						android:id="@+id/activity_information_composer_radiobutton_after_inserting_select_inserted_item"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:checked="true"
+						android:text="@string/activity_information_composer_radiobutton_text_select_inserted_item" />
+					<RadioButton
+						android:id="@+id/activity_information_composer_radiobutton_after_inserting_leave_previous_item_selected"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/activity_information_composer_radiobutton_text_leave_previous_item_selected" />
+				</RadioGroup>
+				<TextView
+					android:id="@+id/activity_information_composer_textview_after_deleting_of_an_item"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/activity_information_composer_textview_text_after_deleting_of_an_item" />
+				<RadioGroup
+					android:id="@+id/activity_information_composer_radiogroup_item_to_select_after_delete"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content" >
+					<RadioButton
+						android:id="@+id/activity_information_composer_radiobutton_after_delete_select_left_item"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:checked="true"
+						android:text="@string/activity_information_composer_radiobutton_text_select_left_item" />
+					<RadioButton
+						android:id="@+id/activity_information_composer_radiobutton_after_delete_select_right_item"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/activity_information_composer_radiobutton_text_select_right_item" />
+				</RadioGroup>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

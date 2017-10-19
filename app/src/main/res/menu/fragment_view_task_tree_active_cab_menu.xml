@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	<item
+		android:id="@+id/fragment_view_task_tree_cab_menu_delete"
+		android:alphabeticShortcut="d"
+		android:enabled="true"
+		android:icon="@drawable/ic_delete_black_24dp"
+		android:numericShortcut="1"
+		android:title="@string/fragment_view_task_tree_cab_menu_delete"
+		android:titleCondensed="@string/fragment_view_task_tree_cab_menu_delete_condensed"
+		android:visible="true">
+	</item>
+	<item
+		android:id="@+id/fragment_view_task_tree_cab_menu_set_complete"
+		android:alphabeticShortcut="c"
+		android:enabled="true"
+		android:icon="@drawable/ic_check_box_black_24dp"
+		android:numericShortcut="2"
+		android:title="@string/fragment_view_task_tree_cab_menu_set_complete"
+		android:visible="true">
+	</item>
+</menu>

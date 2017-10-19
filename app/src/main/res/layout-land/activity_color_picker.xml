@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+	<!-- The ActionBar displayed at the top -->
+	<include
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		layout="@layout/appbarlayout_toolbar" />
+	<LinearLayout
+		android:id="@+id/activity_color_picker_linearlayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#AAA"
+		android:orientation="vertical"
+		tools:context=".Main" >
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1" >
+			<FrameLayout
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent" >
+				<com.larswerkman.holocolorpicker.HueBar
+					android:id="@+id/huebar"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_gravity="center" />
+				<EditText
+					android:id="@+id/edittext_hue"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="start"
+					android:ems="5"
+					android:inputType="numberDecimal" >
+				</EditText>
+			</FrameLayout>
+			<TableLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_weight="1" >
+				<TableRow
+					android:id="@+id/tableRow2"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1" >
+					<com.larswerkman.holocolorpicker.SaturationBar
+						android:id="@+id/saturationbar"
+						android:layout_width="0dp"
+						android:layout_height="0dp"
+						android:layout_gravity="center"
+						android:layout_weight="1" />
+					<EditText
+						android:id="@+id/edittext_saturation"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:ems="3"
+						android:inputType="numberDecimal" >
+					</EditText>
+				</TableRow>
+				<TableRow
+					android:id="@+id/tableRow3"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1" >
+					<com.larswerkman.holocolorpicker.ValueBar
+						android:id="@+id/valuebar"
+						android:layout_width="0dp"
+						android:layout_height="0dp"
+						android:layout_gravity="center"
+						android:layout_weight="1" />
+					<EditText
+						android:id="@+id/edittext_value"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:ems="3"
+						android:inputType="numberDecimal" >
+					</EditText>
+				</TableRow>
+				<TableRow
+					android:id="@+id/tableRow7"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1" >
+					<com.larswerkman.holocolorpicker.OpacityBar
+						android:id="@+id/alphabar"
+						android:layout_width="0dp"
+						android:layout_height="0dp"
+						android:layout_gravity="center"
+						android:layout_weight="1" />
+					<EditText
+						android:id="@+id/edittext_alpha"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:ems="3"
+						android:inputType="number" >
+					</EditText>
+				</TableRow>
+				<TableRow
+					android:id="@+id/tableRow4"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1" >
+					<com.larswerkman.holocolorpicker.RedBar
+						android:id="@+id/redbar"
+						android:layout_width="0dp"
+						android:layout_height="0dp"
+						android:layout_gravity="center"
+						android:layout_weight="1" />
+					<EditText
+						android:id="@+id/edittext_red"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:ems="3"
+						android:inputType="number" >
+					</EditText>
+				</TableRow>
+				<TableRow
+					android:id="@+id/tableRow5"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1" >
+					<com.larswerkman.holocolorpicker.GreenBar
+						android:id="@+id/greenbar"
+						android:layout_width="0dp"
+						android:layout_height="0dp"
+						android:layout_gravity="center"
+						android:layout_weight="1" />
+					<EditText
+						android:id="@+id/edittext_green"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:ems="3"
+						android:inputType="number" >
+					</EditText>
+				</TableRow>
+				<TableRow
+					android:id="@+id/tableRow6"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1" >
+					<com.larswerkman.holocolorpicker.BlueBar
+						android:id="@+id/bluebar"
+						android:layout_width="0dp"
+						android:layout_height="0dp"
+						android:layout_gravity="center"
+						android:layout_weight="1" />
+					<EditText
+						android:id="@+id/edittext_blue"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:ems="3"
+						android:inputType="number" >
+					</EditText>
+				</TableRow>
+			</TableLayout>
+		</LinearLayout>
+		<TableLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+			<TableRow
+				android:id="@+id/tableRow8"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" >
+				<Button
+					android:id="@+id/button1_1"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_2"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_3"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_4"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_5"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_6"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_7"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_8"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_9"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_10"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_11"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_12"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_13"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_14"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_15"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+				<Button
+					android:id="@+id/button1_16"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_margin="1dp"
+					android:layout_weight="1"
+					android:background="#FFFFFFFF" />
+			</TableRow>
+		</TableLayout>
+	</LinearLayout>
+</LinearLayout>

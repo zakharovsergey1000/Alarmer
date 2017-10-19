@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/fragment_view_contact_part_labels_textview_clarification" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_view_label_part_tasks_textview_clarification" />
+
+    <pl.polidea.treeview.TreeViewList
+        xmlns:treeView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragment_view_contact_part_labels_treeview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical"
+        android:smoothScrollbar="true"
+        treeView:indicator_gravity="right|center_vertical" />
+
+</LinearLayout>

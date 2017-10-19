@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical" >
+	<!-- The ActionBar displayed at the top -->
+	<include
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		layout="@layout/appbarlayout_toolbar" />
+	<pl.polidea.treeview.TreeViewList
+		xmlns:treeView="http://schemas.android.com/apk/res-auto"
+		android:id="@+id/tree_view_list"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:divider="@drawable/divider"
+		android:dividerHeight="2dp"
+		android:saveEnabled="true"
+		android:scrollbars="vertical"
+		android:smoothScrollbar="true"
+		treeView:indicator_gravity="right|center_vertical" />
+</LinearLayout>

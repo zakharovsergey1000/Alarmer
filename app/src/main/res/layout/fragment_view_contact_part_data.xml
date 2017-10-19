@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_view_label_part_main_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_phone_numbers"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_group_header_textview_phone_numbers"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_phone_cellular"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_phone_cellular"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_phone_cellular"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_phone_cellular2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_phone_cellular_2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_phone_cellular2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_fax"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_fax"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_fax"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_fax_work"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_fax_work"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_fax_work"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_phone_work"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_phone_work"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_phone_work"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_phone_work2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_phone_work_2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_phone_work2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_phone_home"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_phone_home"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_phone_home"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_phone_home2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_phone_home_2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_phone_home2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_email_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_group_header_textview_email"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_email_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_email"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_email_personal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_email_personal"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_email_personal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_email_personal2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_email_personal_2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_email_personal2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_email_work"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_email_work"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_email_work"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_email_work2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_email_work_2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_email_work2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_internet_communication_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_group_header_textview_internet_communication"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_internet_communication_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_icq"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_icq"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_icq"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_facebook"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_facebook"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_facebook"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_mail_agent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_mail_agent"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_mail_agent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_qip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_qip"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_qip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_msn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_msn"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_msn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_google_talk"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_google_talk"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_google_talk"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_live_journal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_live_journal"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_live_journal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_personal_site"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_personal_site"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_personal_site"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_personal_site2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_personal_site_2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_personal_site2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_skype"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_skype"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_skype"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_twitter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_twitter"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_twitter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_jabber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_jabber"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_jabber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_addresses_and_requisites_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_group_header_textview_addresses_and_requisites"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_addresses_and_requisites_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_address"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_address2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_address_2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_address2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_legal_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_legal_address"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_legal_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_company"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_company"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_company"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_occupation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_occupation"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_occupation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_own_fields_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_group_header_textview_own_fields"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_own_fields_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_field1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_field_1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_field1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_field2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_field_2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_field2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_field3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_field_3"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_field3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_field4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_field_4"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_field4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_field5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_field_5"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_field5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_header_textview_field6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_view_contact_part_data_header_textview_field_6"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/fragment_view_contact_part_data_value_textview_field6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+</ScrollView>

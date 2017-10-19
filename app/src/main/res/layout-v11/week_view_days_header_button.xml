@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+	style="?android:attr/buttonBarButtonStyle"
+	android:layout_width="wrap_content"
+	android:layout_height="48dp"
+	android:drawablePadding="0dp"
+	android:padding="0dp"
+	android:textColor="@color/week_header_text_color" />

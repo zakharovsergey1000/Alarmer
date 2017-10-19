@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/fragment_view_label_part_main_scrollview"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<TextView
+			android:id="@+id/fragment_view_contact_part_main_header_textview_contact_name"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_edit_label_part_main_textview_label_name"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+		<EditText
+			android:id="@+id/fragment_edit_label_part_main_edittext_label_name"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:enabled="false"
+			android:hint="@string/fragment_edit_label_part_main_edittext_label_name_hint">
+		</EditText>
+		<TextView
+			android:id="@+id/fragment_view_contact_part_main_header_textview_contact_description"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/fragment_edit_label_part_main_textview_label_description"
+			android:textAppearance="?android:attr/textAppearanceMedium">
+		</TextView>
+		<EditText
+			android:id="@+id/fragment_edit_label_part_main_edittext_label_description"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:enabled="false"
+			android:hint="@string/fragment_edit_label_part_main_edittext_label_description_hint">
+		</EditText>
+	</LinearLayout>
+</ScrollView>
