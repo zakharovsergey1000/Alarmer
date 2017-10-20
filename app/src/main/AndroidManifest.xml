@@ -8,14 +8,12 @@
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 	<uses-permission android:name="android.permission.VIBRATE" />
-    <application
-        android:name="biz.advancedcalendar.Global"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+	<application
+		android:name="biz.advancedcalendar.Global"
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_name"
+		android:theme="@style/AppTheme" >
 
 		<activity
 			android:name="biz.advancedcalendar.activities.ActivitySplash"
@@ -38,38 +36,6 @@
 		<activity
 			android:name="biz.advancedcalendar.activities.ActivityViewTask"
 			android:label="@string/activity_view_task_title" >
-			<!-- Parent activity meta-data to support 4.0 and lower -->
-			<meta-data
-				android:name="android.support.PARENT_ACTIVITY"
-				android:value="biz.advancedcalendar.activities.ActivityMain" />
-		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.ActivityViewLabel"
-			android:label="@string/activity_view_label_title" >
-			<!-- Parent activity meta-data to support 4.0 and lower -->
-			<meta-data
-				android:name="android.support.PARENT_ACTIVITY"
-				android:value="biz.advancedcalendar.activities.ActivityMain" />
-		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.ActivityViewContact"
-			android:label="@string/activity_view_contact_title" >
-			<!-- Parent activity meta-data to support 4.0 and lower -->
-			<meta-data
-				android:name="android.support.PARENT_ACTIVITY"
-				android:value="biz.advancedcalendar.activities.ActivityMain" />
-		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.ActivityViewFile"
-			android:label="@string/activity_view_file_title" >
-			<!-- Parent activity meta-data to support 4.0 and lower -->
-			<meta-data
-				android:name="android.support.PARENT_ACTIVITY"
-				android:value="biz.advancedcalendar.activities.ActivityMain" />
-		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.ActivityViewDiaryRecord"
-			android:label="@string/activity_view_diary_record_title" >
 			<!-- Parent activity meta-data to support 4.0 and lower -->
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
@@ -148,13 +114,6 @@
 		<activity
 			android:name="biz.advancedcalendar.activities.ActivityEditReminder2"
 			android:label="@string/activity_edit_reminder_title" >
-		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.FragmentSettings"
-			android:label="@string/title_activity_activity_settings" >
-			<meta-data
-				android:name="android.support.PARENT_ACTIVITY"
-				android:value="biz.advancedcalendar.activities.ActivityMain" />
 		</activity>
 		<activity
 			android:name="biz.advancedcalendar.activities.ActivitySettings2"
@@ -258,25 +217,5 @@
 		<service android:name="biz.advancedcalendar.services.ResetupRemindersService" />
 		<service android:name="biz.advancedcalendar.services.NotificationService" />
 		<service android:name="biz.advancedcalendar.sync.SyncService" />
-        <activity
-            android:name=".ItemListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ItemDetailActivity"
-            android:label="@string/title_item_detail"
-            android:parentActivityName=".ItemListActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="biz.advancedcalendar.alarmer.ItemListActivity" />
-        </activity>
-    </application>
-
+	</application>
 </manifest>

@@ -258,7 +258,7 @@
 	<string name="action_discard_elapsed_reminder_confirmation">Discard the elapsed reminder?</string>
 	<string name="action_discard_all_elapsed_reminders_confirmation">Discard all elapsed reminders?</string>
 	<string name="action_delete_task_subtree_confirmation">Also delete task subtree</string>
-	<string name="action_dont_bother_anymore">Donít show this again</string>
+	<string name="action_dont_bother_anymore">Don‚Äôt show this again</string>
 	<string name="action_cancel">Cancel</string>
 	<string name="action_done">Done</string>
 	<string name="action_pick_predefined_color">Pick predefined color</string>
@@ -309,13 +309,13 @@
 	<string name="drawer_open">Open navigation drawer</string>
 	<string name="drawer_close">Close navigation drawer</string>
 	<string name="action_websearch">Web search</string>
-	<string name="app_not_available">Sorry, thereís no web browser available</string>
+	<string name="app_not_available">Sorry, there‚Äôs no web browser available</string>
 	<!-- Strings related to editing in general -->
 	<string name="error_field_required">The field is required</string>
 	<string name="error_field_format_incorrect">Incorrect format</string>
 	<!-- Strings related to splash screenl -->
 	<string name="activity_splash_picture_description">Splash screen picture</string>
-	<string name="activity_splash_textview_info">Preparing database, please waitÖ</string>
+	<string name="activity_splash_textview_info">Preparing database, please wait‚Ä¶</string>
 	<!-- Strings related to login -->
 	<string name="activity_login">Sign in</string>
 	<string name="radio_signin_type_application">Signin with Application account</string>
@@ -348,8 +348,8 @@
 	<string name="error_an_error_occurred">An error occurred:</string>
 	<string name="error_an_unknown_error_occurred">An unknown error occurred</string>
 	<string name="error_the_server_didnt_return_response_successfully">The server did not return response successfully.</string>
-	<string name="error_the_server_didnt_return_authorization_token">The server didnít return authorization token.</string>
-	<string name="error_the_server_didnt_return_user_profile_data_successfully">The server didnít return user profile data successfully</string>
+	<string name="error_the_server_didnt_return_authorization_token">The server didn‚Äôt return authorization token.</string>
+	<string name="error_the_server_didnt_return_user_profile_data_successfully">The server didn‚Äôt return user profile data successfully</string>
 	<string name="error_the_server_has_returned_userprofile_equals_null_for_unknown_reason">The server has returned UserProfile == null for unknown reason</string>
 	<string name="error_please_check_internet_connection_settings">Please check Internet connection settings.</string>
 	<!-- Strings related to cab -->
@@ -528,8 +528,8 @@
 	<string name="fragment_view_task_part_reminders_header_textview_is_recurrent_reminder">Is recurrent:</string>
 	<string name="fragment_view_task_part_reminders_value_textview_is_recurrent_reminder_yes">Yes</string>
 	<string name="fragment_view_task_part_reminders_value_textview_is_recurrent_reminder_no">No</string>
-	<string name="fragment_view_task_part_reminders_header_textview_warning_the_reminder_is_in_silence_time_interval">The reminderís time to go off is in silence time interval</string>
-	<string name="fragment_view_task_part_reminders_header_textview_warning_alarms_are_silenced_until_datetime">The remindersí alarms are silenced until: %1$s</string>
+	<string name="fragment_view_task_part_reminders_header_textview_warning_the_reminder_is_in_silence_time_interval">The reminder‚Äôs time to go off is in silence time interval</string>
+	<string name="fragment_view_task_part_reminders_header_textview_warning_alarms_are_silenced_until_datetime">The reminders‚Äô alarms are silenced until: %1$s</string>
 	<string name="fragment_view_task_part_reminders_header_textview_reminder_ringtone">Ringtone:</string>
 	<string name="fragment_view_task_part_reminders_value_textview_reminder_ringtone">%1$s (%2$s)</string>
 	<string name="fragment_view_task_part_reminders_value_textview_reminder_ringtone_from_task">From task</string>
@@ -559,7 +559,7 @@
 	<string name="fragment_edit_task_part_main_radiobutton_task_sortorder_first">First</string>
 	<string name="fragment_edit_task_part_main_radiobutton_task_sortorder_last">Last</string>
 	<string name="fragment_edit_task_part_main_radiobutton_task_sortorder_aftertask_text_task">After: %1$s</string>
-	<string name="fragment_edit_task_part_main_radiobutton_task_sortorder_aftertask_text_none">After Ö</string>
+	<string name="fragment_edit_task_part_main_radiobutton_task_sortorder_aftertask_text_none">After ‚Ä¶</string>
 	<string name="fragment_edit_task_part_main_radiobutton_task_sortorder_aftertask_text_after">"After: "</string>
 	<string name="fragment_edit_task_part_main_textview_task_sortorder_aftertask_text_none"></string>
 	<string name="fragment_edit_task_part_main_header_textview_task_percent_of_completion">Percent of completion:</string>
@@ -673,7 +673,7 @@
 	<string name="fragment_edit_task_part_reminders_reminder_of_task">Task reminder:</string>
 	<string name="fragment_edit_task_part_reminders_local">Local</string>
 	<string name="fragment_edit_task_part_reminders_textview_alarm_ringtone">Default ringtone for reminder going off with popup window:</string>
-	<string name="fragment_edit_task_part_reminders_textview_reminders_popup_window_displaying_duration">Reminderís popup window displaying duration:</string>
+	<string name="fragment_edit_task_part_reminders_textview_reminders_popup_window_displaying_duration">Reminder‚Äôs popup window displaying duration:</string>
 	<string name="fragment_edit_task_part_reminders_textview_automatic_snooze_duration">Automatic snooze duration:</string>
 	<string name="fragment_edit_task_part_reminders_textview_automatic_snoozes_max_count">Max automatic snoozes:</string>
 	<string name="fragment_edit_task_part_reminders_textview_vibrate_with_alarm_ringtone">Vibrate with ringtone played for reminder:</string>
@@ -682,7 +682,7 @@
 	<string name="fragment_edit_task_part_reminders_cannot_launch_reminder_editor_because_the_task_is_in_inconsistent_state">Cannot add reminder. The task is in inconsistent state:</string>
 	<string name="vibrate">Do vibrate</string>
 	<string name="do_not_vibrate">Do not vibrate</string>
-	<string name="activity_edit_reminder_textview_reminders_popup_window_displaying_duration">Reminderís popup window displaying duration:</string>
+	<string name="activity_edit_reminder_textview_reminders_popup_window_displaying_duration">Reminder‚Äôs popup window displaying duration:</string>
 	<string name="activity_edit_reminder_textview_automatic_snooze_duration">Automatic snooze duration:</string>
 	<string name="activity_edit_reminder_textview_automatic_snoozes_max_count">Max automatic snoozes:</string>
 	<string name="activity_edit_reminder_textview_vibrate_with_alarm_ringtone">Vibrate with ringtone played for reminder:</string>
@@ -935,7 +935,7 @@
 	<string name="activity_quick_reminder_title_text">Reminder: </string>
 	<string name="activity_quick_reminder_radiobutton_text_custom">Custom</string>
 	<string name="activity_quick_reminder_checkbox_text_vibrate">Do vibrate</string>
-	<string name="activity_quick_reminder_textview_reminders_popup_window_displaying_duration">Reminderís popup window displaying duration, seconds:</string>
+	<string name="activity_quick_reminder_textview_reminders_popup_window_displaying_duration">Reminder‚Äôs popup window displaying duration, seconds:</string>
 	<string name="activity_quick_reminder_textview_automatic_snooze_duration">Automatic snooze duration, minutes:</string>
 	<string name="activity_quick_reminder_textview_automatic_snoozes_max_count">Max automatic snoozes:</string>
 	<string name="activity_quick_reminder_textview_vibrate_with_alarm_ringtone">Vibration:</string>
@@ -945,7 +945,7 @@
 	<string name="advanced_calendar_task_notification_content_title">New notification</string>
 	<string name="advanced_calendar_task_notification_content_title_plural">new notifications</string>
 	<string name="advanced_calendar_task_notification_subtext_total">Total</string>
-	<string name="advanced_calendar_task_notification_content_text">Youíve received task notiffications:</string>
+	<string name="advanced_calendar_task_notification_content_text">You‚Äôve received task notiffications:</string>
 	<string name="advanced_calendar_task_notification_content_text_2">New notiffications:</string>
 	<string name="fragment_view_reminders_last_alarmed">Last alarmed at:</string>
 	<string name="fragment_view_reminders_last_notified">Notified at:</string>
@@ -980,11 +980,11 @@
 	<string name="crash_dialog_comment_prompt">You might add your comments about the problem below:</string>
 	<string name="crash_dialog_ok_toast">Thank you !</string>
 	<!-- Strings related to file upload -->
-	<string name="advanced_calendar_file_download_dialog_message_downloading_source">Downloading sourceÖ</string>
+	<string name="advanced_calendar_file_download_dialog_message_downloading_source">Downloading source‚Ä¶</string>
 	<string name="advanced_calendar_file_download_dialog_message_downloaded">Downloaded</string>
 	<string name="advanced_calendar_file_download_dialog_message_kb">KB</string>
 	<!-- Strings related to Synchronizing -->
-	<string name="synchronizing">SynchronizingÖ</string>
+	<string name="synchronizing">Synchronizing‚Ä¶</string>
 	<!-- Strings related to Settings -->
 	<string name="title_activity_activity_settings">Settings</string>
 	<string-array name="first_day_of_week_titles_array">
@@ -1254,8 +1254,8 @@
 	<string name="pref_title_alarm_method">Alarm method to preselect for new reminders:</string>
 	<string name="pref_title_reminder_behavior_for_completed_task">How to schedule reminders of completed tasks?</string>
 	<string name="pref_title_reminder_time_mode">What time should be selected for new reminders?</string>
-	<string name="pref_title_reminders_popup_window_displaying_duration">Reminderís popup window displaying duration:</string>
-	<string name="pref_dialog_title_reminders_popup_window_displaying_duration">Reminderís popup window displaying duration, %1$s:</string>
+	<string name="pref_title_reminders_popup_window_displaying_duration">Reminder‚Äôs popup window displaying duration:</string>
+	<string name="pref_dialog_title_reminders_popup_window_displaying_duration">Reminder‚Äôs popup window displaying duration, %1$s:</string>
 	<string name="pref_title_automatic_snooze_duration">Automatic snooze duration:</string>
 	<string name="pref_dialog_title_automatic_snooze_duration">Automatic snooze duration, %1$s:</string>
 	<string name="pref_title_automatic_snoozes_max_count">Max automatic snoozes:</string>
@@ -1267,7 +1267,7 @@
 	<string name="pref_summary_automatic_snoozes_max_count_plural">%1$d snoozes</string>
 	<string name="pref_title_max_number_of_elapsed_reminders">Maximum number of elapsed reminders to show:</string>
 	<string name="pref_title_date_picker_default_selected_date">Date picker default selected date:</string>
-	<string name="pref_title_start_time_required_action">Action to apply if start time hasnít been set but is required for the currently selected values of the attributes of an edited task:</string>
+	<string name="pref_title_start_time_required_action">Action to apply if start time hasn‚Äôt been set but is required for the currently selected values of the attributes of an edited task:</string>
 	<string name="pref_title_time_picker_time_format">Time format for time picker (12/24-hour clock):</string>
 	<string name="pref_title_on_task_select_action">Selecting a task opens it in:</string>
 	<string name="pref_title_time_unit">Recurrence interval to preselect for new tasks:</string>
@@ -1367,7 +1367,7 @@
 	<string name="error_text_task_name_is_required">Task name is required</string>
 	<string name="toast_text_task_name_is_required">Please select task name</string>
 	<string name="toast_text_reminder_name_is_required">Please select reminder name</string>
-	<string name="toast_text_set_reminders_start_type_to_absolute_time_or_select_task_start_time">Please set ì%1$sî reminderís start time to absolute time or to time after now or select task start time.</string>
+	<string name="toast_text_set_reminders_start_type_to_absolute_time_or_select_task_start_time">Please set ‚Äú%1$s‚Äù reminder‚Äôs start time to absolute time or to time after now or select task start time.</string>
 	<string name="toast_text_start_date_is_required_for_recurrent_task">Start date is required for recurrent task.</string>
 	<string name="toast_text_time_unit_is_not_selected">Please select days.</string>
 	<string name="toast_text_start_date_time_for_one_time_is_not_selected">Please select days.</string>
@@ -1378,10 +1378,10 @@
 	<string name="toast_text_weekly_recurrent_tasks_occurrences_is_not_selected">Please select days of week (To select days of week, tick checkboxes representing days of week).</string>
 	<string name="toast_text_monthly_recurrent_on_date_tasks_occurrences_is_not_selected">Please select days of month (To select days of month, tick checkboxes representing days of month).</string>
 	<string name="toast_text_monthly_recurrent_on_nth_week_day_tasks_occurrences_is_not_selected">Please select days of week (To select days of week, tick checkboxes representing days of week).</string>
-	<string name="toast_text_yearly_recurrent_tasks_occurrences_is_not_selected">Please select days of year (To select days of year, tap ì%1$sî button, then choose dates and click ì%2$sî).</string>
-	<string name="toast_text_reminders_popup_window_displaying_duration_must_be_greater_than_or_equal_to">The number of %2$s the reminderís popup window will be displaying up to, must be greater than or equal to %1$d.</string>
-	<string name="toast_text_reminders_popup_window_displaying_duration_must_be_less_than_or_equal_to">The number of %2$s the reminderís popup window will be displaying up to, must be less than or equal to %1$d.</string>
-	<string name="toast_text_reminders_popup_window_displaying_duration_must_be_within_bounds">Please enter the number of %3$s the reminderís popup window will be displaying up to, from %1$d to %2$d.</string>
+	<string name="toast_text_yearly_recurrent_tasks_occurrences_is_not_selected">Please select days of year (To select days of year, tap ‚Äú%1$s‚Äù button, then choose dates and click ‚Äú%2$s‚Äù).</string>
+	<string name="toast_text_reminders_popup_window_displaying_duration_must_be_greater_than_or_equal_to">The number of %2$s the reminder‚Äôs popup window will be displaying up to, must be greater than or equal to %1$d.</string>
+	<string name="toast_text_reminders_popup_window_displaying_duration_must_be_less_than_or_equal_to">The number of %2$s the reminder‚Äôs popup window will be displaying up to, must be less than or equal to %1$d.</string>
+	<string name="toast_text_reminders_popup_window_displaying_duration_must_be_within_bounds">Please enter the number of %3$s the reminder‚Äôs popup window will be displaying up to, from %1$d to %2$d.</string>
 	<string name="toast_text_automatic_snooze_duration_must_be_greater_than_or_equal_to">The number of %2$s the reminder will be automatically snoozed to, must be greater than or equal to %1$d.</string>
 	<string name="toast_text_automatic_snooze_duration_must_be_less_than_or_equal_to">The number of %2$s the reminder will be automatically snoozed to, must be less than or equal to %1$d.</string>
 	<string name="toast_text_automatic_snooze_duration_must_be_within_bounds">Please enter the number of %3$s the reminder will be automatically snoozed to, from %1$d to %2$d.</string>
@@ -1601,7 +1601,7 @@
 	</string-array>
 	<string-array name="sync_policy_titles_array">
 		<item>Always sync local data with server data</item>
-		<item>Donít sync local data with server data</item>
+		<item>Don‚Äôt sync local data with server data</item>
 	</string-array>
 	<string-array name="sync_policy_values_array">
 		<item>1</item>
@@ -1643,5 +1643,4 @@
 	<string name="title_calendar_detail">Calendar Detail</string>
 	<string name="title_recyclebin_list">Deleted Tasks</string>
 	<string name="title_recyclebin_detail">Deleted Task Detail</string>
-    <string name="title_item_detail">Item Detail</string>
 </resources>

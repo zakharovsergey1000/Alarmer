@@ -19,8 +19,4 @@
 	<dimen name="bar_length">240dp</dimen>
 	<dimen name="bar_pointer_radius">6dp</dimen>
 	<dimen name="bar_pointer_halo_radius">14dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
-    <dimen name="app_bar_height">200dp</dimen>
-    <dimen name="item_width">200dp</dimen>
-    <dimen name="text_margin">16dp</dimen>
 </resources>

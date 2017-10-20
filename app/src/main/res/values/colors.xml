@@ -295,7 +295,4 @@
 	<item name="week_view_days_header_button_today_background_color" type="color">#FFFFFF66</item>
 	<item name="month_day_view_today_background_color" type="color">#FFFFFFE0</item>
 	<item name="fragment_weekview_button_pickup_date_text_color" type="color">#FF808080</item>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
 </resources>
