@@ -243,7 +243,7 @@ public class FragmentViewWeek2RecyclerView extends RecyclerView {
 			mXcoordOnDown = event.getX();
 			LinearLayoutManager layoutManager = (LinearLayoutManager) getLayoutManager();
 			mLastRegisteredFirstVisibleItemPositionOnDown = layoutManager.findFirstVisibleItemPosition();
-			View v = layoutManager.getChildAt(0);
+			View v = layoutManager.findViewByPosition(mLastRegisteredFirstVisibleItemPositionOnDown);
 			if (v.getRight() < v.getWidth() / 2) {
 				mLastRegisteredFirstVisibleItemPositionOnDown++;
 			}
