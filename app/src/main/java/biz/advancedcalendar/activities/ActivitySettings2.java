@@ -4,13 +4,14 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+
 import biz.advancedcalendar.alarmer.R;
 import biz.advancedcalendar.fragments.FragmentSettings;
 
-public class ActivitySettings2 extends ActionBarActivity {
+public class ActivitySettings2 extends AppCompatActivity {
 	private static final String TAG = "FragmentSettings";
 
 	@Override

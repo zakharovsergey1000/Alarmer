@@ -1,12 +1,11 @@
 package biz.advancedcalendar.activities;
 
-import java.util.HashSet;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -16,12 +15,16 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.TableLayout;
-import biz.advancedcalendar.CommonConstants;
-import biz.advancedcalendar.alarmer.R;
-import biz.advancedcalendar.TwoWayHashmap;
+
 import com.android.supportdatetimepicker.date.TextViewWithCircularIndicator;
 
-public class ActivitySelectDaysOfYear2 extends ActionBarActivity {
+import java.util.HashSet;
+
+import biz.advancedcalendar.CommonConstants;
+import biz.advancedcalendar.TwoWayHashmap;
+import biz.advancedcalendar.alarmer.R;
+
+public class ActivitySelectDaysOfYear2 extends AppCompatActivity {
 	private TwoWayHashmap<Integer, Integer> mTwoWayHashmap = new TwoWayHashmap<Integer, Integer>();
 	// ArrayList<Integer> mSelectedDays = new ArrayList<Integer>();
 	HashSet<Integer> selectedDays;

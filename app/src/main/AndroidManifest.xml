@@ -49,58 +49,6 @@
 				android:name="android.support.PARENT_ACTIVITY"
 				android:value="biz.advancedcalendar.activities.ActivityMain" />
 		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.ActivityEditTask2"
-			android:label="@string/activity_edit_task_title" >
-		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.ActivityEditLabel"
-			android:label="@string/activity_edit_label_title" >
-			<!-- Parent activity meta-data to support 4.0 and lower -->
-			<meta-data
-				android:name="android.support.PARENT_ACTIVITY"
-				android:value="biz.advancedcalendar.activities.ActivityMain" />
-		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.ActivityEditContact"
-			android:label="@string/activity_view_contact_title" >
-			<!-- Parent activity meta-data to support 4.0 and lower -->
-			<meta-data
-				android:name="android.support.PARENT_ACTIVITY"
-				android:value="biz.advancedcalendar.activities.ActivityMain" />
-		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.ActivityEditFile"
-			android:label="@string/activity_edit_file_title"
-			android:uiOptions="splitActionBarWhenNarrow" >
-			<!-- Parent activity meta-data to support 4.0 and lower -->
-			<meta-data
-				android:name="android.support.PARENT_ACTIVITY"
-				android:value="biz.advancedcalendar.activities.ActivityMain" />
-			<meta-data
-				android:name="android.support.UI_OPTIONS"
-				android:value="splitActionBarWhenNarrow" />
-		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.ActivityEditDiaryRecord"
-			android:label="@string/activity_edit_diary_record_title"
-			android:uiOptions="splitActionBarWhenNarrow" >
-			<!-- Parent activity meta-data to support 4.0 and lower -->
-			<meta-data
-				android:name="android.support.PARENT_ACTIVITY"
-				android:value="biz.advancedcalendar.activities.ActivityMain" />
-			<meta-data
-				android:name="android.support.UI_OPTIONS"
-				android:value="splitActionBarWhenNarrow" />
-		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.ActivitySelectContactData"
-			android:label="@string/activity_select_contact_data_title" >
-			<!-- Parent activity meta-data to support 4.0 and lower -->
-			<meta-data
-				android:name="android.support.PARENT_ACTIVITY"
-				android:value="biz.advancedcalendar.activities.ActivityEditContact" />
-		</activity>
 		<activity android:name="biz.advancedcalendar.activities.ActivitySelectTreeItems" >
 		</activity>
 		<activity
@@ -109,10 +57,6 @@
 		</activity>
 		<activity
 			android:name="biz.advancedcalendar.activities.ActivityEditReminder"
-			android:label="@string/activity_edit_reminder_title" >
-		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.ActivityEditReminder2"
 			android:label="@string/activity_edit_reminder_title" >
 		</activity>
 		<activity
@@ -129,14 +73,6 @@
 				android:value="biz.advancedcalendar.activities.ActivityMain" />
 		</activity>
 		<activity
-			android:name="biz.advancedcalendar.activities.ActivityResnooze"
-			android:label="@string/activity_resnooze_title" >
-		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.ActivityResnooze2"
-			android:label="@string/activity_resnooze_title" >
-		</activity>
-		<activity
 			android:name="biz.advancedcalendar.activities.ActivityColorPicker"
 			android:label="@string/activity_pick_color_title" >
 		</activity>
@@ -147,10 +83,6 @@
 		<activity
 			android:name="biz.advancedcalendar.activities.ActivityQuickReminder"
 			android:label="@string/title_activity_quick_reminder" >
-		</activity>
-		<activity
-			android:name="biz.advancedcalendar.activities.ActivitySelectDaysOfYear"
-			android:label="@string/title_activity_activity_pick_days_of_year" >
 		</activity>
 		<activity
 			android:name="biz.advancedcalendar.activities.ActivitySelectDaysOfYear2"
@@ -177,10 +109,6 @@
 			android:label="@string/title_recyclebin_list" >
 		</activity>
 		<activity
-			android:name="biz.advancedcalendar.activities.ActivityRecyclebinDetail"
-			android:label="@string/title_recyclebin_detail" >
-		</activity>
-		<activity
 			android:name="biz.advancedcalendar.activities.ActivityExit"
 			android:label="@string/title_activity_activity_exit" >
 		</activity>
@@ -189,7 +117,7 @@
 		<activity android:name="com.ipaulpro.afilechooser.FileChooserActivity" >
 		</activity>
 		<activity
-			android:name="org.acra.CrashReportDialog"
+			android:name="org.acra.dialog.CrashReportDialog"
 			android:excludeFromRecents="true"
 			android:finishOnTaskLaunch="true"
 			android:launchMode="singleInstance"
