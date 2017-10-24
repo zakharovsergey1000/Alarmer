@@ -371,13 +371,13 @@ public class Global extends Application implements AutomaticSnoozer {
 	// public static void setReminderToEdit(Reminder reminderToEdit) {
 	// Global.reminderToEdit = reminderToEdit;
 	// }
-	public void setupAlarmManager() {
-		AlarmManager am = (AlarmManager) Global.this
-				.getSystemService(Context.ALARM_SERVICE);
-		PendingIntent operation = PendingIntent.getActivity(getApplicationContext(), 0,
-				null, 0);
-		am.set(AlarmManager.RTC_WAKEUP, 0L, operation);
-	}
+//	public void setupAlarmManager() {
+//		AlarmManager am = (AlarmManager) Global.this
+//				.getSystemService(Context.ALARM_SERVICE);
+//		PendingIntent operation = PendingIntent.getActivity(getApplicationContext(), 0,
+//				null, 0);
+//		am.set(AlarmManager.RTC_WAKEUP, 0L, operation);
+//	}
 
 	// public static void setupTaskToEdit(Context context, Long id) {
 	//

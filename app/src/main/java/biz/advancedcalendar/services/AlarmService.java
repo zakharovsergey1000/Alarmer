@@ -5,6 +5,7 @@ import android.app.IntentService;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.preference.PreferenceManager;
@@ -22,11 +23,13 @@ import biz.advancedcalendar.greendao.Reminder.ReminderTimeMode;
 import biz.advancedcalendar.greendao.ScheduledReminder;
 import biz.advancedcalendar.greendao.Task;
 import biz.advancedcalendar.receivers.AlarmReceiver;
+import biz.advancedcalendar.receivers.BootCompletedReceiver;
 import biz.advancedcalendar.utils.Helper;
 import biz.advancedcalendar.views.accessories.TreeViewListItemDescription;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 public class AlarmService extends IntentService {
@@ -234,9 +237,24 @@ public class AlarmService extends IntentService {
 		intent.setData(reminder_uri);
 		intent.putExtra(CommonConstants.INTENT_EXTRA_ID, reminderId);
 		// Set the alarm
-		((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).set(
-				AlarmManager.RTC_WAKEUP, dateTime, PendingIntent.getBroadcast(context, 0,
-						intent, PendingIntent.FLAG_UPDATE_CURRENT));
+		setAlarm(context, dateTime, intent);
+	}
+
+	private static void setAlarm(Context context, long dateTime, Intent intent) {
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+			((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).setExactAndAllowWhileIdle(
+					AlarmManager.RTC_WAKEUP, dateTime, PendingIntent.getBroadcast(context, 0,
+							intent, PendingIntent.FLAG_UPDATE_CURRENT));
+		} else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+			((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).setExact(
+					AlarmManager.RTC_WAKEUP, dateTime, PendingIntent.getBroadcast(context, 0,
+							intent, PendingIntent.FLAG_UPDATE_CURRENT));
+		}
+		{
+			((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).set(
+					AlarmManager.RTC_WAKEUP, dateTime, PendingIntent.getBroadcast(context, 0,
+							intent, PendingIntent.FLAG_UPDATE_CURRENT));
+		}
 	}
 
 	public static synchronized void resetupRemindersOfTasks(final Context context,
@@ -520,9 +538,7 @@ public class AlarmService extends IntentService {
 		// intent.setData(reminder_uri);
 		intent.setAction(CommonConstants.ALARM_UNSILENSE_REMINDERS);
 		// Set the alarm
-		((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).set(
-				AlarmManager.RTC_WAKEUP, dateTime, PendingIntent.getBroadcast(context, 0,
-						intent, PendingIntent.FLAG_UPDATE_CURRENT));
+		setAlarm(context, dateTime, intent);
 	}
 
 	public static void unsilenseAlarms(Context context, Runnable r) {
@@ -536,5 +552,54 @@ public class AlarmService extends IntentService {
 						R.string.preference_key_silence_alarms_until_datetime)).commit();
 		context.startActivity(new Intent(context, ActivityAlarm.class)
 				.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+	}
+
+	public static void setupAlarmsForScheduledReminders(final Context context) {
+		DataProvider.runInTx(null, context, new Runnable() {
+			@Override
+			public void run() {
+				List<ScheduledReminder> localReminderList = DataProvider
+						.getScheduledReminders(null, context, null,
+								new int[] {ScheduledReminder.State.SCHEDULED.getValue()});
+				for (final ScheduledReminder scheduledReminder : localReminderList) {
+					try {
+						Log.d(BootCompletedReceiver.BootCompletedReceiverDB,
+								String.format(
+										"AlarmService.setAlarmForReminder(long reminderId: %d, long reminderName: %s, long dateTime: %s)",
+										scheduledReminder.getId(),
+										scheduledReminder.getText(),
+										""
+												+ new Date(scheduledReminder
+												.getNextSnoozeDateTime())));
+						AlarmService.setAlarmForReminder(context,
+								scheduledReminder.getId(),
+								scheduledReminder.getNextSnoozeDateTime(), this);
+					} catch (Exception e) {
+						if (BootCompletedReceiver.DEBUG) {
+							Log.d(BootCompletedReceiver.BootCompletedReceiverDB,
+									"Exception in setAlarmForReminder: "
+											+ e.getLocalizedMessage());
+						}
+					}
+				}
+			}
+		});
+	}
+
+	public static void setupAlarmsToUnsilenceSilencedAlarms(final Context context) {
+		SharedPreferences sharedPreferences = PreferenceManager
+				.getDefaultSharedPreferences(context);
+		String key = context.getResources().getString(
+				R.string.preference_key_silence_alarms_until_datetime);
+		if (sharedPreferences.contains(key)) {
+			long dateTime = sharedPreferences.getLong(key, 0);
+			Intent intent = new Intent(context, AlarmReceiver.class);
+			// Uri reminder_uri = Uri
+			// .parse(CommonConstants.CONTENT_BIZ_ADVANCEDCALENDAR_ALARM_UNSILENSE_REMINDERS);
+			// intent1.setData(reminder_uri);
+			intent.setAction(CommonConstants.ALARM_UNSILENSE_REMINDERS);
+			// Set the alarm
+			setAlarm(context, dateTime, intent);
+		}
 	}
 }

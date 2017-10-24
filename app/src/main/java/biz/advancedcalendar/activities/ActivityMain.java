@@ -790,9 +790,9 @@ public class ActivityMain extends AppCompatActivity implements
 					System.currentTimeMillis() - SystemClock.elapsedRealtime());
 			// setup alarms for reminders
 			// we have to setup alarms anew on every reboot
-			Helper.setupAlarmsForScheduledReminders(this);
+			AlarmService.setupAlarmsForScheduledReminders(this);
 			// set alarm to unsilence silenced alarms
-			Helper.setupAlarmsToUnsilenceSilencedAlarms(this);
+			AlarmService.setupAlarmsToUnsilenceSilencedAlarms(this);
 			//
 			NotificationService.updateNotification(this);
 		}

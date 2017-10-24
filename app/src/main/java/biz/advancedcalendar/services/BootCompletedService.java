@@ -18,7 +18,7 @@ public class BootCompletedService extends IntentService {
 	protected void onHandleIntent(Intent intent) {
 		if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
 			if (BootCompletedReceiver.DEBUG) {
-				Log.d(BootCompletedReceiver.BootCompletedReceiverDebug,
+				Log.d(BootCompletedReceiver.BootCompletedReceiverDB,
 						"onHandleIntent(): ");
 			}
 			// store the new difference as current difference for the next time
@@ -26,9 +26,9 @@ public class BootCompletedService extends IntentService {
 					System.currentTimeMillis() - SystemClock.elapsedRealtime());
 			// setup alarms for reminders
 			// we have to setup alarms anew on every reboot
-			Helper.setupAlarmsForScheduledReminders(this);
+			AlarmService.setupAlarmsForScheduledReminders(this);
 			// set alarm to unsilence silenced alarms
-			Helper.setupAlarmsToUnsilenceSilencedAlarms(this);
+			AlarmService.setupAlarmsToUnsilenceSilencedAlarms(this);
 			//
 			NotificationService.updateNotification(this);
 		}

@@ -9,7 +9,7 @@ import biz.advancedcalendar.services.BootCompletedService;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 	public static final boolean DEBUG = false;
-	public static final String BootCompletedReceiverDebug = "BootCompletedReceiverDebug";
+	public static final String BootCompletedReceiverDB = "BootCompletedReceiverDB";
 
 	@Override
 	public void onReceive(final Context context, final Intent intent) {
@@ -21,7 +21,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 		}
 		//
 		if (BootCompletedReceiver.DEBUG) {
-			Log.d(BootCompletedReceiver.BootCompletedReceiverDebug, "onReceive(): ");
+			Log.d(BootCompletedReceiver.BootCompletedReceiverDB, "onReceive(): ");
 			// MediaPlayer mp = MediaPlayer.create(context, R.raw.greeting);
 			// mp.start();
 		}

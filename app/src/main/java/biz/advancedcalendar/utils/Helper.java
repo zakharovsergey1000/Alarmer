@@ -25,7 +25,6 @@ import android.widget.Toast;
 import biz.advancedcalendar.CommonConstants;
 import biz.advancedcalendar.alarmer.R;
 import biz.advancedcalendar.activities.accessories.InformationUnitMatrix;
-import biz.advancedcalendar.calendar2.Period;
 import biz.advancedcalendar.db.DataProvider;
 import biz.advancedcalendar.fragments.FragmentEditTaskPartMain.UserInterfaceData.TimeFormat;
 import biz.advancedcalendar.fragments.FragmentEditTaskPartMain.UserInterfaceData.ValueMustBe;
@@ -1737,58 +1736,6 @@ public class Helper {
 				borderStartDateTime, borderEndDateTime)
 				|| Helper.isTakingNotWholeInterval(startDateTime, endDateTime,
 						borderStartDateTime, borderEndDateTime);
-	}
-
-
-	public static void setupAlarmsForScheduledReminders(final Context context) {
-		DataProvider.runInTx(null, context, new Runnable() {
-			@Override
-			public void run() {
-				List<ScheduledReminder> localReminderList = DataProvider
-						.getScheduledReminders(null, context, null,
-								new int[] {ScheduledReminder.State.SCHEDULED.getValue()});
-				for (final ScheduledReminder scheduledReminder : localReminderList) {
-					try {
-						Log.d(BootCompletedReceiver.BootCompletedReceiverDebug,
-								String.format(
-										"AlarmService.setAlarmForReminder(long reminderId: %d, long reminderName: %s, long dateTime: %s)",
-										scheduledReminder.getId(),
-										scheduledReminder.getText(),
-										""
-												+ new Date(scheduledReminder
-														.getNextSnoozeDateTime())));
-						AlarmService.setAlarmForReminder(context,
-								scheduledReminder.getId(),
-								scheduledReminder.getNextSnoozeDateTime(), this);
-					} catch (Exception e) {
-						if (BootCompletedReceiver.DEBUG) {
-							Log.d(BootCompletedReceiver.BootCompletedReceiverDebug,
-									"Exception in setAlarmForReminder: "
-											+ e.getLocalizedMessage());
-						}
-					}
-				}
-			}
-		});
-	}
-
-	public static void setupAlarmsToUnsilenceSilencedAlarms(final Context context) {
-		SharedPreferences sharedPreferences = PreferenceManager
-				.getDefaultSharedPreferences(context);
-		String key = context.getResources().getString(
-				R.string.preference_key_silence_alarms_until_datetime);
-		if (sharedPreferences.contains(key)) {
-			long dateTime = sharedPreferences.getLong(key, 0);
-			Intent intent1 = new Intent(context, AlarmReceiver.class);
-			// Uri reminder_uri = Uri
-			// .parse(CommonConstants.CONTENT_BIZ_ADVANCEDCALENDAR_ALARM_UNSILENSE_REMINDERS);
-			// intent1.setData(reminder_uri);
-			intent1.setAction(CommonConstants.ALARM_UNSILENSE_REMINDERS);
-			// Set the alarm
-			((AlarmManager) context.getSystemService(Context.ALARM_SERVICE)).set(
-					AlarmManager.RTC_WAKEUP, dateTime, PendingIntent.getBroadcast(
-							context, 0, intent1, PendingIntent.FLAG_UPDATE_CURRENT));
-		}
 	}
 
 	public static void copy(File src, File dst) throws IOException {
