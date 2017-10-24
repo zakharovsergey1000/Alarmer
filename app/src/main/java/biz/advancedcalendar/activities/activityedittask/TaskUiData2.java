@@ -1652,7 +1652,7 @@ public class TaskUiData2 implements Parcelable {
 			default:
 				int color = Helper.getIntegerPreferenceValue(context,
 						R.string.preference_key_task_unset_color,
-						resources.getInteger(R.color.task_unset_color_default_value),
+						resources.getColor(R.color.task_unset_color_default_value),
 						null, null);
 				return color;
 			}

@@ -378,7 +378,7 @@ public class FragmentViewWeek2Adapter extends
 							mFragmentViewWeek2
 									.getContext()
 									.getResources()
-									.getInteger(
+									.getColor(
 											R.color.calendar_today_date_text_color_default_value),
 							null, null);
 			holder.mDayHeaderButton.setTextColor(color);
@@ -389,7 +389,7 @@ public class FragmentViewWeek2Adapter extends
 							mFragmentViewWeek2
 									.getContext()
 									.getResources()
-									.getInteger(
+									.getColor(
 											R.color.calendar_today_date_highlight_color_default_value),
 							null, null);
 			holder.mDayHeaderButton.setBackgroundColor(color);

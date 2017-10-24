@@ -19,21 +19,8 @@ import android.view.ViewParent;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
-//import com.social.R;
+import biz.advancedcalendar.alarmer.R;
 
-/**
- * The {@link EditTextPreference} class is a preference that allows for string
- * input.
- * <p>
- * It is a subclass of {@link DialogPreference} and shows the {@link EditText}
- * in a dialog. This {@link EditText} can be modified either programmatically
- * via {@link #getEditText()}, or through XML by setting any EditText attributes
- * on the EditTextPreference.
- * <p>
- * This preference will store a string into the SharedPreferences.
- * <p>
- * See {@link android.R.styleable#EditText EditText Attributes}.
- */
 public class DatePickerPreference extends DialogPreference {
 	/**
 	 * The edit text shown in the dialog.
@@ -49,7 +36,7 @@ public class DatePickerPreference extends DialogPreference {
 		mDatePicker = new DatePicker(context, attrs);
 
 		// Give it an ID so it can be saved/restored
-		mDatePicker.setId(/* R.id.dialDatePicker */1);
+		mDatePicker.setId(R.id.dialDatePicker);
 		// setDialogLayoutResource(android.R.attr.dialogLayout);
 		/*
 		 * The preference framework and view framework both have an 'enabled'
@@ -68,12 +55,6 @@ public class DatePickerPreference extends DialogPreference {
 		this(context, null);
 	}
 
-	/**
-	 * Saves the text to the {@link SharedPreferences}.
-	 * 
-	 * @param text
-	 *            The text to save
-	 */
 	public void setDate(Date date) {
 		final boolean wasBlocking = shouldDisableDependents();
 

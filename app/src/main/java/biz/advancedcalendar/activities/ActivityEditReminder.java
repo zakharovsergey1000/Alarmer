@@ -13,7 +13,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.MenuItemCompat;
@@ -68,7 +67,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 	private ReminderUiData mReminder;
 	private boolean is24HourFormat;
 	private BroadcastReceiver mReceiver;
-	private ActivityEditReminderDataFragment dataFragment;
+	private ActivityEditReminderParcelableDataStore mParcelableDataStore;
 	private RadioButton radiobuttonAbsolute;
 	private RadioButton radiobuttonAfterNow;
 	private RadioButton lastSelectedRadiobuttonAbsoluteOrAfterNow;
@@ -116,9 +115,9 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 		}
 	}
 
-	/** @return the dataFragment */
-	public ActivityEditReminderDataFragment getDataFragment() {
-		return dataFragment;
+	/** @return the mParcelableDataStore */
+	public ActivityEditReminderParcelableDataStore getmParcelableDataStore() {
+		return mParcelableDataStore;
 	}
 
 	@Override
@@ -133,19 +132,22 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 		mToolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(mToolbar);
 		FragmentManager fm = getSupportFragmentManager();
-		dataFragment = (ActivityEditReminderDataFragment) fm
-				.findFragmentByTag(CommonConstants.DATA_FRAGMENT);
+//		mParcelableDataStore = (ActivityEditReminderParcelableDataStore) fm
+//				.findFragmentByTag(CommonConstants.DATA_FRAGMENT);
 		Resources resources = getResources();
 		edittextTitle = (EditText) findViewById(R.id.activity_edit_reminder_edittext_reminder_description);
 		radiogroupNotificationAlarm = (RadioGroup) findViewById(R.id.activity_edit_reminder_radiogroup_notification_alarm);
 		radiogroupReminderTime = (RadioGroup) findViewById(R.id.activity_edit_reminder_radiogroup_reminder_time);
 		wantingItemSet = EnumSet.noneOf(WantingItem.class);
-		if (dataFragment == null) {
-			dataFragment = getIntent().getParcelableExtra(CommonConstants.INIT_ARGUMENTS);
-			fm.beginTransaction().add(dataFragment, CommonConstants.DATA_FRAGMENT)
-					.commit();
+		if (savedInstanceState != null) {
+			mParcelableDataStore = savedInstanceState.getParcelable(CommonConstants.INIT_ARGUMENTS);
 		} else {
-			bundle = dataFragment.bundle;
+			if (mParcelableDataStore == null) {
+				mParcelableDataStore = getIntent().getParcelableExtra(CommonConstants.INIT_ARGUMENTS);
+			}
+		}
+		{
+			bundle = mParcelableDataStore.bundle;
 			TimePickerDialog tpd = (TimePickerDialog) fm
 					.findFragmentByTag(mTimePickerDialogKey);
 			if (tpd != null) {
@@ -157,13 +159,13 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 				dpd.setOnDateSetListener(this);
 			}
 		}
-		// mTaskWithDependentsUiData = dataFragment.taskWithDependentsUiData;
-		// mUserInterfaceData = dataFragment.userInterfaceData;
-		mReminder = dataFragment.reminderUiData;
-		is24HourFormat = dataFragment.is24HourFormat;
-		mLastSelectedAbsoluteTime = dataFragment.lastSelectedAbsoluteTime;
-		mLastSelectedTimeSpanMillisAfterNow = dataFragment.lastSelectedTimeSpanMillisAfterNow;
-		mLastSelectedTimeSpanMillisBeforeEvent = dataFragment.lastSelectedTimeSpanMillisBeforeEvent;
+		// mTaskWithDependentsUiData = mParcelableDataStore.taskWithDependentsUiData;
+		// mUserInterfaceData = mParcelableDataStore.userInterfaceData;
+		mReminder = mParcelableDataStore.reminderUiData;
+		is24HourFormat = mParcelableDataStore.is24HourFormat;
+		mLastSelectedAbsoluteTime = mParcelableDataStore.lastSelectedAbsoluteTime;
+		mLastSelectedTimeSpanMillisAfterNow = mParcelableDataStore.lastSelectedTimeSpanMillisAfterNow;
+		mLastSelectedTimeSpanMillisBeforeEvent = mParcelableDataStore.lastSelectedTimeSpanMillisBeforeEvent;
 		radiobuttonAbsolute = (RadioButton) findViewById(R.id.activity_edit_reminder_radio_reminder_time_absolute);
 		radiobuttonAfterNow = (RadioButton) findViewById(R.id.activity_edit_reminder_radio_reminder_time_after_now);
 		radiobuttonBeforeEvent = (RadioButton) findViewById(R.id.activity_edit_reminder_radio_reminder_time_before_event);
@@ -175,7 +177,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 				} else if (intent.getAction().equals(
 						CommonConstants.ACTION_TIME_PICKER_TIME_FORMAT_CHANGED)) {
 					is24HourFormat = Helper.is24HourFormat(getApplicationContext());
-					dataFragment.is24HourFormat = is24HourFormat;
+					mParcelableDataStore.is24HourFormat = is24HourFormat;
 				}
 			}
 		};
@@ -227,7 +229,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 		switch (ReminderTimeMode.fromInt(mReminder.getReminderTimeModeValue())) {
 		case ABSOLUTE_TIME:
 			lastSelectedRadiobuttonAbsoluteOrAfterNow = radiobuttonAbsolute;
-			lastSelectedRadiobuttonBeforeEventOrAfterEvent = (RadioButton) findViewById(dataFragment.lastSelectedRadiobuttonIdBeforeEventOrAfterEvent);
+			lastSelectedRadiobuttonBeforeEventOrAfterEvent = (RadioButton) findViewById(mParcelableDataStore.lastSelectedRadiobuttonIdBeforeEventOrAfterEvent);
 			radiobuttonAbsolute.setChecked(true);
 			relativelayoutReminderTimeBeforeEvent.setVisibility(View.GONE);
 			relativelayoutReminderTimeAfterNow.setVisibility(View.GONE);
@@ -235,7 +237,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 			break;
 		case AFTER_NOW:
 			lastSelectedRadiobuttonAbsoluteOrAfterNow = radiobuttonAfterNow;
-			lastSelectedRadiobuttonBeforeEventOrAfterEvent = (RadioButton) findViewById(dataFragment.lastSelectedRadiobuttonIdBeforeEventOrAfterEvent);
+			lastSelectedRadiobuttonBeforeEventOrAfterEvent = (RadioButton) findViewById(mParcelableDataStore.lastSelectedRadiobuttonIdBeforeEventOrAfterEvent);
 			radiobuttonAfterNow.setChecked(true);
 			linearlayoutReminderTimeAbsolute.setVisibility(View.GONE);
 			relativelayoutReminderTimeBeforeEvent.setVisibility(View.GONE);
@@ -243,7 +245,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 			break;
 		case TIME_BEFORE_EVENT:
 			lastSelectedRadiobuttonBeforeEventOrAfterEvent = radiobuttonBeforeEvent;
-			lastSelectedRadiobuttonAbsoluteOrAfterNow = (RadioButton) findViewById(dataFragment.lastSelectedRadiobuttonIdAbsoluteOrAfterNow);
+			lastSelectedRadiobuttonAbsoluteOrAfterNow = (RadioButton) findViewById(mParcelableDataStore.lastSelectedRadiobuttonIdAbsoluteOrAfterNow);
 			radiobuttonBeforeEvent.setChecked(true);
 			linearlayoutReminderTimeAbsolute.setVisibility(View.GONE);
 			relativelayoutReminderTimeAfterNow.setVisibility(View.GONE);
@@ -251,7 +253,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 			break;
 		case TIME_AFTER_EVENT:
 			lastSelectedRadiobuttonBeforeEventOrAfterEvent = radiobuttonAfterEvent;
-			lastSelectedRadiobuttonAbsoluteOrAfterNow = (RadioButton) findViewById(dataFragment.lastSelectedRadiobuttonIdAbsoluteOrAfterNow);
+			lastSelectedRadiobuttonAbsoluteOrAfterNow = (RadioButton) findViewById(mParcelableDataStore.lastSelectedRadiobuttonIdAbsoluteOrAfterNow);
 			radiobuttonAfterEvent.setChecked(true);
 			linearlayoutReminderTimeAbsolute.setVisibility(View.GONE);
 			relativelayoutReminderTimeAfterNow.setVisibility(View.GONE);
@@ -465,10 +467,11 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 							+ System.identityHashCode(this));
 		}
 		super.onSaveInstanceState(savedInstanceState);
-		dataFragment.lastSelectedRadiobuttonIdBeforeEventOrAfterEvent = lastSelectedRadiobuttonBeforeEventOrAfterEvent
+		mParcelableDataStore.lastSelectedRadiobuttonIdBeforeEventOrAfterEvent = lastSelectedRadiobuttonBeforeEventOrAfterEvent
 				.getId();
-		dataFragment.lastSelectedRadiobuttonIdAbsoluteOrAfterNow = lastSelectedRadiobuttonAbsoluteOrAfterNow
+		mParcelableDataStore.lastSelectedRadiobuttonIdAbsoluteOrAfterNow = lastSelectedRadiobuttonAbsoluteOrAfterNow
 				.getId();
+		savedInstanceState.putParcelable(CommonConstants.INIT_ARGUMENTS, mParcelableDataStore);
 	}
 
 	@Override
@@ -600,7 +603,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 		case R.id.button_reminder_date:
 			bundle = new Bundle();
 			bundle.putInt(CommonConstants.CALLER_ID, R.id.button_reminder_date);
-			dataFragment.bundle = bundle;
+			mParcelableDataStore.bundle = bundle;
 			Calendar calendar = Calendar.getInstance();
 			calendar.setTimeInMillis(mLastSelectedAbsoluteTime);
 			DatePickerDialog dpd = DatePickerDialog.newInstance(this,
@@ -611,7 +614,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 		case R.id.button_reminder_time:
 			bundle = new Bundle();
 			bundle.putInt(CommonConstants.CALLER_ID, R.id.button_reminder_time);
-			dataFragment.bundle = bundle;
+			mParcelableDataStore.bundle = bundle;
 			calendar = Calendar.getInstance();
 			calendar.setTimeInMillis(mLastSelectedAbsoluteTime);
 			TimePickerDialog tpd = TimePickerDialog.newInstance(this,
@@ -622,7 +625,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 		case R.id.button_reminder_time_after_now:
 			bundle = new Bundle();
 			bundle.putInt(CommonConstants.CALLER_ID, R.id.button_reminder_time_after_now);
-			dataFragment.bundle = bundle;
+			mParcelableDataStore.bundle = bundle;
 			tpd = TimePickerDialog.newInstance(this,
 					(int) (mLastSelectedTimeSpanMillisAfterNow / 1000 / 60 / 60 % 24),
 					(int) (mLastSelectedTimeSpanMillisAfterNow / 1000 / 60 % 60), true);
@@ -632,7 +635,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 			bundle = new Bundle();
 			bundle.putInt(CommonConstants.CALLER_ID,
 					R.id.button_reminder_time_before_event);
-			dataFragment.bundle = bundle;
+			mParcelableDataStore.bundle = bundle;
 			tpd = TimePickerDialog
 					.newInstance(
 							this,
@@ -952,7 +955,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 				Calendar calendar = Calendar.getInstance();
 				calendar.setTimeInMillis(mLastSelectedAbsoluteTime);
 				calendar.set(year, monthOfYear, dayOfMonth);
-				dataFragment.lastSelectedAbsoluteTime = mLastSelectedAbsoluteTime = calendar
+				mParcelableDataStore.lastSelectedAbsoluteTime = mLastSelectedAbsoluteTime = calendar
 						.getTimeInMillis();
 				DateFormat mDateFormat = DateFormat.getDateInstance();
 				mDateFormat.setCalendar(calendar);
@@ -976,7 +979,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 				calendar.set(Calendar.MINUTE, minute);
 				calendar.set(Calendar.SECOND, 0);
 				calendar.set(Calendar.MILLISECOND, 0);
-				dataFragment.lastSelectedAbsoluteTime = mLastSelectedAbsoluteTime = calendar
+				mParcelableDataStore.lastSelectedAbsoluteTime = mLastSelectedAbsoluteTime = calendar
 						.getTimeInMillis();
 				DateFormat mDateFormat = DateFormat.getTimeInstance();
 				mDateFormat.setCalendar(calendar);
@@ -987,11 +990,11 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 				button.setText(timeString);
 			} else if (callerId == R.id.button_reminder_time_after_now) {
 				mLastSelectedTimeSpanMillisAfterNow = (hourOfDay * 60L + minute) * 60 * 1000;
-				dataFragment.lastSelectedTimeSpanMillisAfterNow = mLastSelectedTimeSpanMillisAfterNow;
+				mParcelableDataStore.lastSelectedTimeSpanMillisAfterNow = mLastSelectedTimeSpanMillisAfterNow;
 				setTimeSpanButtonText(callerId, hourOfDay, minute);
 			} else if (callerId == R.id.button_reminder_time_before_event) {
 				mLastSelectedTimeSpanMillisBeforeEvent = (hourOfDay * 60L + minute) * 60 * 1000;
-				dataFragment.lastSelectedTimeSpanMillisBeforeEvent = mLastSelectedTimeSpanMillisBeforeEvent;
+				mParcelableDataStore.lastSelectedTimeSpanMillisBeforeEvent = mLastSelectedTimeSpanMillisBeforeEvent;
 				setTimeSpanButtonText(callerId, hourOfDay, minute);
 			}
 		}
@@ -1026,7 +1029,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 		}
 	}
 
-	public static class ActivityEditReminderDataFragment extends Fragment implements
+	public static class ActivityEditReminderParcelableDataStore implements
 			Parcelable {
 		private TaskWithDependentsUiData taskWithDependentsUiData;
 		private UserInterfaceData userInterfaceData;
@@ -1039,10 +1042,10 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 		private int lastSelectedRadiobuttonIdAbsoluteOrAfterNow;
 		private int lastSelectedRadiobuttonIdBeforeEventOrAfterEvent;
 
-		public ActivityEditReminderDataFragment() {
+		public ActivityEditReminderParcelableDataStore() {
 		}
 
-		public ActivityEditReminderDataFragment(
+		public ActivityEditReminderParcelableDataStore(
 				TaskWithDependentsUiData taskWithDependentsUiData,
 				UserInterfaceData userInterfaceData, long lastSelectedAbsoluteTime,
 				long lastSelectedTimeSpanMillis, Bundle bundle,
@@ -1059,10 +1062,10 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 			lastSelectedRadiobuttonIdBeforeEventOrAfterEvent = R.id.activity_edit_reminder_radio_reminder_time_before_event;
 		}
 
-		@Override
+//		@Override
 		public void onCreate(Bundle savedInstanceState) {
-			super.onCreate(savedInstanceState);
-			setRetainInstance(true);
+//			super.onCreate(savedInstanceState);
+//			setRetainInstance(true);
 			//
 			if (savedInstanceState != null) {
 				taskWithDependentsUiData = savedInstanceState
@@ -1085,9 +1088,9 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 			//
 		}
 
-		@Override
+//		@Override
 		public void onSaveInstanceState(Bundle savedInstanceState) {
-			super.onSaveInstanceState(savedInstanceState);
+//			super.onSaveInstanceState(savedInstanceState);
 			savedInstanceState.putParcelable("taskWithDependentsUiData",
 					taskWithDependentsUiData);
 			savedInstanceState.putParcelable("userInterfaceData", userInterfaceData);
@@ -1106,7 +1109,7 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 					lastSelectedRadiobuttonIdBeforeEventOrAfterEvent);
 		}
 
-		protected ActivityEditReminderDataFragment(Parcel in) {
+		protected ActivityEditReminderParcelableDataStore(Parcel in) {
 			taskWithDependentsUiData = (TaskWithDependentsUiData) in
 					.readValue(TaskWithDependentsUiData.class.getClassLoader());
 			userInterfaceData = (UserInterfaceData) in.readValue(UserInterfaceData.class
@@ -1141,15 +1144,15 @@ public class ActivityEditReminder extends AppCompatActivity implements OnClickLi
 			dest.writeInt(lastSelectedRadiobuttonIdBeforeEventOrAfterEvent);
 		}
 
-		public static final Parcelable.Creator<ActivityEditReminderDataFragment> CREATOR = new Parcelable.Creator<ActivityEditReminderDataFragment>() {
+		public static final Parcelable.Creator<ActivityEditReminderParcelableDataStore> CREATOR = new Parcelable.Creator<ActivityEditReminderParcelableDataStore>() {
 			@Override
-			public ActivityEditReminderDataFragment createFromParcel(Parcel in) {
-				return new ActivityEditReminderDataFragment(in);
+			public ActivityEditReminderParcelableDataStore createFromParcel(Parcel in) {
+				return new ActivityEditReminderParcelableDataStore(in);
 			}
 
 			@Override
-			public ActivityEditReminderDataFragment[] newArray(int size) {
-				return new ActivityEditReminderDataFragment[size];
+			public ActivityEditReminderParcelableDataStore[] newArray(int size) {
+				return new ActivityEditReminderParcelableDataStore[size];
 			}
 		};
 	}

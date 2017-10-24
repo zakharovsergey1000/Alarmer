@@ -6,30 +6,9 @@ import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import biz.advancedcalendar.db.TaskWithDependentsUiData;
 
-public class RetainedFragmentForActivityViewTask extends Fragment implements Parcelable {
+public class RetainedFragmentForActivityViewTask implements Parcelable {
 	TaskWithDependentsUiData mTaskWithDependentsUiData;
 	int tab;
-
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setRetainInstance(true);
-		//
-		if (savedInstanceState != null) {
-			mTaskWithDependentsUiData = savedInstanceState
-					.getParcelable("mTaskWithDependentsUiData");
-			tab = savedInstanceState.getInt("tab");
-		}
-		//
-	}
-
-	@Override
-	public void onSaveInstanceState(Bundle savedInstanceState) {
-		super.onSaveInstanceState(savedInstanceState);
-		savedInstanceState.putParcelable("mTaskWithDependentsUiData",
-				mTaskWithDependentsUiData);
-		savedInstanceState.putInt("tab", tab);
-	}
 
 	public void setTaskWithDependentsUiData(TaskWithDependentsUiData data) {
 		mTaskWithDependentsUiData = data;

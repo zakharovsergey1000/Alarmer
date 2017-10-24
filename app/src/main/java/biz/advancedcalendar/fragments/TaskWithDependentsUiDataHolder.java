@@ -1,6 +1,6 @@
 package biz.advancedcalendar.fragments;
 
-import biz.advancedcalendar.activities.ActivityEditTask.ActivityEditTaskDataFragment;
+import biz.advancedcalendar.activities.ActivityEditTask.ActivityEditTaskParcelableDataStore;
 import biz.advancedcalendar.db.TaskWithDependentsUiData;
 import biz.advancedcalendar.fragments.FragmentEditTaskPartMain.UserInterfaceData;
 
@@ -9,5 +9,5 @@ public interface TaskWithDependentsUiDataHolder {
 
 	UserInterfaceData getUserInterfaceData();
 
-	ActivityEditTaskDataFragment getDataFragment();
+	ActivityEditTaskParcelableDataStore getmParcelableDataStore();
 }

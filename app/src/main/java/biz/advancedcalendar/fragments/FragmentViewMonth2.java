@@ -1117,7 +1117,7 @@ public class FragmentViewMonth2 extends Fragment implements OnDateSetListener,
 							context,
 							R.string.preference_key_calendar_today_date_text_color,
 							resources
-									.getInteger(R.color.calendar_today_date_text_color_default_value),
+									.getColor(R.color.calendar_today_date_text_color_default_value),
 							null, null);
 			mButtonPickupDate.setTextColor(color);
 			color = Helper
@@ -1125,7 +1125,7 @@ public class FragmentViewMonth2 extends Fragment implements OnDateSetListener,
 							context,
 							R.string.preference_key_calendar_today_date_highlight_color,
 							resources
-									.getInteger(R.color.calendar_today_date_highlight_color_default_value),
+									.getColor(R.color.calendar_today_date_highlight_color_default_value),
 							null, null);
 			mButtonPickupDate.setBackgroundColor(color);
 		} else {

@@ -9,6 +9,7 @@ import android.content.IntentFilter;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -48,7 +49,7 @@ import android.widget.Toast;
 import biz.advancedcalendar.CommonConstants;
 import biz.advancedcalendar.alarmer.R;
 import biz.advancedcalendar.activities.ActivityColorPicker;
-import biz.advancedcalendar.activities.ActivityEditTask.ActivityEditTaskDataFragment;
+import biz.advancedcalendar.activities.ActivityEditTask.ActivityEditTaskParcelableDataStore;
 import biz.advancedcalendar.activities.ActivitySelectDaysOfYear2;
 import biz.advancedcalendar.activities.ActivitySelectTaskSortOrder;
 import biz.advancedcalendar.activities.ActivitySelectTreeItems;
@@ -178,7 +179,7 @@ public class FragmentEditTaskPartMain extends Fragment implements
 	private int occurrencesMaxCountDefaultValue;
 	private int occurrencesMaxCountMinValue;
 	private int occurrencesMaxCountMaxValue;
-	private ActivityEditTaskDataFragment dataFragment;
+	private ActivityEditTaskParcelableDataStore dataFragment;
 	private TaskWithDependentsUiData taskWithDependentsUiData;
 	private TaskUiData taskUiData;
 	private List<TaskOccurrence> taskOccurrences;
@@ -2346,7 +2347,7 @@ public class FragmentEditTaskPartMain extends Fragment implements
 		// Log.i(CommonConstants.DEBUG_TAG, "onCreateView");
 		//
 		TaskWithDependentsUiDataHolder taskWithDependentsUiDataHolder = (TaskWithDependentsUiDataHolder) getActivity();
-		dataFragment = taskWithDependentsUiDataHolder.getDataFragment();
+		dataFragment = taskWithDependentsUiDataHolder.getmParcelableDataStore();
 		taskEditMode = dataFragment.getTaskEditMode();
 		taskWithDependentsUiData = taskWithDependentsUiDataHolder
 				.getTaskWithDependentsUiData();
@@ -3036,8 +3037,11 @@ public class FragmentEditTaskPartMain extends Fragment implements
 					if (t == null) {
 						textViewTaskSortOrder
 								.setTextColor(mDefaultTextColorStateListForRadioButtonSortOrderAfterTask);
-						textViewTaskSortOrder
-								.setBackground(mDefaultBackgroundForRadioButtonSortOrderAfterTask);
+						if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+							textViewTaskSortOrder
+									.setBackground(mDefaultBackgroundForRadioButtonSortOrderAfterTask);
+						}
+
 						textViewTaskSortOrder
 								.setText(R.string.fragment_edit_task_part_main_textview_task_sortorder_aftertask_text_none);
 						radioButtonSortOrderFirst.setChecked(true);

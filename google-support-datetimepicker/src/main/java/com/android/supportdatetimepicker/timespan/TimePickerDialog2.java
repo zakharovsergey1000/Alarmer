@@ -91,21 +91,10 @@ public class TimePickerDialog2 extends DialogFragment implements OnValueSelected
 	/** The callback interface used to indicate the user is done filling in the timespan
 	 * (they clicked on the 'Set' button). */
 	public interface OnTimeSetListener {
-		/** @param view
-		 *            The view associated with this listener.
-		 * @param hourOfDay
-		 *            The hour that was set.
-		 * @param minute
-		 *            The minute that was set. */
 		void onTimeSpanSet(RadialPickerLayout view, int days, int hours, int minutes);
 	}
 
 	public TimePickerDialog2() {
-		// Empty constructor required for dialog fragment.
-	}
-
-	public TimePickerDialog2(Context context, int theme, OnTimeSetListener callback,
-			int days, int hours, int minutes) {
 		// Empty constructor required for dialog fragment.
 	}
 
@@ -587,11 +576,6 @@ public class TimePickerDialog2 extends DialogFragment implements OnValueSelected
 		return deleted;
 	}
 
-	/** Get out of keyboard mode. If there is nothing in typedTimes, revert to TimePicker's
-	 * time.
-	 *
-	 * @param changeDisplays
-	 *            If true, update the displays with the relevant time. */
 	private void finishKbMode(boolean updateDisplays) {
 		mInKbMode = false;
 		if (!mTypedTimes.isEmpty()) {

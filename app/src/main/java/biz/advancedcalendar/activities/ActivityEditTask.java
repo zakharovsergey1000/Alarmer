@@ -67,7 +67,7 @@ public class ActivityEditTask extends AppCompatActivity implements
 	private static final boolean Debug = true;
 	private static final String DebugTag = "CreateReminderDebugTag";
 	private LocalBroadcastManager mBroadcaster;
-	private ActivityEditTaskDataFragment dataFragment;
+	private ActivityEditTaskParcelableDataStore mParcelableDataStore;
 	private GetUserInfoTask mGetUserInfoTask = null;
 	private TaskWithDependentsUiData taskWithDependentsUiData;
 	private TaskUiData taskUiData;
@@ -85,12 +85,12 @@ public class ActivityEditTask extends AppCompatActivity implements
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
 		if (ActivityEditTask.Debug) {
 			Log.d(ActivityEditTask.DebugTag,
 					"ActivityEditTask " + "onCreate(Bundle savedInstanceState) "
 							+ System.identityHashCode(this));
 		}
+		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_pager);
 		// Set a Toolbar to replace the ActionBar.
 		mToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -99,17 +99,20 @@ public class ActivityEditTask extends AppCompatActivity implements
 		mTabLayout.setOnTabSelectedListener(this);
 		mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 		FragmentManager fm = getSupportFragmentManager();
-		dataFragment = (ActivityEditTaskDataFragment) fm
-				.findFragmentByTag(CommonConstants.DATA_FRAGMENT);
-		if (dataFragment == null) {
-			dataFragment = getIntent().getParcelableExtra(CommonConstants.INIT_ARGUMENTS);
-			fm.beginTransaction().add(dataFragment, CommonConstants.DATA_FRAGMENT)
-					.commit();
+//		dataFragment = (ActivityEditTaskDataFragment) fm
+//				.findFragmentByTag(CommonConstants.DATA_FRAGMENT);
+		if (savedInstanceState != null) {
+			mParcelableDataStore = savedInstanceState.getParcelable(CommonConstants.INIT_ARGUMENTS);
+		} else {
+			if (mParcelableDataStore == null) {
+				mParcelableDataStore = getIntent().getParcelableExtra(CommonConstants.INIT_ARGUMENTS);
+			}
 		}
-		taskWithDependentsUiData = dataFragment.mTaskWithDependentsUiData;
+
+		taskWithDependentsUiData = mParcelableDataStore.mTaskWithDependentsUiData;
 		taskUiData = taskWithDependentsUiData.TaskUiData;
-		userInterfaceData = dataFragment.userInterfaceData;
-		taskEditMode = dataFragment.taskEditMode;
+		userInterfaceData = mParcelableDataStore.userInterfaceData;
+		taskEditMode = mParcelableDataStore.taskEditMode;
 		mBroadcaster = LocalBroadcastManager.getInstance(this);
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
@@ -147,77 +150,13 @@ public class ActivityEditTask extends AppCompatActivity implements
 					false);
 		}
 		int tabIndex = 0;
-		int tabCode = dataFragment.tab;
+		int tabCode = mParcelableDataStore.tab;
 		if (tabCode == CommonConstants.INTENT_EXTRA_VALUE_TAB_REMINDERS) {
 			tabIndex = 1;
 		}
 		android.support.design.widget.TabLayout.Tab selectedTab = mTabLayout
 				.getTabAt(tabIndex);
 		selectedTab.select();
-	}
-
-	@Override
-	protected void onRestoreInstanceState(Bundle savedInstanceState) {
-		if (ActivityEditTask.Debug) {
-			Log.d(ActivityEditTask.DebugTag,
-					"ActivityEditTask "
-							+ "onRestoreInstanceState(Bundle savedInstanceState) "
-							+ System.identityHashCode(this));
-		}
-		super.onRestoreInstanceState(savedInstanceState);
-	}
-
-	@Override
-	protected void onRestart() {
-		if (ActivityEditTask.Debug) {
-			Log.d(ActivityEditTask.DebugTag, "ActivityEditTask " + "onRestart() "
-					+ System.identityHashCode(this));
-		}
-		super.onRestart();
-	}
-
-	@Override
-	protected void onStart() {
-		super.onStart();
-		if (ActivityEditTask.Debug) {
-			Log.d(ActivityEditTask.DebugTag,
-					"ActivityEditTask " + "onStart() " + System.identityHashCode(this));
-		}
-	}
-
-	@Override
-	protected void onPostCreate(Bundle savedInstanceState) {
-		super.onPostCreate(savedInstanceState);
-		if (ActivityEditTask.Debug) {
-			Log.d(ActivityEditTask.DebugTag,
-					"ActivityEditTask " + "onPostCreate(Bundle savedInstanceState) "
-							+ System.identityHashCode(this));
-		}
-	}
-
-	@Override
-	protected void onResume() {
-		super.onResume();
-		if (ActivityEditTask.Debug) {
-			Log.d(ActivityEditTask.DebugTag,
-					"ActivityEditTask " + "onResume() " + System.identityHashCode(this));
-		}
-	}
-
-	@Override
-	protected void onPause() {
-		super.onPause();
-		if (ActivityEditTask.Debug) {
-			Log.d(ActivityEditTask.DebugTag,
-					"ActivityEditTask " + "onPause() " + System.identityHashCode(this));
-		}
-		if (isFinishing()) {
-			// avoid memory leak
-			// Global.setTaskToEdit(null);
-			// Global.setTaskToEditLabelIdList(null);
-			// Global.setTaskToEditContactIdList(null);
-			// Global.setTaskToEditFileIdList(null);
-		}
 	}
 
 	@Override
@@ -229,37 +168,11 @@ public class ActivityEditTask extends AppCompatActivity implements
 							+ System.identityHashCode(this));
 		}
 		super.onSaveInstanceState(savedInstanceState);
-	}
-
-	@Override
-	protected void onStop() {
-		if (ActivityEditTask.Debug) {
-			Log.d(ActivityEditTask.DebugTag,
-					"ActivityEditTask " + "onStop() " + System.identityHashCode(this));
-		}
-		super.onStop();
-	}
-
-	@Override
-	protected void onDestroy() {
-		if (ActivityEditTask.Debug) {
-			Log.d(ActivityEditTask.DebugTag, "ActivityEditTask " + "onDestroy() "
-					+ System.identityHashCode(this));
-		}
-		super.onDestroy();
-	}
-
-	@Override
-	public void onConfigurationChanged(Configuration newConfig) {
-		super.onConfigurationChanged(newConfig);
+		savedInstanceState.putParcelable(CommonConstants.INIT_ARGUMENTS, mParcelableDataStore);
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		if (ActivityEditTask.Debug) {
-			Log.d(ActivityEditTask.DebugTag, "ActivityEditTask "
-					+ "onCreateOptionsMenu(Menu menu) " + System.identityHashCode(this));
-		}
 		MenuItem menuItem = menu.add(Menu.NONE, CommonConstants.MENU_ID_CANCEL, 0,
 				getResources().getString(R.string.action_cancel));
 		menuItem.setIcon(R.drawable.ic_cancel_black_24dp);
@@ -376,18 +289,14 @@ public class ActivityEditTask extends AppCompatActivity implements
 											.sendBroadcast(
 													new Intent(
 															CommonConstants.ACTION_ENTITIES_CHANGED_REMINDERS));
-									if (true) {
-										finish();
-										return;
-									}
 									// sync with server
-									@SuppressWarnings("unused")
 									SyncPolicy syncPolicy = SyncPolicy.fromInt((byte) Helper
 											.getIntegerPreferenceValueFromStringArray(
 													ActivityEditTask.this,
 													R.string.preference_key_sync_policy,
 													R.array.sync_policy_values_array,
 													R.integer.sync_policy_default_value));
+									syncPolicy = SyncPolicy.DO_NOT_SYNC;
 									switch (syncPolicy) {
 									case DO_NOT_SYNC:
 										finish();
@@ -655,20 +564,15 @@ public class ActivityEditTask extends AppCompatActivity implements
 		return isCollected;
 	}
 
-	@Override
-	public ActivityEditTaskDataFragment getDataFragment() {
-		if (dataFragment == null) {
-			dataFragment = (ActivityEditTaskDataFragment) getSupportFragmentManager()
-					.findFragmentByTag(CommonConstants.DATA_FRAGMENT);
-		}
-		return dataFragment;
+	public ActivityEditTaskParcelableDataStore getmParcelableDataStore() {
+		return mParcelableDataStore;
 	}
 
 	@Override
 	public TaskWithDependentsUiData getTaskWithDependentsUiData() {
 		if (taskWithDependentsUiData == null) {
-			dataFragment = getDataFragment();
-			taskWithDependentsUiData = dataFragment.mTaskWithDependentsUiData;
+			mParcelableDataStore = getmParcelableDataStore();
+			taskWithDependentsUiData = mParcelableDataStore.mTaskWithDependentsUiData;
 		}
 		return taskWithDependentsUiData;
 	}
@@ -676,8 +580,8 @@ public class ActivityEditTask extends AppCompatActivity implements
 	@Override
 	public UserInterfaceData getUserInterfaceData() {
 		if (userInterfaceData == null) {
-			dataFragment = getDataFragment();
-			userInterfaceData = dataFragment.userInterfaceData;
+			mParcelableDataStore = getmParcelableDataStore();
+			userInterfaceData = mParcelableDataStore.userInterfaceData;
 		}
 		return userInterfaceData;
 	}
@@ -723,26 +627,26 @@ public class ActivityEditTask extends AppCompatActivity implements
 		}
 	}
 
-	public static class ActivityEditTaskDataFragment extends Fragment implements
+	public static class ActivityEditTaskParcelableDataStore implements
 			Parcelable {
 		private TaskWithDependentsUiData mTaskWithDependentsUiData;
 		private UserInterfaceData userInterfaceData;
 		private TaskEditMode taskEditMode;
 		private int tab;
 
-		public ActivityEditTaskDataFragment() {
+		public ActivityEditTaskParcelableDataStore() {
 			if (ActivityEditTask.Debug) {
-				Log.d(ActivityEditTask.DebugTag, "ActivityEditTaskDataFragment()"
+				Log.d(ActivityEditTask.DebugTag, "ActivityEditTaskParcelableDataStore()"
 						+ System.identityHashCode(this));
 			}
 		}
 
-		public ActivityEditTaskDataFragment(
+		public ActivityEditTaskParcelableDataStore(
 				TaskWithDependentsUiData mTaskWithDependentsUiData,
 				UserInterfaceData userInterfaceData, TaskEditMode taskEditMode, int tab) {
 			if (ActivityEditTask.Debug) {
 				Log.d(ActivityEditTask.DebugTag,
-						"ActivityEditTaskDataFragment(TaskWithDependentsUiData mTaskWithDependentsUiData, UserInterfaceData userInterfaceData, TaskEditMode taskEditMode, int tab) "
+						"ActivityEditTaskParcelableDataStore(TaskWithDependentsUiData mTaskWithDependentsUiData, UserInterfaceData userInterfaceData, TaskEditMode taskEditMode, int tab) "
 								+ System.identityHashCode(this));
 			}
 			this.mTaskWithDependentsUiData = mTaskWithDependentsUiData;
@@ -751,25 +655,16 @@ public class ActivityEditTask extends AppCompatActivity implements
 			this.tab = tab;
 		}
 
-		@Override
-		public void onAttach(Activity activity) {
-			if (ActivityEditTask.Debug) {
-				Log.d(ActivityEditTask.DebugTag, "ActivityEditTaskDataFragment "
-						+ "onAttach(Activity activity) " + System.identityHashCode(this));
-			}
-			super.onAttach(activity);
-		}
-
-		@Override
+		//@Override
 		public void onCreate(Bundle savedInstanceState) {
 			if (ActivityEditTask.Debug) {
 				Log.d(ActivityEditTask.DebugTag,
-						"ActivityEditTaskDataFragment "
+						"ActivityEditTaskParcelableDataStore "
 								+ "onCreate(Bundle savedInstanceState) "
 								+ System.identityHashCode(this));
 			}
-			super.onCreate(savedInstanceState);
-			setRetainInstance(true);
+			//super.onCreate(savedInstanceState);
+			//setRetainInstance(true);
 			//
 			if (savedInstanceState != null) {
 				mTaskWithDependentsUiData = savedInstanceState
@@ -782,85 +677,20 @@ public class ActivityEditTask extends AppCompatActivity implements
 			//
 		}
 
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			if (ActivityEditTask.Debug) {
-				Log.d(ActivityEditTask.DebugTag,
-						"ActivityEditTaskDataFragment "
-								+ "onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) "
-								+ System.identityHashCode(this));
-			}
-			return super.onCreateView(inflater, container, savedInstanceState);
-		}
-
-		@Override
-		public void onActivityCreated(Bundle savedInstanceState) {
-			if (ActivityEditTask.Debug) {
-				Log.d(ActivityEditTask.DebugTag,
-						"ActivityEditTaskDataFragment "
-								+ "onActivityCreated(Bundle savedInstanceState) "
-								+ System.identityHashCode(this));
-			}
-			super.onActivityCreated(savedInstanceState);
-		}
-
-		@Override
-		public void onResume() {
-			if (ActivityEditTask.Debug) {
-				Log.d(ActivityEditTask.DebugTag, "ActivityEditTaskDataFragment "
-						+ "onResume() " + System.identityHashCode(this));
-			}
-			super.onResume();
-		}
-
-		@Override
-		public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-			if (ActivityEditTask.Debug) {
-				Log.d(ActivityEditTask.DebugTag, "ActivityEditTaskDataFragment "
-						+ "onCreateOptionsMenu(Menu menu, MenuInflater inflater) "
-						+ System.identityHashCode(this));
-			}
-		}
-
-		@Override
-		public void onPause() {
-			if (ActivityEditTask.Debug) {
-				Log.d(ActivityEditTask.DebugTag, "ActivityEditTaskDataFragment "
-						+ "onPause() " + System.identityHashCode(this));
-			}
-			super.onPause();
-			if (!getActivity().isFinishing()) {
-			}
-		}
-
-		@Override
+		//@Override
 		public void onSaveInstanceState(Bundle savedInstanceState) {
 			if (ActivityEditTask.Debug) {
 				Log.d(ActivityEditTask.DebugTag,
-						"ActivityEditTaskDataFragment "
+						"ActivityEditTaskParcelableDataStore "
 								+ "onSaveInstanceState(Bundle savedInstanceState) "
 								+ System.identityHashCode(this));
 			}
-			super.onSaveInstanceState(savedInstanceState);
+			//super.onSaveInstanceState(savedInstanceState);
 			savedInstanceState.putParcelable("mTaskWithDependentsUiData",
 					mTaskWithDependentsUiData);
 			savedInstanceState.putParcelable("userInterfaceData", userInterfaceData);
 			savedInstanceState.putByte("taskEditMode", taskEditMode.getValue());
 			savedInstanceState.putInt("tab", tab);
-		}
-
-		@Override
-		public void onStop() {
-			if (ActivityEditTask.Debug) {
-				Log.d(ActivityEditTask.DebugTag, "ActivityEditTaskDataFragment "
-						+ "onStop() " + System.identityHashCode(this));
-			}
-			if (!getActivity().isFinishing()) {
-				// collect info
-				// saveData();
-			}
-			super.onStop();
 		}
 
 		public void setTaskWithDependentsUiData(TaskWithDependentsUiData data) {
@@ -895,10 +725,10 @@ public class ActivityEditTask extends AppCompatActivity implements
 			this.tab = tab;
 		}
 
-		protected ActivityEditTaskDataFragment(Parcel in) {
+		protected ActivityEditTaskParcelableDataStore(Parcel in) {
 			if (ActivityEditTask.Debug) {
 				Log.d(ActivityEditTask.DebugTag,
-						"ActivityEditTaskDataFragment(Parcel in)"
+						"ActivityEditTaskParcelableDataStore(Parcel in)"
 								+ System.identityHashCode(this));
 			}
 			mTaskWithDependentsUiData = (TaskWithDependentsUiData) in
@@ -928,15 +758,15 @@ public class ActivityEditTask extends AppCompatActivity implements
 			dest.writeInt(tab);
 		}
 
-		public static final Parcelable.Creator<ActivityEditTaskDataFragment> CREATOR = new Parcelable.Creator<ActivityEditTaskDataFragment>() {
+		public static final Parcelable.Creator<ActivityEditTaskParcelableDataStore> CREATOR = new Parcelable.Creator<ActivityEditTaskParcelableDataStore>() {
 			@Override
-			public ActivityEditTaskDataFragment createFromParcel(Parcel in) {
-				return new ActivityEditTaskDataFragment(in);
+			public ActivityEditTaskParcelableDataStore createFromParcel(Parcel in) {
+				return new ActivityEditTaskParcelableDataStore(in);
 			}
 
 			@Override
-			public ActivityEditTaskDataFragment[] newArray(int size) {
-				return new ActivityEditTaskDataFragment[size];
+			public ActivityEditTaskParcelableDataStore[] newArray(int size) {
+				return new ActivityEditTaskParcelableDataStore[size];
 			}
 		};
 	}

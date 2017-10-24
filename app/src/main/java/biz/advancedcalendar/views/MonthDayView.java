@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class MonthDayView extends Button /* implements OnClickListener */{
+public class MonthDayView extends android.support.v7.widget.AppCompatButton /* implements OnClickListener */{
 	private static final int MIN_TASK_HEIGHT_DIP = 3;// 25;
 	private static final int WHOLE_DAY_TASKS_AREA_MIN_HEIGHT_DIP = MonthDayView.MIN_TASK_HEIGHT_DIP;// 3;
 	private static final int WHOLE_DAY_TASKS_AREA_MAX_HEIGHT_DIP = 48;
@@ -90,8 +90,7 @@ public class MonthDayView extends Button /* implements OnClickListener */{
 	/** Constructor
 	 *
 	 * @param context
-	 * @param attrs
-	 * @param defStyle */
+	 * @param attrs */
 	public MonthDayView(final Context context, final AttributeSet attrs) {
 		this(context, attrs, 0);
 	}
@@ -319,14 +318,14 @@ public class MonthDayView extends Button /* implements OnClickListener */{
 			int color = Helper.getIntegerPreferenceValue(
 					getContext(),
 					R.string.preference_key_calendar_today_date_text_color,
-					getContext().getResources().getInteger(
+					getContext().getResources().getColor(
 							R.color.calendar_today_date_text_color_default_value), null,
 					null);
 			mTextPaint.setColor(color);
 			color = Helper.getIntegerPreferenceValue(
 					getContext(),
 					R.string.preference_key_calendar_today_date_highlight_color,
-					getContext().getResources().getInteger(
+					getContext().getResources().getColor(
 							R.color.calendar_today_date_highlight_color_default_value),
 					null, null);
 			mBackgroundPaint.setColor(color);

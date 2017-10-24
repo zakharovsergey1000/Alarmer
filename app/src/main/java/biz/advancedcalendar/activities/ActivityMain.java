@@ -48,7 +48,7 @@ import android.widget.Toast;
 import biz.advancedcalendar.CommonConstants;
 import biz.advancedcalendar.MultipartUtility;
 import biz.advancedcalendar.alarmer.R;
-import biz.advancedcalendar.activities.ActivityEditTask.ActivityEditTaskDataFragment;
+import biz.advancedcalendar.activities.ActivityEditTask.ActivityEditTaskParcelableDataStore;
 import biz.advancedcalendar.activities.accessories.OnTabSelectedListener;
 import biz.advancedcalendar.activities.accessories.OnTabSelectedListener.SelectedIndexChangedListener;
 import biz.advancedcalendar.activities.accessories.OnTabSelectedListener.TabTag;
@@ -240,7 +240,7 @@ public class ActivityMain extends AppCompatActivity implements
 			int tab) {
 		UserInterfaceData userInterfaceData = new UserInterfaceData(context,
 				taskWithDependentsUiData);
-		ActivityEditTaskDataFragment activityEditTaskDataFragment = new ActivityEditTaskDataFragment(
+		ActivityEditTask.ActivityEditTaskParcelableDataStore activityEditTaskDataFragment = new ActivityEditTaskParcelableDataStore(
 				taskWithDependentsUiData, userInterfaceData, taskEditMode, tab);
 		Intent intent = new Intent(context, ActivityEditTask.class);
 		intent.putExtra(CommonConstants.INIT_ARGUMENTS, activityEditTaskDataFragment);
@@ -333,7 +333,8 @@ public class ActivityMain extends AppCompatActivity implements
 		// create the fragment and data the first time
 		if (mRetainedFragmentForFragmentViewAgenda == null) {
 			// add the fragment
-			mRetainedFragmentForFragmentViewAgenda = new RetainedFragmentForFragmentViewAgenda(
+			mRetainedFragmentForFragmentViewAgenda = new RetainedFragmentForFragmentViewAgenda();
+			mRetainedFragmentForFragmentViewAgenda.setFragmentViewAgendaTag(
 					FragmentTags.AGENDA.name());
 			fm.beginTransaction()
 					.add(mRetainedFragmentForFragmentViewAgenda,
@@ -788,7 +789,7 @@ public class ActivityMain extends AppCompatActivity implements
 			// store the new difference as current difference for the next time
 			Helper.setLastTimeDifference(this,
 					System.currentTimeMillis() - SystemClock.elapsedRealtime());
-			// setup alarms for reminders
+			// setup alarms for remindersmParcelableDataStore
 			// we have to setup alarms anew on every reboot
 			AlarmService.setupAlarmsForScheduledReminders(this);
 			// set alarm to unsilence silenced alarms

@@ -127,11 +127,6 @@ public class TimePickerDialog2 extends DialogFragment implements OnValueSelected
 		// Empty constructor required for dialog fragment.
 	}
 
-	public TimePickerDialog2(Context context, int theme, OnTimeSetListener callback,
-			int hourOfDay, int minute, boolean is24HourMode) {
-		// Empty constructor required for dialog fragment.
-	}
-
 	public static TimePickerDialog2 newInstance(OnTimeSetListener callback, int callerId,
 			int hourOfDay, int minute, boolean is24HourMode) {
 		TimePickerDialog2 ret = new TimePickerDialog2();
@@ -784,11 +779,6 @@ public class TimePickerDialog2 extends DialogFragment implements OnValueSelected
 		return deleted;
 	}
 
-	/** Get out of keyboard mode. If there is nothing in typedTimes, revert to TimePicker's
-	 * time.
-	 *
-	 * @param changeDisplays
-	 *            If true, update the displays with the relevant time. */
 	private void finishKbMode(boolean updateDisplays) {
 		mInKbMode = false;
 		if (!mTypedTimes.isEmpty()) {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools"
+	tools:ignore="MissingTranslation" >
 	<string name="selected_configuration">layout</string>
 	<!-- Choices for timezones, must be kept in sync with timezone_values. This list was taken from packages/apps/Settings/res/xml/timezones.xml sed -e 's/^.*">/ <item>"/;s,</.*$,"</item>,' packages/apps/Settings/res/xml/timezones.xml [CHAR LIMIT=25] -->
 	<string-array name="timezone_labels">

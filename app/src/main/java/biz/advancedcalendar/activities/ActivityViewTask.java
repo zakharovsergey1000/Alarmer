@@ -27,7 +27,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 import biz.advancedcalendar.CommonConstants;
 import biz.advancedcalendar.alarmer.R;
-import biz.advancedcalendar.activities.ActivityEditTask.ActivityEditTaskDataFragment;
+import biz.advancedcalendar.activities.ActivityEditTask.ActivityEditTaskParcelableDataStore;
 import biz.advancedcalendar.db.DataProvider;
 import biz.advancedcalendar.db.TaskUiData;
 import biz.advancedcalendar.db.TaskWithDependents;
@@ -51,7 +51,7 @@ public class ActivityViewTask extends AppCompatActivity implements
 		TaskWithDependentsUiDataHolder {
 	ActivityViewTaskPagerAdapter mActivityPagerAdapter;
 	private ViewPager mViewPager;
-	private RetainedFragmentForActivityViewTask dataFragment;
+	private RetainedFragmentForActivityViewTask mParcelableDataStore;
 	private GetUserInfoTask mGetUserInfoTask = null;
 	private TaskWithDependentsUiData taskWithDependentsUiData;
 	private TaskUiData taskUiData;
@@ -68,14 +68,17 @@ public class ActivityViewTask extends AppCompatActivity implements
 		mTabLayout.setOnTabSelectedListener(this);
 		mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 		FragmentManager fm = getSupportFragmentManager();
-		dataFragment = (RetainedFragmentForActivityViewTask) fm
-				.findFragmentByTag(CommonConstants.DATA_FRAGMENT);
-		if (dataFragment == null) {
-			dataFragment = getIntent().getParcelableExtra(CommonConstants.INIT_ARGUMENTS);
-			fm.beginTransaction().add(dataFragment, CommonConstants.DATA_FRAGMENT)
-					.commit();
+//		dataFragment = (RetainedFragmentForActivityViewTask) fm
+//				.findFragmentByTag(CommonConstants.DATA_FRAGMENT);
+		if (savedInstanceState != null) {
+			mParcelableDataStore = savedInstanceState.getParcelable(CommonConstants.INIT_ARGUMENTS);
+		} else {
+			if (mParcelableDataStore == null) {
+				mParcelableDataStore = getIntent().getParcelableExtra(CommonConstants.INIT_ARGUMENTS);
+			}
 		}
-		taskWithDependentsUiData = dataFragment.mTaskWithDependentsUiData;
+
+		taskWithDependentsUiData = mParcelableDataStore.mTaskWithDependentsUiData;
 		taskUiData = taskWithDependentsUiData.TaskUiData;
 		LocalBroadcastManager.getInstance(this).registerReceiver(new BroadcastReceiver() {
 			@Override
@@ -89,7 +92,7 @@ public class ActivityViewTask extends AppCompatActivity implements
 					} else {
 						taskWithDependentsUiData = new TaskWithDependentsUiData(
 								taskWithDependents);
-						dataFragment.setTaskWithDependentsUiData(taskWithDependentsUiData);
+						mParcelableDataStore.setTaskWithDependentsUiData(taskWithDependentsUiData);
 					}
 				}
 			}
@@ -118,7 +121,7 @@ public class ActivityViewTask extends AppCompatActivity implements
 					false);
 		}
 		int tabIndex = 0;
-		int tabCode = dataFragment.tab;
+		int tabCode = mParcelableDataStore.tab;
 		if (tabCode == CommonConstants.INTENT_EXTRA_VALUE_TAB_REMINDERS) {
 			tabIndex = 1;
 		}
@@ -468,7 +471,7 @@ public class ActivityViewTask extends AppCompatActivity implements
 
 	@Override
 	public TaskWithDependentsUiData getTaskWithDependentsUiData() {
-		return dataFragment.getTaskWithDependentsUiData();
+		return mParcelableDataStore.getTaskWithDependentsUiData();
 	}
 
 	@Override
@@ -476,8 +479,7 @@ public class ActivityViewTask extends AppCompatActivity implements
 		return null;
 	}
 
-	@Override
-	public ActivityEditTaskDataFragment getDataFragment() {
+	public ActivityEditTaskParcelableDataStore getmParcelableDataStore() {
 		return null;
 	}
 }

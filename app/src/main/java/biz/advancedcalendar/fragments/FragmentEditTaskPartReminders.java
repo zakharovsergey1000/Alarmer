@@ -46,9 +46,8 @@ import android.widget.Toast;
 import biz.advancedcalendar.CommonConstants;
 import biz.advancedcalendar.alarmer.R;
 import biz.advancedcalendar.activities.ActivityEditReminder;
-import biz.advancedcalendar.activities.ActivityEditReminder.ActivityEditReminderDataFragment;
+import biz.advancedcalendar.activities.ActivityEditReminder.ActivityEditReminderParcelableDataStore;
 import biz.advancedcalendar.activities.ActivityEditTask;
-import biz.advancedcalendar.activities.ActivityEditTask.ActivityEditTaskDataFragment;
 import biz.advancedcalendar.activities.accessories.DataSaver;
 import biz.advancedcalendar.db.ReminderUiData;
 import biz.advancedcalendar.db.TaskUiData;
@@ -78,7 +77,7 @@ public class FragmentEditTaskPartReminders extends Fragment implements OnClickLi
 	protected SparseBooleanArray mSparseBooleanArray1;
 	protected SparseBooleanArray mSparseBooleanArray2;
 	private TaskWithDependentsUiDataHolder taskWithDependentsUiDataHolder;
-	private ActivityEditTaskDataFragment dataFragment;
+	private ActivityEditTask.ActivityEditTaskParcelableDataStore dataFragment;
 	private TaskWithDependentsUiData taskWithDependentsUiData;
 	private TaskUiData taskUiData;
 	private List<ReminderUiData> remindersUiData;
@@ -194,7 +193,7 @@ public class FragmentEditTaskPartReminders extends Fragment implements OnClickLi
 			Bundle savedInstanceState) {
 		//
 		taskWithDependentsUiDataHolder = (TaskWithDependentsUiDataHolder) getActivity();
-		dataFragment = taskWithDependentsUiDataHolder.getDataFragment();
+		dataFragment = taskWithDependentsUiDataHolder.getmParcelableDataStore();
 		taskEditMode = dataFragment.getTaskEditMode();
 		taskWithDependentsUiData = taskWithDependentsUiDataHolder
 				.getTaskWithDependentsUiData();
@@ -816,11 +815,11 @@ public class FragmentEditTaskPartReminders extends Fragment implements OnClickLi
 			}
 		}
 		boolean is24HourFormat = Helper.is24HourFormat(context);
-		ActivityEditReminderDataFragment activityEditReminderDataFragment = new ActivityEditReminderDataFragment(
+		ActivityEditReminderParcelableDataStore activityEditReminderParcelableDataStore = new ActivityEditReminderParcelableDataStore(
 				taskWithDependentsUiData, userInterfaceData, lastSelectedAbsoluteTime,
 				lastSelectedTimeSpanMillis, null, reminderUiData, is24HourFormat);
 		Intent intent = new Intent(context, ActivityEditReminder.class);
-		intent.putExtra(CommonConstants.INIT_ARGUMENTS, activityEditReminderDataFragment);
+		intent.putExtra(CommonConstants.INIT_ARGUMENTS, activityEditReminderParcelableDataStore);
 		intent.putExtra(CommonConstants.INTENT_EXTRA_POSITION, position);
 		startActivityForResult(intent, requestCode);
 	}

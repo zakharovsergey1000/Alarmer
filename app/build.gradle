@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId "biz.advancedcalendar.alarmer"
+        applicationId "me.alarmer"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 21
@@ -12,9 +12,10 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -25,11 +26,12 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile "com.android.support:mediarouter-v7:${rootProject.ext.supportLibVersion}"
     compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     compile "com.android.support:support-v4:${rootProject.ext.supportLibVersion}"
     compile "com.android.support:recyclerview-v7:${rootProject.ext.supportLibVersion}"
-    compile 'com.android.support:design:26.+'
-    compile 'com.android.support:preference-v7:26.+'
+    compile "com.android.support:design:${rootProject.ext.supportLibVersion}"
+    compile "com.android.support:preference-v7:${rootProject.ext.supportLibVersion}"
     testCompile 'junit:junit:4.12'
     compile project(path: ':google-support-datetimepicker')
     compile 'com.google.android.gms:play-services:10.0.1'

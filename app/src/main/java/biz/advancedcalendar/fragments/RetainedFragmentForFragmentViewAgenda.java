@@ -36,17 +36,8 @@ public class RetainedFragmentForFragmentViewAgenda extends Fragment
 		}
 	}
 
-	public RetainedFragmentForFragmentViewAgenda(String fragmentViewAgendaTag) {
-		super();
+	public void setFragmentViewAgendaTag(String fragmentViewAgendaTag) {
 		mFragmentViewAgendaTag = fragmentViewAgendaTag;
-		if (FragmentViewAgenda.LoadGroupAsyncTaskDebug) {
-			Log.d(FragmentViewAgenda.LoadGroupAsyncTaskDebugTag,
-					String.format(
-							"RetainedFragmentForFragmentViewAgenda(String fragmentViewAgendaTag) thread: %s",
-							Thread.currentThread().getName()));
-			Log.d(FragmentViewAgenda.LoadGroupAsyncTaskDebugTag,
-					String.format("    fragmentViewAgendaTag: %s", fragmentViewAgendaTag));
-		}
 	}
 
 	public static class LoadGroupAsyncTaskArguments {
