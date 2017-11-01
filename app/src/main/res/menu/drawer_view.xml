@@ -22,9 +22,5 @@
 			android:id="@+id/drawer_item_settings"
 			android:icon="@drawable/ic_settings_black_24dp"
 			android:title="@string/drawer_title_settings"/>
-		<item
-			android:id="@+id/drawer_item_recyclebin"
-			android:icon="@drawable/ic_delete_black_24dp"
-			android:title="@string/drawer_title_recyclebin"/>
 	</group>
 </menu>

@@ -1443,10 +1443,6 @@ public class ActivityMain extends AppCompatActivity implements
 			Intent intent2 = new Intent(ActivityMain.this, ActivitySettings2.class);
 			startActivity(intent2);
 			break;
-		case R.id.drawer_item_recyclebin:
-			intent2 = new Intent(ActivityMain.this, ActivityRecyclebinList.class);
-			startActivity(intent2);
-			break;
 		case 4:
 			selectItem(ActivityState.FILES, mFilesSelectedTabIndex);
 			break;

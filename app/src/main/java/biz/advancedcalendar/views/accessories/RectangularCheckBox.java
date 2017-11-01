@@ -12,12 +12,12 @@ import android.util.AttributeSet;
 import android.widget.RadioGroup;
 import android.widget.TableLayout;
 import android.widget.TableRow;
-import android.widget.TextView;
+
 import biz.advancedcalendar.alarmer.R;
 import biz.advancedcalendar.greendao.Task.InformationUnitSelector;
 
 /** A text view which, when pressed or activated, displays a blue circle around the text. */
-public class RectangularCheckBox extends TextView {
+public class RectangularCheckBox extends android.support.v7.widget.AppCompatTextView {
 	private static final int SELECTED_CIRCLE_ALPHA = 60;
 	Paint mCirclePaint = new Paint();
 	private int mCircleColor;
@@ -38,9 +38,9 @@ public class RectangularCheckBox extends TextView {
 
 	private void init() {
 		resources = context.getResources();
-		mCircleColor = resources.getColor(com.android.datetimepicker.R.color.blue);
+		mCircleColor = resources.getColor(com.android.supportdatetimepicker.R.color.blue);
 		mItemIsSelectedText = context.getResources().getString(
-				com.android.datetimepicker.R.string.item_is_selected);
+				com.android.supportdatetimepicker.R.string.item_is_selected);
 		mCirclePaint.setFakeBoldText(true);
 		mCirclePaint.setAntiAlias(true);
 		mCirclePaint.setColor(mCircleColor);
@@ -70,16 +70,6 @@ public class RectangularCheckBox extends TextView {
 			rectF.set(0, 0, width, height);
 			int radius = height / 4;
 			canvas.drawRoundRect(rectF, radius, radius, mCirclePaint);
-		}
-	}
-
-	@Override
-	public CharSequence getContentDescription() {
-		CharSequence itemText = getText();
-		if (mDrawCircle) {
-			return String.format(mItemIsSelectedText, itemText);
-		} else {
-			return itemText;
 		}
 	}
 
