@@ -4,7 +4,8 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-	tools:context="biz.advancedcalendar.activities.ActivityRecyclebinList" >
+	tools:context="biz.advancedcalendar.activities.ActivityRecyclebinList"
+	android:fitsSystemWindows="true">
 	<!--
     This layout is a two-pane layout for the Calendars
     master/detail flow. See res/values-large/refs.xml and
