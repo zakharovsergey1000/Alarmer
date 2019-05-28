@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="dialDatePicker" type="id">1</item>
+    <item name="dialDatePicker" type="id"/>
 </resources>
