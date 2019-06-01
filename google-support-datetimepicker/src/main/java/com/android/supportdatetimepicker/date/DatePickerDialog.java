@@ -45,8 +45,8 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
     DatePickerController {
     private static final String TAG = "DatePickerDialog";
     private static final int UNINITIALIZED = -1;
-    private static final int MONTH_VIEW = 0;
     private static final int DAY_VIEW = 1;
+    private static final int MONTH_VIEW = 0;
     private static final int YEAR_VIEW = 2;
     private static final String KEY_SELECTED_YEAR = "year";
     private static final String KEY_SELECTED_MONTH = "month";
@@ -61,12 +61,9 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
     private static final int DEFAULT_END_YEAR = 2100;
     private static final int ANIMATION_DURATION = 300;
     private static final int ANIMATION_DELAY = 500;
-    private static SimpleDateFormat YEAR_FORMAT = new SimpleDateFormat("yyyy",
-        Locale.getDefault());
-    private static SimpleDateFormat MONTH_FORMAT = new SimpleDateFormat("MMMM",
-        Locale.getDefault());
-    private static SimpleDateFormat DAY_FORMAT = new SimpleDateFormat("dd",
-        Locale.getDefault());
+    private static SimpleDateFormat YEAR_FORMAT = new SimpleDateFormat("yyyy", Locale.getDefault());
+    private static SimpleDateFormat MONTH_FORMAT = new SimpleDateFormat("MMMM", Locale.getDefault());
+    private static SimpleDateFormat DAY_FORMAT = new SimpleDateFormat("dd", Locale.getDefault());
     private final Calendar mCalendar = Calendar.getInstance();
     private OnDateSetListener mCallBack;
     private HashSet<OnDateChangedListener> mListeners = new HashSet<OnDateChangedListener>();
@@ -128,14 +125,14 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
      * @param dayOfMonth The initial day of the dialog.
      */
     public static DatePickerDialog newInstance(OnDateSetListener callBack, int year,
-                                               int monthOfYear, int dayOfMonth) {
+                                               int monthOfYear,
+                                               int dayOfMonth) {
         DatePickerDialog ret = new DatePickerDialog();
         ret.initialize(callBack, year, monthOfYear, dayOfMonth);
         return ret;
     }
 
-    public void initialize(OnDateSetListener callBack, int year, int monthOfYear,
-                           int dayOfMonth) {
+    public void initialize(OnDateSetListener callBack, int year, int monthOfYear, int dayOfMonth) {
         mCallBack = callBack;
         mCalendar.set(Calendar.YEAR, year);
         mCalendar.set(Calendar.MONTH, monthOfYear);
@@ -149,12 +146,9 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
         activity.getWindow().setSoftInputMode(
             WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         if (savedInstanceState != null) {
-            mCalendar.set(Calendar.YEAR,
-                savedInstanceState.getInt(KEY_SELECTED_YEAR));
-            mCalendar.set(Calendar.MONTH,
-                savedInstanceState.getInt(KEY_SELECTED_MONTH));
-            mCalendar.set(Calendar.DAY_OF_MONTH,
-                savedInstanceState.getInt(KEY_SELECTED_DAY));
+            mCalendar.set(Calendar.YEAR, savedInstanceState.getInt(KEY_SELECTED_YEAR));
+            mCalendar.set(Calendar.MONTH, savedInstanceState.getInt(KEY_SELECTED_MONTH));
+            mCalendar.set(Calendar.DAY_OF_MONTH, savedInstanceState.getInt(KEY_SELECTED_DAY));
         }
     }
 
@@ -162,10 +156,8 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(KEY_SELECTED_YEAR, mCalendar.get(Calendar.YEAR));
-        outState.putInt(KEY_SELECTED_MONTH,
-            mCalendar.get(Calendar.MONTH));
-        outState.putInt(KEY_SELECTED_DAY,
-            mCalendar.get(Calendar.DAY_OF_MONTH));
+        outState.putInt(KEY_SELECTED_MONTH, mCalendar.get(Calendar.MONTH));
+        outState.putInt(KEY_SELECTED_DAY, mCalendar.get(Calendar.DAY_OF_MONTH));
         outState.putInt(KEY_WEEK_START, mWeekStart);
         outState.putInt(KEY_YEAR_START, mMinYear);
         outState.putInt(KEY_YEAR_END, mMaxYear);
@@ -183,8 +175,7 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
         //
         else if (mCurrentView == YEAR_VIEW) {
             listPosition = mYearPickerView.getFirstVisiblePosition();
-            outState.putInt(KEY_LIST_POSITION_OFFSET,
-                mYearPickerView.getFirstPositionOffset());
+            outState.putInt(KEY_LIST_POSITION_OFFSET, mYearPickerView.getFirstPositionOffset());
         }
         outState.putInt(KEY_LIST_POSITION, listPosition);
     }
@@ -211,8 +202,7 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
             mMaxYear = savedInstanceState.getInt(KEY_YEAR_END);
             currentView = savedInstanceState.getInt(KEY_CURRENT_VIEW);
             listPosition = savedInstanceState.getInt(KEY_LIST_POSITION);
-            listPositionOffset = savedInstanceState
-                .getInt(KEY_LIST_POSITION_OFFSET);
+            listPositionOffset = savedInstanceState.getInt(KEY_LIST_POSITION_OFFSET);
         }
         final Activity activity = getActivity();
         mDayPickerView = new SimpleDayPickerView(activity, this);
@@ -244,9 +234,8 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
             public void onClick(View v) {
                 tryVibrate();
                 if (mCallBack != null) {
-                    mCallBack.onDateSet(DatePickerDialog.this,
-                        mCalendar.get(Calendar.YEAR), mCalendar.get(Calendar.MONTH),
-                        mCalendar.get(Calendar.DAY_OF_MONTH));
+                    mCallBack.onDateSet(DatePickerDialog.this, mCalendar.get(Calendar.YEAR),
+                        mCalendar.get(Calendar.MONTH), mCalendar.get(Calendar.DAY_OF_MONTH));
                 }
                 dismiss();
             }
@@ -254,15 +243,11 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
         updateDisplay(false);
         setCurrentView(currentView);
         if (listPosition != -1) {
-            if (currentView == MONTH_VIEW) {
-                mMonthPickerView.postSetSelection(listPosition);
-            }
-            //
-            else if (currentView == DAY_VIEW) {
+            if (currentView == DAY_VIEW) {
                 mDayPickerView.postSetSelection(listPosition);
-            }
-            //
-            else if (currentView == YEAR_VIEW) {
+            } else if (currentView == MONTH_VIEW) {
+                mMonthPickerView.postSetSelection(listPosition);
+            } else if (currentView == YEAR_VIEW) {
                 mYearPickerView.postSetSelectionFromTop(listPosition, listPositionOffset);
             }
         }
@@ -365,9 +350,8 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
     private void updateDisplay(boolean announce) {
         if (mDayOfWeekView != null) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                mDayOfWeekView.setText(mCalendar.getDisplayName(Calendar.DAY_OF_WEEK,
-                    Calendar.LONG, Locale.getDefault()).toUpperCase(
-                    Locale.getDefault()));
+                mDayOfWeekView.setText(mCalendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG,
+                    Locale.getDefault()).toUpperCase(Locale.getDefault()));
             } else {
                 mDayOfWeekView.setText(new SimpleDateFormat("EEEE").format(
                     mCalendar.getTime()).toUpperCase(Locale.getDefault()));
@@ -398,8 +382,8 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
 
     public void setFirstDayOfWeek(int startOfWeek) {
         if (startOfWeek < Calendar.SUNDAY || startOfWeek > Calendar.SATURDAY) {
-            throw new IllegalArgumentException(
-                "Value must be between Calendar.SUNDAY and " + "Calendar.SATURDAY");
+            throw new IllegalArgumentException("Value must be between Calendar.SUNDAY and " +
+                "Calendar.SATURDAY");
         }
         mWeekStart = startOfWeek;
         if (mDayPickerView != null) {
