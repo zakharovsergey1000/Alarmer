@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- 
+<?xml version="1.0" encoding="UTF-8"?><!--
      Copyright (C) 2013 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,9 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="done_label" msgid="7007948707597430919">"تم"</string>
     <string name="hour_picker_description" msgid="7586639618712934060">"شريط التمرير الدائري للساعات"</string>
     <string name="minute_picker_description" msgid="6024811202872705251">"شريط التمرير الدائري للدقائق"</string>

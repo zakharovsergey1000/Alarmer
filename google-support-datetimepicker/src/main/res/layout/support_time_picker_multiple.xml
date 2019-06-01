@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (C) 2013 The Android Open Source Project
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,85 +13,95 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/time_picker_dialog"
-	android:layout_width="wrap_content"
-	android:layout_height="match_parent"
-	android:focusable="true"
-	android:orientation="vertical" >
-	<LinearLayout
-		android:id="@+id/linearlayout_time_selector"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:background="@color/circle_background"
-		android:focusable="true"
-		android:orientation="vertical" >
-		<TextView
-			android:id="@+id/time_picker_textview_title"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_gravity="center_horizontal"
-			android:textColor="@color/done_text_color"
-			android:textSize="@dimen/done_label_size" />
-		<RadioGroup
-			android:id="@+id/radiogroup_time_selector"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_gravity="center_horizontal"
-			android:orientation="horizontal"
-			android:padding="0dp" >
-		</RadioGroup>
-	</LinearLayout>
-	<FrameLayout
-		android:id="@+id/time_display_background"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:background="@color/white" >
-		<include
-			android:layout_width="match_parent"
-			android:layout_height="@dimen/header_height"
-			android:layout_gravity="center"
-			layout="@layout/support_time_header_label" />
-	</FrameLayout>
-	<com.android.supportdatetimepicker.time.RadialPickerLayout
-		android:id="@+id/time_picker_12"
-		android:layout_width="wrap_content"
-		android:layout_height="@dimen/picker_dimen"
-		android:layout_gravity="center"
-		android:background="@color/circle_background"
-		android:focusable="true"
-		android:focusableInTouchMode="true"
-		android:visibility="gone" />
-	<com.android.supportdatetimepicker.time.RadialPickerLayout
-		android:id="@+id/time_picker_24"
-		android:layout_width="wrap_content"
-		android:layout_height="@dimen/picker_dimen"
-		android:layout_gravity="center"
-		android:background="@color/circle_background"
-		android:focusable="true"
-		android:focusableInTouchMode="true"
-		android:visibility="gone" />
-	<com.android.supportdatetimepicker.time.RadialPickerLayout
-		android:id="@+id/time_picker"
-		android:layout_width="wrap_content"
-		android:layout_height="@dimen/picker_dimen"
-		android:layout_gravity="center"
-		android:background="@color/circle_background"
-		android:focusable="true"
-		android:focusableInTouchMode="true"
-		android:visibility="gone" />
-	<View
-		android:id="@+id/line"
-		android:layout_width="match_parent"
-		android:layout_height="1dip"
-		android:background="@color/line_background" />
-	<Button
-		android:id="@+id/done_button"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:background="@drawable/done_background_color"
-		android:minHeight="48dp"
-		android:text="@string/done_label"
-		android:textColor="@color/done_text_color"
-		android:textSize="@dimen/done_label_size" />
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/time_picker_dialog"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearlayout_time_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/circle_background"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/time_picker_textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/done_text_color"
+            android:textSize="@dimen/done_label_size"/>
+
+        <RadioGroup
+            android:id="@+id/radiogroup_time_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="0dp"></RadioGroup>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/time_display_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:layout_gravity="center"
+            layout="@layout/support_time_header_label"/>
+    </FrameLayout>
+
+    <com.android.supportdatetimepicker.time.RadialPickerLayout
+        android:id="@+id/time_picker_12"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/picker_dimen"
+        android:layout_gravity="center"
+        android:background="@color/circle_background"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone"/>
+
+    <com.android.supportdatetimepicker.time.RadialPickerLayout
+        android:id="@+id/time_picker_24"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/picker_dimen"
+        android:layout_gravity="center"
+        android:background="@color/circle_background"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone"/>
+
+    <com.android.supportdatetimepicker.time.RadialPickerLayout
+        android:id="@+id/time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/picker_dimen"
+        android:layout_gravity="center"
+        android:background="@color/circle_background"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/line_background"/>
+
+    <Button
+        android:id="@+id/done_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/done_background_color"
+        android:minHeight="48dp"
+        android:text="@string/done_label"
+        android:textColor="@color/done_text_color"
+        android:textSize="@dimen/done_label_size"/>
 </LinearLayout>
