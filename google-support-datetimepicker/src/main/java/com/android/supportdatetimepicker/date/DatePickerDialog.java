@@ -11,7 +11,6 @@ package com.android.supportdatetimepicker.date;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.res.Resources;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.text.format.DateUtils;
@@ -271,13 +270,10 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
         long millis = mCalendar.getTimeInMillis();
         switch (viewIndex) {
             case DAY_VIEW:
-                ObjectAnimator pulseAnimator = null;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                    pulseAnimator = Utils.getPulseAnimator(mDayView, 0.9f, 1.05f);
-                    if (mDelayAnimation) {
-                        pulseAnimator.setStartDelay(ANIMATION_DELAY);
-                        mDelayAnimation = false;
-                    }
+                ObjectAnimator pulseAnimator = Utils.getPulseAnimator(mDayView, 0.9f, 1.05f);
+                if (mDelayAnimation) {
+                    pulseAnimator.setStartDelay(ANIMATION_DELAY);
+                    mDelayAnimation = false;
                 }
                 mDayPickerView.onDateChanged();
                 if (mCurrentView != viewIndex) {
@@ -287,23 +283,17 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
                     mAnimator.setDisplayedChild(DAY_VIEW);
                     mCurrentView = viewIndex;
                 }
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                    pulseAnimator.start();
-                }
+                pulseAnimator.start();
                 int flags = DateUtils.FORMAT_SHOW_DATE;
                 String dayString = DateUtils.formatDateTime(getActivity(), millis, flags);
                 mAnimator.setContentDescription(mDayPickerDescription + ": " + dayString);
                 Utils.tryAccessibilityAnnounce(mAnimator, mSelectDay);
                 break;
             case MONTH_VIEW:
-                pulseAnimator = null;
-                // pulseAnimator = Utils.getPulseAnimator(mMonthView, 0.9f, 1.05f);
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                    pulseAnimator = Utils.getPulseAnimator(mMonthView, 0.85f, 1.1f);
-                    if (mDelayAnimation) {
-                        pulseAnimator.setStartDelay(ANIMATION_DELAY);
-                        mDelayAnimation = false;
-                    }
+                pulseAnimator = Utils.getPulseAnimator(mMonthView, 0.85f, 1.1f);
+                if (mDelayAnimation) {
+                    pulseAnimator.setStartDelay(ANIMATION_DELAY);
+                    mDelayAnimation = false;
                 }
                 mMonthPickerView.onDateChanged();
                 if (mCurrentView != viewIndex) {
@@ -313,21 +303,16 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
                     mAnimator.setDisplayedChild(MONTH_VIEW);
                     mCurrentView = viewIndex;
                 }
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                    pulseAnimator.start();
-                }
+                pulseAnimator.start();
                 CharSequence monthString = MONTH_FORMAT.format(millis);
                 mAnimator.setContentDescription(mMonthPickerDescription + ": " + monthString);
                 Utils.tryAccessibilityAnnounce(mAnimator, mSelectMonth);
                 break;
             case YEAR_VIEW:
-                pulseAnimator = null;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                    pulseAnimator = Utils.getPulseAnimator(mYearView, 0.85f, 1.1f);
-                    if (mDelayAnimation) {
-                        pulseAnimator.setStartDelay(ANIMATION_DELAY);
-                        mDelayAnimation = false;
-                    }
+                pulseAnimator = Utils.getPulseAnimator(mYearView, 0.85f, 1.1f);
+                if (mDelayAnimation) {
+                    pulseAnimator.setStartDelay(ANIMATION_DELAY);
+                    mDelayAnimation = false;
                 }
                 mYearPickerView.onDateChanged();
                 if (mCurrentView != viewIndex) {
@@ -337,9 +322,7 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
                     mAnimator.setDisplayedChild(YEAR_VIEW);
                     mCurrentView = viewIndex;
                 }
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                    pulseAnimator.start();
-                }
+                pulseAnimator.start();
                 CharSequence yearString = YEAR_FORMAT.format(millis);
                 mAnimator.setContentDescription(mYearPickerDescription + ": " + yearString);
                 Utils.tryAccessibilityAnnounce(mAnimator, mSelectYear);
@@ -349,22 +332,11 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
 
     private void updateDisplay(boolean announce) {
         if (mDayOfWeekView != null) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                mDayOfWeekView.setText(mCalendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG,
-                    Locale.getDefault()).toUpperCase(Locale.getDefault()));
-            } else {
-                mDayOfWeekView.setText(new SimpleDateFormat("EEEE").format(
-                    mCalendar.getTime()).toUpperCase(Locale.getDefault()));
-            }
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            mMonthView.setText(mCalendar.getDisplayName(Calendar.MONTH, Calendar.SHORT,
+            mDayOfWeekView.setText(mCalendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG,
                 Locale.getDefault()).toUpperCase(Locale.getDefault()));
-        } else {
-            // SimpleDateFormat dateFormat = new SimpleDateFormat("EEEEE");
-            // String dayOfWeek = dateFormat.format(mCalendar.getTime());
-            mMonthView.setText(new SimpleDateFormat("MMM").format(mCalendar.getTime()));
         }
+        mMonthView.setText(mCalendar.getDisplayName(Calendar.MONTH, Calendar.SHORT,
+            Locale.getDefault()).toUpperCase(Locale.getDefault()));
         mDayView.setText(DAY_FORMAT.format(mCalendar.getTime()));
         mYearView.setText(YEAR_FORMAT.format(mCalendar.getTime()));
         // Accessibility.
