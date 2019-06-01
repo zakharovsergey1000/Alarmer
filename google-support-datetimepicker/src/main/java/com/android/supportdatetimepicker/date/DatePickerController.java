@@ -8,33 +8,36 @@
  * License. */
 package com.android.supportdatetimepicker.date;
 
-import java.util.Calendar;
 import com.android.supportdatetimepicker.date.DatePickerDialog.OnDateChangedListener;
 import com.android.supportdatetimepicker.date.MonthAdapter.CalendarDay;
 
-/** Controller class to communicate among the various components of the date picker dialog. */
+import java.util.Calendar;
+
+/**
+ * Controller class to communicate among the various components of the date picker dialog.
+ */
 public interface DatePickerController {
-	void onYearSelected(int year);
+    void onYearSelected(int year);
 
-	void onMonthSelected(int month);
+    void onMonthSelected(int month);
 
-	void onDayOfMonthSelected(int year, int month, int day);
+    void onDayOfMonthSelected(int year, int month, int day);
 
-	void registerOnDateChangedListener(OnDateChangedListener listener);
+    void registerOnDateChangedListener(OnDateChangedListener listener);
 
-	void unregisterOnDateChangedListener(OnDateChangedListener listener);
+    void unregisterOnDateChangedListener(OnDateChangedListener listener);
 
-	CalendarDay getSelectedDay();
+    CalendarDay getSelectedDay();
 
-	int getFirstDayOfWeek();
+    int getFirstDayOfWeek();
 
-	int getMinYear();
+    int getMinYear();
 
-	int getMaxYear();
+    int getMaxYear();
 
-	Calendar getMinDate();
+    Calendar getMinDate();
 
-	Calendar getMaxDate();
+    Calendar getMaxDate();
 
-	void tryVibrate();
+    void tryVibrate();
 }

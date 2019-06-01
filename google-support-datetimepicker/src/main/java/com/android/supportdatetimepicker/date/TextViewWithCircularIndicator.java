@@ -16,64 +16,67 @@ import android.graphics.Paint.Align;
 import android.graphics.Paint.Style;
 import android.util.AttributeSet;
 import android.widget.TextView;
+
 import com.android.supportdatetimepicker.R;
 
-/** A text view which, when pressed or activated, displays a blue circle around the text. */
+/**
+ * A text view which, when pressed or activated, displays a blue circle around the text.
+ */
 public class TextViewWithCircularIndicator extends TextView {
-	private static final int SELECTED_CIRCLE_ALPHA = 60;
-	Paint mCirclePaint = new Paint();
-	private final int mRadius;
-	private final int mCircleColor;
-	private final String mItemIsSelectedText;
-	private boolean mDrawCircle;
+    private static final int SELECTED_CIRCLE_ALPHA = 60;
+    Paint mCirclePaint = new Paint();
+    private final int mRadius;
+    private final int mCircleColor;
+    private final String mItemIsSelectedText;
+    private boolean mDrawCircle;
 
-	public TextViewWithCircularIndicator(Context context, AttributeSet attrs) {
-		super(context, attrs);
-		Resources res = context.getResources();
-		mCircleColor = res.getColor(R.color.blue);
-		mRadius = res.getDimensionPixelOffset(R.dimen.month_select_circle_radius);
-		mItemIsSelectedText = context.getResources().getString(R.string.item_is_selected);
-		init();
-	}
+    public TextViewWithCircularIndicator(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        Resources res = context.getResources();
+        mCircleColor = res.getColor(R.color.blue);
+        mRadius = res.getDimensionPixelOffset(R.dimen.month_select_circle_radius);
+        mItemIsSelectedText = context.getResources().getString(R.string.item_is_selected);
+        init();
+    }
 
-	private void init() {
-		mCirclePaint.setFakeBoldText(true);
-		mCirclePaint.setAntiAlias(true);
-		mCirclePaint.setColor(mCircleColor);
-		mCirclePaint.setTextAlign(Align.CENTER);
-		mCirclePaint.setStyle(Style.FILL);
-		mCirclePaint.setAlpha(TextViewWithCircularIndicator.SELECTED_CIRCLE_ALPHA);
-	}
+    private void init() {
+        mCirclePaint.setFakeBoldText(true);
+        mCirclePaint.setAntiAlias(true);
+        mCirclePaint.setColor(mCircleColor);
+        mCirclePaint.setTextAlign(Align.CENTER);
+        mCirclePaint.setStyle(Style.FILL);
+        mCirclePaint.setAlpha(TextViewWithCircularIndicator.SELECTED_CIRCLE_ALPHA);
+    }
 
-	public void drawIndicator(boolean drawCircle) {
-		if (mDrawCircle != drawCircle) {
-			mDrawCircle = drawCircle;
-			invalidate();
-		}
-	}
+    public void drawIndicator(boolean drawCircle) {
+        if (mDrawCircle != drawCircle) {
+            mDrawCircle = drawCircle;
+            invalidate();
+        }
+    }
 
-	public boolean isDrawingIndicator() {
-		return mDrawCircle;
-	}
+    public boolean isDrawingIndicator() {
+        return mDrawCircle;
+    }
 
-	@Override
-	public void onDraw(Canvas canvas) {
-		super.onDraw(canvas);
-		if (mDrawCircle) {
-			final int width = getWidth();
-			final int height = getHeight();
-			int radius = height / 2;
-			canvas.drawCircle(width / 2, radius, radius, mCirclePaint);
-		}
-	}
+    @Override
+    public void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        if (mDrawCircle) {
+            final int width = getWidth();
+            final int height = getHeight();
+            int radius = height / 2;
+            canvas.drawCircle(width / 2, radius, radius, mCirclePaint);
+        }
+    }
 
-	@Override
-	public CharSequence getContentDescription() {
-		CharSequence itemText = getText();
-		if (mDrawCircle) {
-			return String.format(mItemIsSelectedText, itemText);
-		} else {
-			return itemText;
-		}
-	}
+    @Override
+    public CharSequence getContentDescription() {
+        CharSequence itemText = getText();
+        if (mDrawCircle) {
+            return String.format(mItemIsSelectedText, itemText);
+        } else {
+            return itemText;
+        }
+    }
 }
