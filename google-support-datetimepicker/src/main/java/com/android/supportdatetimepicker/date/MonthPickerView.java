@@ -99,9 +99,7 @@ public class MonthPickerView extends LinearLayout implements DatePickerDialog.On
                 clickedView.requestLayout();
                 mSelectedView = clickedView;
             }
-            mController
-                .onMonthSelected(MonthPickerView.getMonthFromTextView(clickedView));
-            // mAdapter.notifyDataSetChanged();
+            mController.onMonthSelected(getMonthFromTextView(clickedView));
             requestLayout();
         }
     }
