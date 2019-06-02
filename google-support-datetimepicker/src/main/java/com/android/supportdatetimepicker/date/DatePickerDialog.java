@@ -244,8 +244,6 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
         if (listPosition != -1) {
             if (currentView == DAY_VIEW) {
                 mDayPickerView.postSetSelection(listPosition);
-            } else if (currentView == MONTH_VIEW) {
-                mMonthPickerView.postSetSelection(listPosition);
             } else if (currentView == YEAR_VIEW) {
                 mYearPickerView.postSetSelectionFromTop(listPosition, listPositionOffset);
             }
@@ -342,9 +340,12 @@ public class DatePickerDialog extends DialogFragment implements OnClickListener,
         // Accessibility.
         long millis = mCalendar.getTimeInMillis();
         mAnimator.setDateMillis(millis);
-        int flags = DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_NO_YEAR;
-        String monthAndDayText = DateUtils.formatDateTime(getActivity(), millis, flags);
-        // mMonthAndDayView.setContentDescription(monthAndDayText);
+        int flags = DateUtils.FORMAT_NUMERIC_DATE;
+        String dayText = DateUtils.formatDateTime(getActivity(), millis, flags);
+        mDayView.setContentDescription(dayText);
+        flags = DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_NO_YEAR | DateUtils.FORMAT_NO_MONTH_DAY;
+        String monthText = DateUtils.formatDateTime(getActivity(), millis, flags);
+        mMonthView.setContentDescription(monthText);
         if (announce) {
             flags = DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_YEAR;
             String fullDateText = DateUtils.formatDateTime(getActivity(), millis, flags);
